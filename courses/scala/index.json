@@ -1,0 +1,17 @@
+{
+  "name": "Scala course",
+  "levels": [
+    "advanced",
+    "intermediate",
+    "beginner"
+  ],
+  "image": "courseImages/scala.svg",
+  "video": "https://www.youtube.com/embed/S8kjLe0zKGg",
+  "desc": "Scala language course",
+  "language": "English",
+  "scope": [
+    "Introduction to scala types and collection",
+    "Pattern matching, erasure and exhaustivity",
+    "Extracts and type matching"
+  ]
+}

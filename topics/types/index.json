@@ -1,0 +1,31 @@
+{
+  "name": "Types",
+  "desc": "All about Scala's Type System",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorId": "jon-pretty",
+      "duration": 8
+    },
+    {
+      "id": "casting",
+      "title": "Casting",
+      "authorId": "jon-pretty",
+      "duration": 8
+
+    },
+    {
+      "id": "subtyping",
+      "title": "Subtyping",
+      "authorId": "jon-pretty",
+      "duration": 10
+    },
+    {
+      "id": "hierarchy",
+      "title": "The Type Hierarchy",
+      "authorId": "jon-pretty",
+      "duration": 10
+    }
+  ]
+}

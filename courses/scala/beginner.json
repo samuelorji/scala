@@ -1,0 +1,41 @@
+{
+  "name": "Scala for beginners",
+  "desc": "Scala for Beginners",
+  "ranges": [
+    {
+      "topicId": "foundations",
+      "lessonStart": "underscore",
+      "lessonEnd": "hashing"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "objects",
+      "lessonEnd": "generics"
+    },
+    {
+      "topicId": "types",
+      "lessonStart": "basics",
+      "lessonEnd": "hierarchy"
+    },
+    {
+      "topicId": "patterns",
+      "lessonStart": "simple",
+      "lessonEnd": "exhaustivity"
+    },
+    {
+      "topicId": "collections",
+      "lessonStart": "basics",
+      "lessonEnd": "maps"
+    },
+    {
+      "topicId": "fors",
+      "lessonStart": "looping",
+      "lessonEnd": "looping"
+    },
+    {
+      "topicId": "runtime",
+      "lessonStart": "jvm",
+      "lessonEnd": "threads"
+    }
+  ]
+}

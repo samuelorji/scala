@@ -1,0 +1,12 @@
+{
+    "name": "For comprehensions",
+    "desc": "For comprehensions desc",
+    "lessons": [
+        {
+        "id": "looping",
+        "title": "Looping",
+        "authorId": "szymon-rodziewicz",
+        "duration": 10
+        }
+    ]
+}

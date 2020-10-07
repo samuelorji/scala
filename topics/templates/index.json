@@ -1,0 +1,37 @@
+{
+  "name": "Templates",
+  "desc": "Classes, traits, objects and their creation",
+  "lessons": [
+    {
+      "id": "objects",
+      "title": "Objects in Scala",
+      "authorId": "jon-pretty",
+      "duration": 11
+    },
+    {
+      "id": "classes",
+      "title": "Classes",
+      "authorId": "jon-pretty",
+      "duration": 9
+
+    },
+    {
+      "id": "traits",
+      "title": "Traits",
+      "authorId": "jon-pretty",
+      "duration": 20
+    },
+    {
+      "id": "inheritance",
+      "title": "Inheritance",
+      "authorId": "jon-pretty",
+      "duration": 16
+    },
+    {
+      "id": "generics",
+      "title": "Generics",
+      "authorId": "szymon-rodziewicz",
+      "duration": 5
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Pattern Matching",
+  "desc": "Matching and deconstructing values in Scala with Patterns",
+  "lessons": [
+    {
+      "id": "simple",
+      "title": "Simple matching",
+      "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/Aw6GkiCvcWs",
+      "duration": 8
+    },
+    {
+      "id": "destructuring",
+      "title": "Structural Matching",
+      "authorId": "jon-pretty",
+      "duration": 14
+    },
+    {
+      "id": "syntax",
+      "title": "Pattern Syntax",
+      "authorId": "jon-pretty",
+      "duration": 15
+    },
+    {
+      "id": "types",
+      "title": "Matching by Type",
+      "authorId": "jon-pretty",
+      "duration": 13
+    },
+    {
+      "id": "collections",
+      "title": "Matching on Collections",
+      "authorId": "jon-pretty",
+      "duration": 12
+    },
+    {
+      "id": "exhaustivity",
+      "title": "Exhaustivity of Matches",
+      "authorId": "jon-pretty",
+      "duration": 10
+    },
+    {
+      "id": "erasure",
+      "title": "Erasure",
+      "authorId": "jon-pretty",
+      "duration": 10
+    },
+    {
+      "id": "extractors",
+      "title": "Using and Defining Extractors",
+      "authorId": "jon-pretty",
+      "duration": 14
+    },
+    {
+      "id": "associativity",
+      "title": "Associativity and Precedence",
+      "authorId": "jon-pretty",
+      "duration": 11
+    },
+    {
+      "id": "advancedtypes",
+      "title": "Advanced Types",
+      "authorId": "jon-pretty",
+      "duration": 8
+    }
+  ]
+}

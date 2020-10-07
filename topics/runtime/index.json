@@ -1,0 +1,31 @@
+{
+  "name": "The Runtime",
+  "desc": "The JVM runtime environment",
+  "lessons": [
+    {
+      "id": "jvm",
+      "title": "The JVM",
+      "authorId": "jon-pretty",
+      "duration": 10
+    },
+    {
+      "id": "memory",
+      "title": "The Memory Model",
+      "authorId": "jon-pretty",
+      "duration": 10
+
+    },
+    {
+      "id": "stack",
+      "title": "The Execution Stack",
+      "authorId": "jon-pretty",
+      "duration": 10
+    },
+    {
+      "id": "threads",
+      "title": "Threads",
+      "authorId": "jon-pretty",
+      "duration": 10
+    }
+  ]
+}

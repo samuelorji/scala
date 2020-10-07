@@ -1,0 +1,24 @@
+{
+  "name": "Foundations",
+  "desc": "Fundamental topics for learning to program in Scala on the JVM",
+  "lessons": [
+    {
+      "id": "underscore",
+      "title": "Understanding the Underscore",
+      "authorId": "jon-pretty",
+      "duration": 5
+    },
+    {
+      "id": "scopes",
+      "title": "Lexical Scoping",
+      "authorId": "jon-pretty",
+      "duration": 5
+    },
+    {
+      "id": "hashing",
+      "title": "Hash functions",
+      "authorId": "jon-pretty",
+      "duration": 5
+    }
+  ]
+}
