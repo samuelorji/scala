@@ -12,6 +12,6 @@ def test_lesson_unique():
       assert False, f"Lesson {duplicate} is duplicated in topic {topic.id}"
   
 def test_prerequisites():
-  lessonToCourse 
+  levelToLessons = STRUCTURE.levels 
   for topic in TOPICS:
     for lesson in topic.lessons:
