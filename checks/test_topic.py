@@ -15,5 +15,3 @@ def test_prerequisites():
   lessonToCourse 
   for topic in TOPICS:
     for lesson in topic.lessons:
-      
-      

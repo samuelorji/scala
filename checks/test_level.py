@@ -35,4 +35,3 @@ def test_ranges_order():
         assert start_index <= end_index, "Start lesson index must be less than or equal to end lesson index"
   except IndexError:
     assert False, "Topic missing, detailed message in another test"
-
