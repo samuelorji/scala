@@ -32,6 +32,12 @@ class Lesson:
   title: str
   author_id: str
   duration: int
+  prereqs: [str]
+
+@dataclass
+class LessonPrereq:
+  lesson_id: str
+  topic_id: str
 
 @dataclass 
 class Topic:

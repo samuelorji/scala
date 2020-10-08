@@ -58,12 +58,13 @@ Topics are ordered collections of lessons. Their index is stored at [topics/inde
 
 `Lesson` JSON type structure:
 
-| Field name | Type   | Description                                               |
-|------------|--------|-----------------------------------------------------------|
-| `id`       | String | Id of the lessons                                         |
-| `title`    | String | Title of the lesson - name that is visible on the website |
-| `authorId` | String | Id of the lesson's author                                 |
-| `duration` | Int    | Expected duration of lesson completion in minutes         |
+| Field name      | Type            | Description                                               |
+|-----------------|------------------|-----------------------------------------------------------|
+| `id`            | String          | Id of the lessons                                         |
+| `title`         | String          | Title of the lesson - name that is visible on the website |
+| `authorId`      | String          | Id of the lesson's author                                 |
+| `duration`      | Int             | Expected duration of lesson completion in minutes         |
+| `prerequisites` | List of String  | Ids of lessons that are prerequisites of this lesson         |
 
 ### Lessons
 

@@ -2,13 +2,18 @@ name: Deploy content to develop environment
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop, feature/structure-checks ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Test content
+      run: |
+        cd checks
+        pip install -U pytest
+        pytest -rP
     - uses: actions/checkout@v2
     - name: Set GCStorage CLI
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master

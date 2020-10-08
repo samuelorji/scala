@@ -58,13 +58,17 @@ def load_topics():
   except KeyError as e:
     assert False, f"Topics index is malformed, cause: {repr(e)}" 
 
+def emptyIfNone(array):
+  return [] if array == None else array
+
 def load_topic(topic_id: str):
   try:
     path = CONTENT_PATH + f"/topics/{topic_id}/index.json"
     topic_json = Path(path).read_text()
     topic = json.loads(topic_json) 
-    lessons = [Lesson(lesson['id'], topic_id, lesson['title'], lesson['authorId'], lesson['duration']) 
-                for lesson in topic['lessons']]
+    lessons = [Lesson(lesson['id'], topic_id, lesson['title'], lesson['authorId'], lesson['duration'], 
+              [LessonPrereq(prereq['lessonId'], prereq['topicId']) for prereq in emptyIfNone(lesson.get('prerequisites'))]) 
+              for lesson in topic['lessons']]
     return Topic(topic_id, topic['name'], topic['desc'], lessons)
   except FileNotFoundError:
     assert False, f"Topic {topic_id} index not found"
