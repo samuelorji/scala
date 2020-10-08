@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Test content
       run: |
+        export CONTENT_DIR=$(pwd)
         cd checks
         pip3 install -U pytest
         pip3 install dataclasses

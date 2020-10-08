@@ -1,3 +1,3 @@
 import os
 
-CONTENT_PATH = os.getenv("HOME")
+CONTENT_PATH = os.getenv("CONTENT_DIR")
