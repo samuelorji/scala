@@ -129,6 +129,7 @@ object Info:
   println(s"Initializing $description")
 ```
 and a `main` method which references it, twice:
+
 ```scala
 @main
 def exec(): Unit =
@@ -143,15 +144,15 @@ When the runtime encounters the first reference to the `Info` object, it will,
 * [X] print the string `"Initializing Onion, version 7"`
 * [ ] print something else
 
-# The second time the runtime encounters a reference to the `Info` object, it will,
-* [ ] instantiate the object
+# TODO FIX The second time the runtime encounters a reference to the `Info` object, it will,
+* [X] instantiate the object
 * [ ] evaluate the value `version`
 * [ ] evaluate the value `name`
 * [ ] print the string `"Initializing Onion, version 7"`
 * [ ] print something else
 
-# Moving the definition of `description` before the definition of `name` would,
-* [ ] cause compilation to fail, due to a forward-reference
+# TODO FIX Moving the definition of `description` before the definition of `name` would,
+* [X] cause compilation to fail, due to a forward-reference
 * [ ] result in an error at runtime, due to a forward-reference
 * [ ] cause an incorrect message to be printed
 * [ ] not change the behavior at all
