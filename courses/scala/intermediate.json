@@ -2,20 +2,6 @@
   "name": "Scala for beginner",
   "desc": "Scala for unexperienced developers",
   "ranges": [
-    {
-      "topicId": "templates",
-      "lessonStart": "inheritance",
-      "lessonEnd": "inheritance"
-    },
-    {
-      "topicId": "types",
-      "lessonStart": "hierarchy",
-      "lessonEnd": "hierarchy"
-    },
-    {
-      "topicId": "patterns",
-      "lessonStart": "exhaustivity",
-      "lessonEnd": "associativity"
-    }
+
   ]
 }
