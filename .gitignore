@@ -1,3 +1,7 @@
 revision
 .DS_Store
 .metals
+.pytest_cache
+__pycache__
+.gitconfig
+.viminfo
