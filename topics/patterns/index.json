@@ -11,10 +11,10 @@
     {
       "id": "destructuring",
       "title": "Structural Matching",
-      "authordId": "jon-pretty",
+      "authorId": "jon-pretty",
       "duration": 14
     },
-    {d
+    {
       "id": "syntax",
       "title": "Pattern Syntax",
       "authorId": "jon-pretty",
