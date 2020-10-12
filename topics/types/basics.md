@@ -123,23 +123,18 @@ putting many limitations on the code we can write straight away.
 
 ?---?
 
-Below are several short fragments of code which include a single reference to either `alpha` or `Alpha`. In some
-fragments, it is a term, while in others it represents a type. Even if you don't fully understand the code, try
-to understand whether each is a term or a type.
+# Below are several short fragments of code which include a single reference to either `alpha` or `Alpha`. In some fragments, it is a term, while in others it represents a type. Even if you don't fully understand the code, try to understand whether each is a term or a type. Select all the fragments of Scala code where `alpha` or `Alpha` looks like a type (and not a term). There are no trick questions!
+* [X] `val x: Alpha = get()`
+* [ ] `val alpha = "a"`
+* [ ] `val Alpha = "A"`
+* [X] `case x: Alpha => "a"`
+* [ ] `def go() = alpha[String]()`
+* [X] `def go() = get[Alpha]`
+* [X] `class Item(value: Alpha)`
+* [ ] `2 + Alpha()`
+* [X] `private[Alpha] def apply(): Unit`
 
-# Select all the fragments of Scala code where `alpha` or `Alpha` looks like a type (and not a term). There
-# are no trick questions!
-- [X] `val x: Alpha = get()`
-- [ ] `val alpha = "a"`
-- [ ] `val Alpha = "A"`
-- [X] `case x: Alpha => "a"`
-- [ ] `def go() = alpha[String]()`
-- [X] `def go() = get[Alpha]`
-- [X] `class Item(value: Alpha)`
-- [ ] `2 + Alpha()`
-- [X] `private[Alpha] def apply(): Unit`
-
-Consider the following class and object definitions:
+# Consider the following class and object definitions:
 ```scala
 class Rectangle(width: Double, height: Double):
   def size: Double = width*height
@@ -149,12 +144,12 @@ object Square:
   def height: Double = width
   def size: Double = width*height
 ```
-# Is the object `Square` an instance of the type `Rectangle`?
-* [ ] Yes
-* [X] No
+Is the object `Square` an instance of the type `Rectangle`?
+- [ ] Yes
+- [X] No
 
 # Which of the following properties of a value could be represented by its type?
-- [X] "it has a member called `apply()` which will always return the value `2`"
-- [X] "it has a member called `count` which takes any number of parameters of the same type"
-- [ ] "it does not have a member called `run()`"
-- [ ] "it has a member called `apply()` which will always return a different value"
+* [X] "it has a member called `apply()` which will always return the value `2`"
+* [X] "it has a member called `count` which takes any number of parameters of the same type"
+* [ ] "it does not have a member called `run()`"
+* [ ] "it has a member called `apply()` which will always return a different value"
