@@ -4,38 +4,38 @@
   "ranges": [
     {
       "topicId": "foundations",
-      "lessonStart": "underscore",
-      "lessonEnd": "hashing"
+      "lessonStart": "environment",
+      "lessonEnd": "defs"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "static",
+      "lessonEnd": "static"
     },
     {
       "topicId": "templates",
       "lessonStart": "objects",
-      "lessonEnd": "generics"
+      "lessonEnd": "traits"
     },
     {
       "topicId": "types",
       "lessonStart": "basics",
-      "lessonEnd": "hierarchy"
+      "lessonEnd": "casting"
     },
     {
       "topicId": "patterns",
       "lessonStart": "simple",
-      "lessonEnd": "exhaustivity"
+      "lessonEnd": "collections"
     },
     {
       "topicId": "collections",
       "lessonStart": "basics",
-      "lessonEnd": "maps"
-    },
-    {
-      "topicId": "fors",
-      "lessonStart": "looping",
-      "lessonEnd": "looping"
+      "lessonEnd": "lists"
     },
     {
       "topicId": "runtime",
       "lessonStart": "jvm",
-      "lessonEnd": "threads"
+      "lessonEnd": "stack"
     }
   ]
 }

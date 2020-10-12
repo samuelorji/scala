@@ -3,22 +3,28 @@
   "desc": "Fundamental topics for learning to program in Scala on the JVM",
   "lessons": [
     {
-      "id": "underscore",
-      "title": "Understanding the Underscore",
+      "id": "environment",
+      "title": "Our Programming Environment",
       "authorId": "jon-pretty",
-      "duration": 5
+      "duration": 23
     },
     {
-      "id": "scopes",
-      "title": "Lexical Scoping",
+      "id": "expressions",
+      "title": "Expressions and Statements",
       "authorId": "jon-pretty",
-      "duration": 5
+      "duration": 14
     },
     {
-      "id": "hashing",
-      "title": "Hash functions",
+      "id": "helloworld",
+      "title": "Our First Program",
       "authorId": "jon-pretty",
-      "duration": 5
+      "duration": 12
+    },
+    {
+      "id": "defs",
+      "title": "Definitions",
+      "authorId": "jon-pretty",
+      "duration": 15
     }
   ]
 }

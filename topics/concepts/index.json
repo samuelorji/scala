@@ -1,0 +1,12 @@
+{
+  "name": "Concepts",
+  "desc": "Programming Concepts",
+  "lessons": [
+    {
+      "id": "static",
+      "title": "Static vs Dynamic",
+      "authorId": "jon-pretty",
+      "duration": 1
+    }
+  ]
+}
