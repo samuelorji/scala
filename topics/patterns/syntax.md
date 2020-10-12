@@ -161,15 +161,18 @@ green match
 - [X] Third
 
 # Choose pattern that *does not* contain syntax errors, given color definitions from previous question
- - [ ] ```scala
+ - [ ] 
+ ```scala
   red match 
     case Color(r, g, b) | Blue => println("Match!")
  ```
- - [X] ```scala
+ - [X] 
+ ```scala
  green match 
    case red => println("Match!")
  ```
-  - [ ] ```scala
+  - [ ] 
+  ```scala
   Blue match 
     case `blue` => println("Match!")
   ```
