@@ -2,7 +2,7 @@ name: Deploy content to production environment
 
 on:
   push:
-    branches: [ master, feature/structure-checks ]
+    branches: [ main ]
 
 jobs:
   build:
