@@ -117,7 +117,9 @@ instantiated, so, like `def`s, the order they appear in is insignificant.
 
 ?---?
 
-Consider the following `object` definition within a hypothetical piece of software called "Onion",
+
+# Consider the following `object` definition within a hypothetical piece of software called "Onion",
+
 ```scala
 object Info:
   val version: Int = 7
@@ -134,19 +136,19 @@ def exec(): Unit =
   Info // Second reference
 ```
 
-# When the runtime encounters the first reference to the `Info` object, it will,
-- [X] instantiate a new object in memory
-- [X] evaluate the value `version`
-- [X] evaluate the value `name`
-- [X] print the string `"Initializing Onion, version 7"`
-- [ ] print something else
+When the runtime encounters the first reference to the `Info` object, it will,
+* [X] instantiate a new object in memory
+* [X] evaluate the value `version`
+* [X] evaluate the value `name`
+* [X] print the string `"Initializing Onion, version 7"`
+* [ ] print something else
 
 # The second time the runtime encounters a reference to the `Info` object, it will,
-- [ ] instantiate the object
-- [ ] evaluate the value `version`
-- [ ] evaluate the value `name`
-- [ ] print the string `"Initializing Onion, version 7"`
-- [ ] print something else
+* [ ] instantiate the object
+* [ ] evaluate the value `version`
+* [ ] evaluate the value `name`
+* [ ] print the string `"Initializing Onion, version 7"`
+* [ ] print something else
 
 # Moving the definition of `description` before the definition of `name` would,
 * [ ] cause compilation to fail, due to a forward-reference
@@ -154,7 +156,7 @@ def exec(): Unit =
 * [ ] cause an incorrect message to be printed
 * [ ] not change the behavior at all
 
-Now, consider the following definitions,
+# Now, consider the following definitions,
 ```scala
 object Alpha:
   val beta = Beta
@@ -175,7 +177,7 @@ def exec(): Unit =
 Invoking the method `exec()` will cause several objects to be instantiated to evaluate it, before the number `3`
 is printed on the console.
 
-# Tick all the objects which are initialized when the `exec()` method is run:
+Tick all the objects which are initialized when the `exec()` method is run:
 * [X] `Alpha`
 * [X] `Beta`
 * [X] `Alpha.beta`
