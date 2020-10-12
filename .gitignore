@@ -1,3 +1,5 @@
 revision
 .DS_Store
 .metals
+.pytest_cache
+__pycache__
