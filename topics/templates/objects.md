@@ -176,9 +176,9 @@ Invoking the method `exec()` will cause several objects to be instantiated to ev
 is printed on the console.
 
 # Tick all the objects which are initialized when the `exec()` method is run:
-- [X] `Alpha`
-- [X] `Beta`
-- [X] `Alpha.beta`
-- [X] `Beta.delta`
-- [ ] `Gamma`
-- [ ] `Gamma.epsilon`
+* [X] `Alpha`
+* [X] `Beta`
+* [X] `Alpha.beta`
+* [X] `Beta.delta`
+* [ ] `Gamma`
+* [ ] `Gamma.epsilon`
