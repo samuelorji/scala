@@ -37,4 +37,3 @@ jobs:
         API_URL:       ${{ secrets.DEV_SZ_API_URL }}
       run: |
         bash .github/workflows/deployToScalazone.sh
-

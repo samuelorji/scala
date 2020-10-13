@@ -59,5 +59,3 @@ def test_prerequisites():
           assert lesson_and_topic_to_course[(lesson.id, topic.id)] == lesson_and_topic_to_course[(prereq.lesson_id, prereq.topic_id)], same_course_failed_msg
           lower_ordinal_failed_msg = f"Lesson's {topic.id}/{lesson.id} preqrequiste {prereq.topic_id}/{prereq.lesson_id} is on higher level that the {topic.id}/{lesson.id}"
           assert lesson_and_topic_to_lowest_level_ordinal[(lesson.id, topic.id)] >= lesson_and_topic_to_lowest_level_ordinal[(prereq.lesson_id, prereq.topic_id)], lower_ordinal_failed_msg
-            
-      

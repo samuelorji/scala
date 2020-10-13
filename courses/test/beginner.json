@@ -1,0 +1,11 @@
+{
+  "name": "Scala for beginners test",
+  "desc": "Scala for Beginners",
+  "ranges": [
+    {
+      "topicId": "foundations",
+      "lessonStart": "environment",
+      "lessonEnd": "scopes"
+    }
+  ]
+}

@@ -25,6 +25,12 @@
       "title": "Definitions",
       "authorId": "jon-pretty",
       "duration": 15
+    },
+    {
+      "id": "scopes",
+      "title": "Definitions",
+      "authorId": "szymon-rodziewicz",
+      "duration": 15
     }
   ]
 }
