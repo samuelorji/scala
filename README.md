@@ -9,8 +9,7 @@ Content is distributed under the [CreativeCommons Attribution-ShareAlike 4.0](ht
  - Every commit to  the `develop` brach updates the content on development environment.	 - Every commit to the `develop` branch updates the content on the development environment.
  - Every commit to the `stage` brach updates the content on staging environment.	 - Every commit to the `stage` branch updates the content on the staging environment.
  - Every commit to the `main` brach updates the content on production environment.	 - Every commit to the `master` branch updates the content on the production environment. 
-Only production environment is accessible to the public. 	Only the production environment is accessible to the public. [TODO: add access for other people?]
-People outside of VirtusLab do not have access to `develop` and `stage` environments, but it will be changed in some way in the near future.
+Only the production environment is accessible to the public. People outside of VirtusLab do not have access to `develop` and `stage` environments, but it will be changed in some way in the near future.
 
 ## Structure overview
 
@@ -63,13 +62,21 @@ Topics are ordered collections of lessons. Their index is stored in the [topics/
 
 The `Lesson` JSON type structure:
 
-| Field name      | Type            | Description                                                  |
-|-----------------|------------------|-------------------------------------------------------------|
-| `id`            | String          | Id of the lessons                                            |
-| `title`         | String          | Title of the lesson; the name that is visible on the website |
-| `authorId`      | String          | Id of the lesson's author                                    |
-| `duration`      | Int             | Expected duration of lesson completion in minutes            |
-| `prerequisites` | List of String  | Ids of lessons that are prerequisites of this lesson         |
+| Field name      | Type                          | Description                                                  |
+|-----------------|-------------------------------|--------------------------------------------------------------|
+| `id`            | String                        | Id of the lessons                                            |
+| `title`         | String                        | Title of the lesson; the name that is visible on the website |
+| `authorId`      | String                        | Id of the lesson's author                                    |
+| `duration`      | Int                           | Expected duration of lesson completion in minutes            |
+| `prerequisites` | List of LessonPrerequisites   | Ids of lessons that are prerequisites of this lesson         |
+
+The `LessonPrerequisite` JSON type structure:
+
+| Field name | Type   | Description                                  |
+|------------|--------|----------------------------------------------|
+| `lessonId` | String | Id of the lesson to depend upon              |
+| `topicId`  | String | Id of the topic of the lesson to depend upon |
+
 
 ### Lessons
 
