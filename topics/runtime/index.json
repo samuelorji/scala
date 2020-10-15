@@ -6,20 +6,37 @@
       "id": "jvm",
       "title": "The JVM",
       "authorId": "jon-pretty",
-      "duration": 12
+      "duration": 12,
+      "prerequisites": [
+        {
+          "topicId": "foundations",
+          "lessonId": "environment"
+        }
+      ]
     },
     {
       "id": "memory",
       "title": "The Memory Model",
       "authorId": "jon-pretty",
-      "duration": 14
-
+      "duration": 14,
+      "prerequisites": [
+        {
+          "topicId": "templates",
+          "lessonId": "objects"
+        }
+      ]
     },
     {
       "id": "stack",
       "title": "The Execution Stack",
       "authorId": "jon-pretty",
-      "duration": 15
+      "duration": 15,
+      "prerequisites": [
+        {
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ]
     }
   ]
 }

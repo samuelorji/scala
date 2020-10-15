@@ -1,19 +1,24 @@
 {
-    "name": "Collections",
-    "desc": "Collection in Scala",
-    "lessons": [
+  "name": "Collections",
+  "desc": "Collection in Scala",
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "authorId": "jon-pretty",
+      "duration": 20,
+      "prerequisites": [
         {
-        "id": "basics",
-        "title": "Basics",
-        "authorId": "jon-pretty",
-        "duration": 20
-        },
-        {
-        "id": "lists",
-        "title": "Lists and Sets",
-        "authorId": "jon-pretty",
-        "duration": 17
-
+          "topicId": "templates",
+          "lessonId": "classes"
         }
-    ]
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Lists and Sets",
+      "authorId": "jon-pretty",
+      "duration": 17
+    }
+  ]
 }
