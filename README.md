@@ -5,7 +5,8 @@ This repository contains content of ScalaZONE website. It stores both lessons te
  - Every commit to `develop` brach updates the content on development environment.
  - Every commit to `stage` brach updates the content on staging environment.
  - Every commit to `master` brach updates the content on production environment.
-Only production environment is accessible to the public. [TODO: add access for other people?]
+Only production environment is accessible to the public. 
+People outside of VirtusLab do not have access to `develop` and `stage` environments, but it will be changed in some way in the near future.
 
 ## Structure overview
 
