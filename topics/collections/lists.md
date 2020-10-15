@@ -7,39 +7,40 @@ quickly with some collection types than others.
 
 This means that the choice of which collection type to use can play an important role in the performance
 characteristics of an application when it is run. The knowledge we have about how values will be added to,
-removed from or updated within a collection and the way and the frequency with which they are accessed are
-important considerations when making choosing a collection type.
+removed from or updated within a collection, and the way and the frequency with which they are accessed are
+important considerations when choosing a collection type.
 
 There is no single "ideal" collection for all purposes, and every collection type will have certain advantages
-in some areas and make certain compromises in others. Some, like `Vector` provide a good general balance for
-working with ordered sequences of data, whereas `List`s can provide much better performance if we are not
-reading or writing elements at arbitrary locations within it. `Stream`s are similar to `List`s, but where the
-end of the list is computed _lazily_, or "on-demand", and whose total length is not known at the outset, and may
-actually be infinite.
+in some areas and make certain compromises in others. Some, like `Vector` a good general balance for working
+with ordered sequences of data, whereas `List`s can provide much better performance as long as we do not read or
+writing elements at arbitrary locations within it. `Stream`s are similar to `List`s, but where the end of the
+list is computed _lazily_, or "on-demand", and whose total length is not known at the outset, and may actually
+be infinite.
 
 `Set`s are optimized for deduplicated, unordered values while `TreeSet`s can take take advantage on a sort order
 on the set's elements. These have _map-like_ counterparts which associate with each item, which we call the
 _key_, a secondary associated value of another type (which is our choice), allowing the associated values to be
-accessed using a key as an index. These types are called `Map` and `TreeMap`.
+accessed using a key as an index. These types are called `Map` and `TreeMap`, respectively.
 
 Other types in the collections library provide generalizations of these interfaces for when we need to operate
 on a collection without requiring that it be a particular one. For example, the `Iterable` type is a
 generalization of `List`s, `Vector`s and `Set`s because we can iterate over their elements, without concerning
 ourselves with the exact structure of the elements in that data structure. `Seq` is a generalization of `List`
 and `Vector`, but not `Set`, as its elements are unordered, so don't exhibit the "sequential" nature that the
-`Seq` type is intended to encapsulate.
+`Seq` type is intended to indicate.
 
-## List
+## `List`s
 
 `List`s are the most commonly-used Scala collection, particularly (but not only) for working with small
 collections of data. Accessing the first element of a list, the _head_, is very quick, as is accessing the
 _tail_, the remainder of the list after the head is removed, which is itself a `List`.
 
-To access element 1 of the list (the second element) requires looking at the head of the list's tail, which is
-_two_ operations. Element 2 requires accessing the head of the tail of the list's tail, which is _three_
-operations. While each operation is very fast, in general it takes _n_ operations to access the _nth_ element,
-which makes `List` unsuitable for operations which require _random access_ of elements within the sequence.
-The method `List#last` exists, but the cost of executing it will be proportional to the length of the sequence.
+To access element 1 of the list (remembering that this is the _second_ element) requires looking at the head of
+the list's tail, which is _two_ operations. Element 2 requires accessing the head of the tail of the list's
+tail, which is _three_ operations. While each operation is very fast, in general it takes _n_ operations to
+access the _nth_ element, which makes `List` unsuitable for operations which require _random access_ of elements
+within the sequence. The method `List#last` exists, but the cost of executing it will be proportional to the
+length of the sequence.
 
 The structure of Scala's `List` is usually called a _linked list_, or more precisely, a _singly-linked list_.
 Each List instance is an element (the head) attached to another list containing (potentially) more of the same
@@ -48,9 +49,9 @@ no head and no tail, but it's necessary to terminate every list.
 
 There is only one `Nil` instance. While we can create an empty list of `String`s or an empty list of `Int`s, as
 there is nothing in either of those lists, the element type is not relevant, and the lists are not only
-indistinguishable, but literally the same value, so every `List` in Scala will share a tiny part of its tail.
-`Nil` is necessary in Scala to terminate every list; without it, every list would have to provide a link to
-another `List` instance as its tail, which could only carry on infinitely.
+indistinguishable, but literally the same value, stored at the same location in memory, so every `List` in Scala
+will share a tiny part of its tail. And `Nil` is necessary in Scala to terminate every list; without it, every
+list would have to provide a link to another `List` instance as its tail, which could only carry on infinitely.
 
 Diagrammatically, a `List` looks like this,
 ![Singly-linked list](/api/content/contentImages/singly-linked.svg)
@@ -60,13 +61,13 @@ enum List[+T]:
   case Nil
   case ::(head: T, tail: List[T])
 ```
-where a `LinkedList` of the first three natural numbers would be written,
+where a `List` of the first three natural numbers would be written,
 ```scala
 val xs = ::(1, ::(2, ::(3, Nil)))
 ```
-or using _infix_ style, where the right-associative method `::`, defined on `List` will call the `::`
-constructor, meaning that `::(head, tail)` can, in general, be written as `head :: tail`. So we can more neatly
-write,
+or more naturally, using _infix_ style, where the right-associative method `::`, defined on `List` will call the
+`::` constructor, meaning that `::(head, tail)` can, in general, be written as `head :: tail`. So we can more
+neatly write,
 ```scala
 val xs = 1 :: 2 :: 3 :: Nil
 ```
@@ -75,8 +76,11 @@ Scala permits the use of a symbolic name for a type, `::`, which is generally re
 
 Constructing new `List`s presents a similar compromise in performance: prepending an element to the start is
 fast, regardless of the length of the original list, because it requires only the creation of a single new `::`
-object which links the new element to the pre-existing tail. But adding an element to the end of the list is
-less trivial.
+object which links the new element to the pre-existing tail. It's especially convenient that the original `List`
+continues to exist, and the reference to it can be _reused_ unchanged as the `tail` value of the new `List`,
+without even exploring the values within it. This reuse is called _structural sharing_.
+
+But adding an element to the end of the list is less trivial.
 
 Imagine we wanted to add `4` to our list of natural numbers, above. That is, we want to construct,
 `1 :: 2 :: 3 :: 4 :: Nil` from `1 :: 2 :: 3 :: Nil`. Unlike prepending, we cannot "reuse" the existing list,
@@ -92,10 +96,10 @@ and `last` methods and both have the `+:` (prepend) and `:+` (append) methods, e
 may have quite different performance characteristics for long sequences.
 
 In comparison, none of `Vector`s operations are proportional to the size of the collection, all being
-guaranteed to complete in fewer than a small, fixed number of operations. Accessing the first element of a
+guaranteed to complete in fewer than a small, fixed number of operations. But accessing the first element of a
 `Vector` will require more operations than accessing the first element of a `List`, so it will be slower, as
-will constructing a new `Vector` by prepeding an element to the start of the `Vector`, because `List`s are
-structurally optimized for precisely these operations.
+will constructing a new `Vector` by prepeding an element to the start of the `Vector`, simply because `List`s
+are structurally optimized for precisely these operations.
 
 But the guarantee that `Vector` provides is very useful for understanding scalability of operations. The
 guarantee assures us that operations on `Vector`s will have more _predictable_ performance than those on
@@ -168,3 +172,50 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 - `set -- collection`, for removing every element of `collection` from `set`,
 - `xs.intersect(ys)` or `xs & ys`, for calculating the intersection of the elements of `xs` and `ys`,
 - `xs.union(ys)` or `xs | ys`, for calculating the union of the elements of `xs` and `ys`
+
+?---?
+
+# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1).head`?
+
+* [ ] 1
+* [X] 2
+* [ ] 3
+* [ ] 4
+* [ ] 5
+
+# The `List`, `xs`, contains the integers `0` to `4`. If we print every element, accessed by its index, how
+# many times must the `tail` field of a `List` be accessed?
+
+```scala
+val xs = List(0, 1, 2, 3, 4, 5, 6)
+println(xs(0))
+println(xs(1))
+println(xs(2))
+println(xs(3))
+println(xs(4))
+println(xs(5))
+println(xs(6))
+```
+
+* [ ] 5
+* [ ] 6
+* [ ] 7
+* [ ] 18
+* [X] 21
+* [ ] 36
+
+# How many elements are there in the set `zs`?
+
+```scala
+val ws = Set(1, 2, 3)
+val xs = Set(2, 3, 4, 2)
+val ys = Set(2, 4, 8)
+val zs = ws + 4 ++ xs + 5 ++ ys 
+```
+
+* [ ] 5
+* [X] 6
+* [ ] 7
+* [ ] 11
+* [ ] 12
+* [ ] 13
