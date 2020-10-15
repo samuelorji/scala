@@ -6,7 +6,13 @@
       "id": "static",
       "title": "Static vs Dynamic",
       "authorId": "jon-pretty",
-      "duration": 1
+      "duration": 1,
+      "prerequisites": [
+        {
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ]
     }
   ]
 }

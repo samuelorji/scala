@@ -6,20 +6,31 @@
       "id": "basics",
       "title": "Basics",
       "authorId": "jon-pretty",
-      "duration": 12
+      "duration": 12,
+      "prerequisites": [
+        {
+          "topicId": "foundations",
+          "lessonId": "helloworld"
+        }
+      ]
     },
     {
       "id": "subtyping",
       "title": "Subtyping",
       "authorId": "jon-pretty",
-      "duration": 12
+      "duration": 12,
+      "prerequisites": [
+        {
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ]
     },
     {
       "id": "casting",
       "title": "Casting",
       "authorId": "jon-pretty",
       "duration": 14
-
     }
   ]
 }
