@@ -1,6 +1,9 @@
 # Scala Zone Content
 This repository contains content of ScalaZONE website. It stores both lessons text and overall courses structure. Everyone is welcome to make PRs with suggestions [TODO contributing.md]
 
+## Licence
+Content is distributed under the [CreativeCommons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) licence.
+
 ## Deployment triggers
  - Every commit to `develop` brach updates the content on development environment.
  - Every commit to `stage` brach updates the content on staging environment.
