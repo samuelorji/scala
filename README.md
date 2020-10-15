@@ -1,5 +1,5 @@
 # ScalaZONE Content
-This repository contains the content of the [ScalaZONE website](https://scala.zone). It stores both lesson text and course structure. Everyone is welcome to make PRs with suggestions [TODO contributing.md]
+This repository contains the content of the [ScalaZONE website](https://scala.zone). It stores both lesson text and course structure. Everyone is welcome to make PRs with suggestions/
 
 ## Licence	
 Content is distributed under the [CreativeCommons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) licence.	
