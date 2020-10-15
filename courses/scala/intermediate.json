@@ -3,9 +3,9 @@
   "desc": "Scala for unexperienced developers",
   "ranges": [
     {
-      "topicId": "templates",
-      "lessonStart": "inheritance",
-      "lessonEnd": "inheritance"
+      "topicId": "types",
+      "lessonStart": "casting",
+      "lessonEnd": "casting"
     },
     {
       "topicId": "types",
@@ -15,7 +15,7 @@
     {
       "topicId": "patterns",
       "lessonStart": "exhaustivity",
-      "lessonEnd": "associativity"
+      "lessonEnd": "exhaustivity"
     }
   ]
 }
