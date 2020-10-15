@@ -2,6 +2,20 @@
   "name": "Scala for beginner",
   "desc": "Scala for unexperienced developers",
   "ranges": [
-
+    {
+      "topicId": "types",
+      "lessonStart": "casting",
+      "lessonEnd": "casting"
+    },
+    {
+      "topicId": "types",
+      "lessonStart": "hierarchy",
+      "lessonEnd": "hierarchy"
+    },
+    {
+      "topicId": "patterns",
+      "lessonStart": "exhaustivity",
+      "lessonEnd": "exhaustivity"
+    }
   ]
 }

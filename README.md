@@ -1,15 +1,18 @@
 # ScalaZONE Content
+
 This repository contains the content of the [ScalaZONE website](https://scala.zone). It stores both lesson text and course structure. Everyone is welcome to make PRs with suggestions/
 
 ## Licence	
 Content is distributed under the [CreativeCommons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) licence.	
 
-
 ## Deployment triggers	## Deployment triggers
- - Every commit to  the `develop` brach updates the content on development environment.	 - Every commit to the `develop` branch updates the content on the development environment.
- - Every commit to the `stage` brach updates the content on staging environment.	 - Every commit to the `stage` branch updates the content on the staging environment.
- - Every commit to the `main` brach updates the content on production environment.	 - Every commit to the `master` branch updates the content on the production environment. 
-Only the production environment is accessible to the public. People outside of VirtusLab do not have access to `develop` and `stage` environments, but it will be changed in some way in the near future.
+ - Every commit to the `develop` branch updates the content in the development environment.
+ - Every commit to the `stage` branch updates the content in the staging environment.
+ - Every commit to the `main` branch updates the content in the production environment.
+
+Only the production environment is accessible to the public. [TODO: add access for other people?]
+People outside of [VirtusLab](https://virtuslab.com) and [Propensive](https://propensive.com) do not have access to the `develop` and `stage` environments, but access will be provided
+on request.
 
 ## Structure overview
 

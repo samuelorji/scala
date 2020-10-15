@@ -6,7 +6,17 @@
       "id": "objects",
       "title": "Objects in Scala",
       "authorId": "jon-pretty",
-      "duration": 11
+      "duration": 11,
+      "prerequisites": [
+        {
+          "topicId": "foundations",
+          "lessonId": "definitions"
+        },
+        {
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ]
     },
     {
       "id": "classes",
@@ -19,7 +29,13 @@
       "id": "traits",
       "title": "Traits",
       "authorId": "jon-pretty",
-      "duration": 20
+      "duration": 20,
+      "prerequisites": [
+        {
+          "topicId": "types",
+          "lessonId": "subtyping"
+        }
+      ]
     }
   ]
 }

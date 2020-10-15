@@ -6,7 +6,13 @@
       "id": "simple",
       "title": "Simple matching",
       "authorId": "jon-pretty",
-      "duration": 8
+      "duration": 8,
+      "prerequisites": [
+        {
+          "topicId": "foundations",
+          "lessonId": "expressions"
+        }
+      ]
     },
     {
       "id": "destructuring",
@@ -24,7 +30,13 @@
       "id": "collections",
       "title": "Matching on Collections",
       "authorId": "jon-pretty",
-      "duration": 12
+      "duration": 12,
+      "prerequisites": [
+        {
+          "topicId": "collections",
+          "lessonId": "lists"
+        }
+      ]
     }
   ]
 }

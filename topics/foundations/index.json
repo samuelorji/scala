@@ -24,7 +24,13 @@
       "id": "defs",
       "title": "Definitions",
       "authorId": "jon-pretty",
-      "duration": 15
+      "duration": 15,
+      "prerequisites": [
+        {
+          "topicId": "types",
+          "lessonId": "basics"
+        }
+      ]
     }
   ]
 }
