@@ -1,5 +1,3 @@
-# Scopes
-
 At any point within a Scala source file where we may refer to values, methods, objects, types, traits, enums and
 classes by an identifier, Scala must resolve the name we use to the unique definition, somewhere else in our
 code, or within libraries that we depend upon.

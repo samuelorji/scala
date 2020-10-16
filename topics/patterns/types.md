@@ -1,5 +1,3 @@
-# Matching by Type
-
 The patterns we have seen so far have been described in terms of literal values and case classes. But we can
 also match a value by type, subject to some important restrictions.
 

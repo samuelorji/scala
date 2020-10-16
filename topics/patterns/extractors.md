@@ -1,5 +1,3 @@
-# Pattern Extractors
-
 Every case class or enum we define may be used in a pattern. But the same is not true by default for all types.
 It is possible for case classes and enums because, by design, their signatures should be what defines them: the
 notion of equality on a case class is defined in terms of equality on its parameters, as is its `hashCode`

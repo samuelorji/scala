@@ -1,5 +1,3 @@
-# Expressions
-
 The most fundamental components of Scala source code are _expressions_: code which _evaluates_ when a program is
 run to produce a single _value_. Most of the code we write, excluding the signatures which define the structure
 of classes, objects, traits and methods, will be expressions; they most closely represent the code that is doing
@@ -137,3 +135,5 @@ lines like this (or separated by semicolons), all but the last return value will
 
 Expressions are the most fundamental building-blocks of Scala code. Understanding them as the consistent and
 composable means of specifying computations or sequences of operations is key to writing even basic Scala code.
+
+?---?

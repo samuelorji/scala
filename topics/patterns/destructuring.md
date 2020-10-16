@@ -1,5 +1,3 @@
-# Structural Matching 
-
 Scala offers a variety of ways to describe patterns, and much of this topic will be spent discovering these.
 In the example above, we have described the simplest of patterns like `Up` and `Down`. They are just references
 to values, and the `dir` value will be compared to see if it is _equal_ to each of them: first `Up`, and if

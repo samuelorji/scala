@@ -1,5 +1,3 @@
-# Classes
-
 The `object` keyword allows us to create "one-off", or _singleton_, instances of objects with state and methods
 (collectively, we will call these _members_), but we often need to create multiple instances of similar objects;
 a _class_ of objects.

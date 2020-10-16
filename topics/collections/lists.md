@@ -1,5 +1,3 @@
-## Why are there so many collections in scala?
-
 Scala's standard library provides many different collection types, which differ primarily in the structure they
 use to store the values contained within them. The way a collection's internal data is structured has
 implications for how that data is stored and accessed, and certain operations will be performed much more

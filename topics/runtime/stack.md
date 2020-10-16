@@ -1,5 +1,3 @@
-# The Call Stack
-
 A program running in the JVM will use a _stack_ to track where, within a potentially*large program, execution is
 currently happening. A stack is a _first*in last*out_ (FILO) data structure, so called because it behaves like a
 stack of books on a table: we can add to the pile, and it gets higher, but we can only take a book from the top,

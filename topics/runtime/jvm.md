@@ -1,5 +1,3 @@
-# The Java Virtual Machine
-
 Scala code runs inside the _Java Virtual Machine_, or _JVM_. The JVM is designed to look like a "machine" while
 we are writing code to run on it, but it is not actually a machine in the traditional sense, as the different
 parts of the JVM do not necessarily correspond directly to real, physical hardware. It is an abstraction.

@@ -1,5 +1,3 @@
-# Our Environment
-
 Before we start programming in Scala, we will need a working environment in which we can write, edit, compile
 and run Scala code.
 

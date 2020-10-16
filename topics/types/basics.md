@@ -1,5 +1,3 @@
-# Types
-
 Scala uses _types_ during compilation to check that the code we write is self-consistent. Scala's type system
 offers us the single greatest protection from coding mistakes; it makes it impossible for us to even attempt to
 run code which the compiler can prove is inconsistent.

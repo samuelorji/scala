@@ -1,5 +1,3 @@
-# Hashing
-
 The concept of _hash functions_ is fundamental to a number of different areas of software development, from high
 performance access of elements in collections, to security, to caching, it has a variety of different
 applications. A good understanding of the basics of _hashing_ is essential.

@@ -1,5 +1,3 @@
-# Infix operators and associativity
-
 We saw an example earlier of a pattern using two `::` extractors, `case head :: head2 :: Nil`. The compiler
 must make a decision about what order to interpret this. Should the first or the second `::` be applied first?
 1. `case (head :: head2) :: Nil`, or

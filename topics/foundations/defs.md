@@ -1,5 +1,3 @@
-# Declarations
-
 From a syntactic perspective, the code we write in Scala will be a composition of:
 - literal values, such as `"orange"`, `1`, `82.7` and `'z'`
 - Scala keywords, such as `trait`, `def`, `for` and `lazy`

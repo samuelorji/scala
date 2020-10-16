@@ -1,5 +1,3 @@
-# Collections
-
 As programmers we often need to store and operate on multiple similar values, where it's necessary to refer to
 the values _collectively_ rather than individually, and where our code must work whether there is one value, a
 million values, or zero. Scala provides a variety of _collection types_ with for this purpose.

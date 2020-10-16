@@ -1,7 +1,3 @@
-# Matching on Advanced Types
-
-## Path-dependent types
-
 Working with nested classes can lead to path-dependent types. For example, imagine a representation of a
 form containing fields.
 ```scala

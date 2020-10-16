@@ -1,5 +1,3 @@
-# Objects
-
 Every value in Scala is an instance of a type. Many values are _primitive values_ or just _primitives_, which
 are representations of data that have special, native support within the JVM, and very closely correspond to
 operations the computer's CPU is performing. These include number types like `Byte`s, `Double`s, `Float`s,

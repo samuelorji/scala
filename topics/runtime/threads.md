@@ -1,5 +1,3 @@
-# Concurrency
-
 The JVM is capable of doing more than one thing at the same time. We can write software which can respond to
 multiple HTTP requests at the same time, starting to serve one request before the previous one has completed, or
 we can start processing the start of a file while we are still reading it from disk, at the same time as writing
