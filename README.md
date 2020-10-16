@@ -5,7 +5,7 @@ This repository contains the content of the [ScalaZONE website](https://scala.zo
 ## Licence	
 Content is distributed under the [CreativeCommons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) licence.	
 
-## Deployment triggers	## Deployment triggers
+## Deployment triggers
  - Every commit to the `develop` branch updates the content in the development environment.
  - Every commit to the `stage` branch updates the content in the staging environment.
  - Every commit to the `main` branch updates the content in the production environment.
