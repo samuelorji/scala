@@ -160,7 +160,7 @@ object Main:
   y = ""
   // Z
 ```
-# Does the string `"Hello" exist as an object on the heap at the point marked `Z`?
+# Does the string `"Hello"` exist as an object on the heap at the point marked `Z`?
 - [X] Yes
 - [ ] No
 - [ ] Maybe, or maybe not; it may have been garbage collected already
