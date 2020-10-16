@@ -175,11 +175,11 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 
 # What is the value of `List(5, 4, 3, 2, 1).tail.tail(1).head`?
 
-* [ ] 1
-* [X] 2
-* [ ] 3
-* [ ] 4
-* [ ] 5
+- [ ] 1
+- [X] 2
+- [ ] 3
+- [ ] 4
+- [ ] 5
 
 # The `List`, `xs`, contains the integers `0` to `4`. If we print every element, accessed by its index, how many times must the `tail` field of a `List` be accessed?
 
@@ -194,12 +194,12 @@ println(xs(5))
 println(xs(6))
 ```
 
-* [ ] 5
-* [ ] 6
-* [ ] 7
-* [ ] 18
-* [X] 21
-* [ ] 36
+- [ ] 5
+- [ ] 6
+- [ ] 7
+- [ ] 18
+- [X] 21
+- [ ] 36
 
 # How many elements does the set `zs` contain?
 
@@ -210,9 +210,9 @@ val ys = Set(2, 4, 8)
 val zs = ws + 4 ++ xs + 5 ++ ys 
 ```
 
-* [ ] 5
-* [X] 6
-* [ ] 7
-* [ ] 11
-* [ ] 12
-* [ ] 13
+- [ ] 5
+- [X] 6
+- [ ] 7
+- [ ] 11
+- [ ] 12
+- [ ] 13
