@@ -4,7 +4,7 @@
   "lessons": [
     {
       "id": "objects",
-      "title": "Objects in Scala",
+      "title": "Objects",
       "authorId": "jon-pretty",
       "duration": 11,
       "prerequisites": [
