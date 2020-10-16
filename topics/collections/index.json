@@ -9,6 +9,7 @@
       "duration": 20,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "templates",
           "lessonId": "classes"
         }

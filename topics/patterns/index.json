@@ -9,6 +9,7 @@
       "duration": 8,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "foundations",
           "lessonId": "expressions"
         }
@@ -33,6 +34,7 @@
       "duration": 12,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "collections",
           "lessonId": "lists"
         }
