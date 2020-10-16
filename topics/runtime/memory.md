@@ -147,12 +147,14 @@ This, however, is just an optimization, designed to minimize the impact of garba
 * [X] Eden space
 
 # Garbage collection of JVM objects happens:
-* [ ] When the objects are left unused in collections for a period of time
-* [X] When no references to those objects exist
-* [ ] After having spent a period of time in survior space
-* [ ] At regular intervals
 
-Consider the following code:
+- [ ] When the objects are left unused in collections for a period of time
+- [X] When no references to those objects exist
+- [ ] After having spent a period of time in survior space
+- [ ] At regular intervals
+
+# Does the string `"Hello"` exist as an object on the heap at the point marked `Z`, in the following code?
+
 ```scala
 object Main:
   val x = "Hello"
@@ -160,7 +162,7 @@ object Main:
   y = ""
   // Z
 ```
-# Does the string `"Hello" exist as an object on the heap at the point marked `Z`?
+
 - [X] Yes
 - [ ] No
 - [ ] Maybe, or maybe not; it may have been garbage collected already

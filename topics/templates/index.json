@@ -4,17 +4,17 @@
   "lessons": [
     {
       "id": "objects",
-      "title": "Objects in Scala",
+      "title": "Objects",
       "authorId": "jon-pretty",
       "duration": 11,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "we will need to create some definitions within objects",
           "topicId": "foundations",
           "lessonId": "defs"
         },
         {
-          "reason": "",
+          "reason": "every object has a type, and  basic understanding of types is useful",
           "topicId": "types",
           "lessonId": "basics"
         }
@@ -34,7 +34,7 @@
       "duration": 20,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "inheritance from traits requires an understanding of subtyping",
           "topicId": "types",
           "lessonId": "subtyping"
         }

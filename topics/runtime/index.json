@@ -9,7 +9,7 @@
       "duration": 12,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "before understanding the JVM, we need a working development environment with Java installed",
           "topicId": "foundations",
           "lessonId": "environment"
         }
@@ -22,7 +22,7 @@
       "duration": 14,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "Java's memory stores objects, so we need to understand them first",
           "topicId": "templates",
           "lessonId": "objects"
         }
@@ -35,7 +35,7 @@
       "duration": 15,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "the stack contains references to methods in classes, so we should understand classes first",
           "topicId": "templates",
           "lessonId": "classes"
         }

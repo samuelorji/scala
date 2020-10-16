@@ -9,7 +9,7 @@
       "duration": 20,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "to understand collection classes, we should first understand classes",
           "topicId": "templates",
           "lessonId": "classes"
         }

@@ -96,7 +96,7 @@ Assigning each intermediate result to a named identifier should make it more obv
 continues to exist after its creation: `acct0`, for example, will always be a reference to a `Vector`
 with zero elements.
 
-More likely, we don't need all the intermediate results, so we could write this more simply as,
+More likely, we don't need all the intermediate results, so we could write this more simply as:
 ```scala
 val acct3: Vector[Int] = Vector() :+ 1000 :+ -200 :+ -300
 ```
@@ -111,7 +111,7 @@ val acct3: Vector[Int] = Vector(1000, -200, -300)
 ```
 
 `Vector`s also provide a counterpart to the `:+` operator for _prepending_ elements to the start of a `Vector`.
-That operator is `+:`, the mirror-image of the `:+` operator. For example,
+That operator is `+:`, the mirror-image of the `:+` operator. For example:
 ```scala
 val acct4 = -100 +: acct3
 ```
