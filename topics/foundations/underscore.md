@@ -1,5 +1,3 @@
-# The Underscore
-
 Scala's use of the underscore (`_`) character has been a point of contention for as long as the language has
 existed, as a consequence of its many varied uses, and the difficulty in knowing how it should be interpreted in
 different contexts.

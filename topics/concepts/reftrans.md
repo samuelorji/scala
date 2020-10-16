@@ -1,5 +1,3 @@
-# Referential Transparency
-
 In an earlier example, we saw how,
 ```scala
 def second: String =

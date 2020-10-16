@@ -1,5 +1,3 @@
-# Pattern Matching Syntax
-
 Reading and writing match expressions requires us to understand a couple of fundamental details of Scala's
 syntax. In this lesson, we will examine a couple more of these details: the significance of identifier names in
 a pattern, and alternation.

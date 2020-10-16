@@ -1,5 +1,3 @@
-## Introduction
-
 In the previous lessons you learned about `Vector`, `List`, and the `Set` collections with basics of operating on them. In fact, scala equips you with a rich assortment of functions that enable you to perform various operations on them. In this lesson we will cover the most common of these functions. It is important for you to keep in mind that `Vector` and `List` share most of their functions. Following examples will present them with a `List` type, but all of them can be used with a `Vector` as well.
 
 ## Initializing Collections

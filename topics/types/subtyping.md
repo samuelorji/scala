@@ -1,5 +1,3 @@
-# Subtyping
-
 Some types may share some features or behaviors in common, and we can assert useful relationships between
 certain types to indicate, at a very fundamental level, allows us to encode the concepts of _generality_ and
 _specificity_ through the type system.

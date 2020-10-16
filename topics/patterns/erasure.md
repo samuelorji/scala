@@ -1,7 +1,3 @@
-# Erasure
-
-## Abstract types
-
 Another limitation of the Java runtime is that we cannot match against types unless we know, concretely, what
 they are. Imagine, for example, the following method which we would like to return a `Some[S]`, if the
 `Any`-typed value is an instance of the type `S`.

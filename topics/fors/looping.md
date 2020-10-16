@@ -1,5 +1,3 @@
-# Looping, yielding and filters
-
 In the previous lessons we talked about methods that are called `foreach`, `map` and `filter`. In this lesson you will learn about a more convenient way to work with these functions. At first it may seem that the construct you are going to learn about only makes your code look cleaner. However, it is one of the most important and commonly used features in the functional programming.
 
 ## The for comprehension

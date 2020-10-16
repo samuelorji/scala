@@ -1,5 +1,3 @@
-# Subtyping Diagrams
-
 Subtyping relationships between some types in Scala imply a partial order between them. That is to say, for any
 two concretely-known types, `A` and `B`, `A` may be a subtype of `B`, or `B` may be a subtype of `A`, or there
 may be no subtyping relationship between them.

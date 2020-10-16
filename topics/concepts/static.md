@@ -1,5 +1,3 @@
-# Compilation vs Interpretation
-
 Many programming languages allow us to write code, and run it directly, converting the source code into machine
 code and running it, as it is being read. This is called _interpretation_, and contrasts with _compilation_,
 which fully converts an entire program from source code to machine code before any of it is executed. Pieces of

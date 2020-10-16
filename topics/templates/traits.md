@@ -1,5 +1,3 @@
-# Traits
-
 Scala provides another kind of template, similar to a class, but trading some constraints for some additional
 capabilities. Like a class, a _trait_ defines a body with methods, state and other members. A trait may also
 define a constructor, but unlike a class, cannot be instantiated; not _directly_, at least. This compromise has

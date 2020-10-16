@@ -1,5 +1,3 @@
-# Pattern Matching on Collections
-
 We commonly want to match on collection types like `List[Int]` or `Vector[String]`, and Scala offers special
 support for matching against collections using _infix extractors_.
 

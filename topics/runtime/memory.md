@@ -1,5 +1,3 @@
-# The JVM Memory Model
-
 All data that is used by a running JVM—values, objects, arrays—will be stored in one of two places: on the
 _heap_, a large block of memory, parts of which may be allocated by the JVM when needed, or in the _stack_,
 a special data structure which stores the current position in a running program, and the history of how it got

@@ -1,5 +1,3 @@
-# Inheritance
-
 Often we want to define a class which has all of the state and methods of another class, but provides additional
 functionality; extra methods and/or state. Scala provides this through _inheritance_, and establishes a
 _subtyping relationship_ between the new template and the template in inherits from.
