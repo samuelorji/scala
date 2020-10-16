@@ -10,7 +10,7 @@
       "prerequisites": [
         {
           "topicId": "foundations",
-          "lessonId": "definitions"
+          "lessonId": "defs"
         },
         {
           "topicId": "types",
