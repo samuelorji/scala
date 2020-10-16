@@ -28,7 +28,7 @@
       "prerequisites": [
         {
           "topicId": "types",
-          "reason": "test",
+          "reason": "",
           "lessonId": "basics"
         }
       ]

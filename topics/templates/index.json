@@ -9,10 +9,12 @@
       "duration": 11,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "foundations",
           "lessonId": "defs"
         },
         {
+          "reason": "",
           "topicId": "types",
           "lessonId": "basics"
         }
@@ -32,6 +34,7 @@
       "duration": 20,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "types",
           "lessonId": "subtyping"
         }

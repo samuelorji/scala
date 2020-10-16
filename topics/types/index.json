@@ -9,6 +9,7 @@
       "duration": 12,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "foundations",
           "lessonId": "helloworld"
         }
@@ -21,6 +22,7 @@
       "duration": 12,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "templates",
           "lessonId": "classes"
         }

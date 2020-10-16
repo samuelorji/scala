@@ -9,6 +9,7 @@
       "duration": 12,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "foundations",
           "lessonId": "environment"
         }
@@ -21,6 +22,7 @@
       "duration": 14,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "templates",
           "lessonId": "objects"
         }
@@ -33,6 +35,7 @@
       "duration": 15,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "templates",
           "lessonId": "classes"
         }

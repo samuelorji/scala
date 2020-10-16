@@ -9,6 +9,7 @@
       "duration": 1,
       "prerequisites": [
         {
+          "reason": "",
           "topicId": "types",
           "lessonId": "basics"
         }

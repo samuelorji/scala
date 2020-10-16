@@ -15,9 +15,9 @@ writing elements at arbitrary locations within it. `Stream`s are similar to `Lis
 list is computed _lazily_, or "on-demand", and whose total length is not known at the outset, and may actually
 be infinite.
 
-`Set`s are optimized for deduplicated, unordered values while `TreeSet`s can take take advantage on a sort order
-on the set's elements. These have _map-like_ counterparts which associate with each item, which we call the
-_key_, a secondary associated value of another type (which is our choice), allowing the associated values to be
+`Set`s are optimized for deduplicated, unordered values while `TreeSet`s can take advantage on a sort order on
+the set's elements. These have _map-like_ counterparts which associate with each item, which we call the _key_,
+a secondary associated value of another type (which is our choice), allowing the associated values to be
 accessed using a key as an index. These types are called `Map` and `TreeMap`, respectively.
 
 Other types in the collections library provide generalizations of these interfaces for when we need to operate
