@@ -9,7 +9,7 @@
       "duration": 8,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "pattern matches are composed of (and are themselves) expressions, so we should understand these first",
           "topicId": "foundations",
           "lessonId": "expressions"
         }
@@ -34,7 +34,7 @@
       "duration": 12,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "it would be useful to know a few collections before we try to pattern match on them",
           "topicId": "collections",
           "lessonId": "lists"
         }

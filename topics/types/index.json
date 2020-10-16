@@ -9,9 +9,14 @@
       "duration": 12,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "we should know how a trivial program works before exploring types",
           "topicId": "foundations",
           "lessonId": "helloworld"
+        },
+        {
+          "reason": "types are a static concept, and we should be clear about the distinction between runtime and compiletime",
+          "topicId": "concepts",
+          "lessonId": "static"
         }
       ]
     },
@@ -22,7 +27,7 @@
       "duration": 12,
       "prerequisites": [
         {
-          "reason": "",
+          "reason": "subtyping requires a basic understanding of classes to provide context",
           "topicId": "templates",
           "lessonId": "classes"
         }

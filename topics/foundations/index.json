@@ -27,8 +27,8 @@
       "duration": 15,
       "prerequisites": [
         {
+          "reason": "all value definitions will have a type, so we need a basic intuition for types first",
           "topicId": "types",
-          "reason": "",
           "lessonId": "basics"
         }
       ]
