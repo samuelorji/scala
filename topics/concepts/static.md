@@ -98,24 +98,29 @@ facts we encode statically in types, and having the Scala compiler do the hard w
 ?---?
 
 # Scala is...
-* [X] a statically-typed language
-* [ ] a dynamically-typed language
+
+- [X] a statically-typed language
+- [ ] a dynamically-typed language
 
 # True or false? Interpreted languages never have types.
-* [ ] True
-* [X] False
+
+- [ ] True
+- [X] False
 
 # True or false? Unit tests may verify facts about a program that types cannot verify.
-* [X] True
-* [ ] False
+
+- [X] True
+- [ ] False
 
 # True or false? Most programming languages are either designed to be interpreted or designed to be compiled.
-* [X] True
-* [ ] False
+
+- [X] True
+- [ ] False
 
 # Select all the facts which can be known statically
-- [X] the expression `5 + 4 > 3` is `true`
-- [ ] the expression `x/2 > 0` is `true` where `x` is an integer
-- [X] the expression `3*2` is `6`
-- [X] the expression `StdIn.readDouble` is a `Double`
-- [ ] the expression `math.random > 0` is `true`
+
+* [X] the expression `5 + 4 > 3` is `true`
+* [ ] the expression `x/2 > 0` is `true` where `x` is an integer
+* [X] the expression `3*2` is `6`
+* [X] the expression `StdIn.readDouble` is a `Double`
+* [ ] the expression `math.random > 0` is `true`
