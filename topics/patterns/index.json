@@ -37,6 +37,13 @@
           "lessonId": "lists"
         }
       ]
+    },
+    {
+      "id": "exhaustivity",
+      "title": "Exhaustivity",
+      "authorId": "jon-pretty",
+      "duration": 10,
+      "comingSoon": true
     }
   ]
 }

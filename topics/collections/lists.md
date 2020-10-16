@@ -204,7 +204,7 @@ println(xs(6))
 * [X] 21
 * [ ] 36
 
-# How many elements are there in the set `zs`?
+# How many elements does the set `zs` contain?
 
 ```scala
 val ws = Set(1, 2, 3)

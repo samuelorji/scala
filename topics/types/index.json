@@ -31,6 +31,13 @@
       "title": "Casting",
       "authorId": "jon-pretty",
       "duration": 14
+    },
+    {
+      "id": "hierarchy",
+      "title": "The Type Hierarchy",
+      "authorId": "jon-pretty",
+      "duration": 14,
+      "comingSoon": true
     }
   ]
 }
