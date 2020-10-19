@@ -8,11 +8,11 @@ find ./ -type f -exec sed -i -e 's/&quot;/"/g' {} \;
 
 gcloud info
 DIRS=(pages courses topics contexts icons courseImages contentImages)
-FILES=(revision authors.json)
+FILES=(revision authors.json companies.json)
 gsutil rm -r "gs://$CONTENT_BUCKET/*"
-for dir in ${DIRS[@]};do
+for dir in "${DIRS[@]}"; do
     gsutil cp -r "$dir" "gs://$CONTENT_BUCKET"
 done
-for file in ${FILES[@]}; do
+for file in "${FILES[@]}"; do
     gsutil cp "$file" "gs://$CONTENT_BUCKET"
 done

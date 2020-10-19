@@ -5,7 +5,7 @@
     {
       "id": "basics",
       "title": "Basics",
-      "authorId": "jon-pretty",
+      "authorId": "szymon-rodziewicz",
       "duration": 20,
       "prerequisites": [
         {
@@ -18,7 +18,7 @@
     {
       "id": "lists",
       "title": "Lists and Sets",
-      "authorId": "jon-pretty",
+      "authorId": "szymon-rodziewicz",
       "duration": 17
     }
   ]

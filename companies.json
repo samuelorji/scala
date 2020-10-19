@@ -1,0 +1,11 @@
+[
+  {
+      "id": "virtuslab",
+      "name": "VirtusLab",
+      "order": 0,
+      "twitter": "https://twitter.com/virtuslab",
+      "github": "https://github.com/VirtusLab",
+      "facebook": "https://www.facebook.com/virtuslab",
+      "desc": "TODO desc of VirtusLab"
+  }
+]
