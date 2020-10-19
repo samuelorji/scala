@@ -12,5 +12,6 @@
     "Introduction to scala types and collection",
     "Pattern matching, erasure and exhaustivity",
     "Extracts and type matching"
-  ]
+  ],
+  "sponsoredBy": "virtuslab"
 }
