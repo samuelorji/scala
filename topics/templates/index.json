@@ -39,6 +39,20 @@
           "lessonId": "subtyping"
         }
       ]
+    },
+    {
+      "id": "inheritance",
+      "title": "Inheritance",
+      "authorId": "jon-pretty",
+      "duration": 11,
+      "prerequisites": [
+        {
+          "reason": "we should understand how types are organized hierarchically",
+          "topicId": "types",
+          "lessonId": "hierarchy"
+        }
+      ],
+      "comingSoon": true
     }
   ]
 }

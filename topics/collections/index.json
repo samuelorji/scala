@@ -1,6 +1,6 @@
 {
   "name": "Collections",
-  "desc": "Collection in Scala",
+  "desc": "Working with collections of values",
   "lessons": [
     {
       "id": "basics",
@@ -20,6 +20,13 @@
       "title": "Lists and Sets",
       "authorId": "szymon-rodziewicz",
       "duration": 17
+    },
+    {
+      "id": "methods",
+      "title": "Collection Methods",
+      "authorId": "jon-pretty",
+      "duration": 16,
+      "comingSoon": true
     }
   ]
 }
