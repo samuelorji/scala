@@ -1,11 +1,11 @@
 {
-  "name": "Scala for beginner",
-  "desc": "Scala for unexperienced developers",
+  "name": "Intermediate Scala",
+  "desc": "Scala from for developers who already have some experience",
   "ranges": [
     {
       "topicId": "types",
       "lessonStart": "casting",
-      "lessonEnd": "inheritance"
+      "lessonEnd": "hierarchy"
     },
     {
       "topicId": "patterns",
@@ -16,6 +16,11 @@
       "topicId": "foundations",
       "lessonStart": "scopes",
       "lessonEnd": "scopes"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "traits",
+      "lessonEnd": "inheritance"
     },
     {
       "topicId": "runtime",
