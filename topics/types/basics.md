@@ -96,7 +96,7 @@ compiler can use), if two different types with the same name are accessible in t
 possible to resolve one of them, and Scala may additionally produce an error in the event of such a conflict.
 We will learn more about this during the topic of _scopes_.
 
-This is in contrast to the _term namespace_ which contains the names of _terms_, that is, objects, values,
+This is in contrast to the _term namespace_ which contains the names of _terms_, that is, objects,
 methods and values. The _term namespace_ has the same constraint that a single identifier must consistently
 resolve to only one _term_ object, but the distinction between the two namespaces is important because the same
 name may refer to both a _type_ and a _term_, which are different entities. The syntactic context is all that

@@ -52,7 +52,7 @@ part of the state of each `BasicLog` instance, so it's accessible like `val`s de
 unlike `val`s, class parameters are not accessible from _outside_ the class's body.
 
 The signature of the class, `BasicLog(id: String)` in this example, looks and behaves a lot like a method, and
-is called a _constructor_ because it _constructs_ a new object instance. Consequencly, parameters such as `id`
+is called a _constructor_ because it _constructs_ a new object instance. Consequently, parameters such as `id`
 are called _constructor parameters_.
 
 We can instantiate a new `BasicLog` instance by calling its constructor, for example:
