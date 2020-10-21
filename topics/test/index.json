@@ -4,13 +4,13 @@
   "lessons": [
     {
       "id": "testA",
-      "title": "Test A",
+      "title": "Test A ąćź>",
       "authorId": "szymon-rodziewicz",
       "duration": 5
     },
     {
       "id": "testB",
-      "title": "Test B",
+      "title": "Test B ∂śą∂śą <",
       "authorId": "szymon-rodziewicz",
       "duration": 5
     }
