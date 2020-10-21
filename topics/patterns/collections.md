@@ -116,5 +116,34 @@ object + :
 def fractional(x: Double) = x match
   case _ + f => f
 ```
+to give us a method which returns just the fractional part of a `Double`.
+
+Note that we have to add a space between the `+`, which is the name of the object, and the syntactic `:`, which
+indicates the start of its definition, so that the two are not interpreted as the same name.
+
+Infix extractors are convenient for _deconstructing_ objects which were _constructed_ using infix operators.
+This maintains the syntactic correspondence between the construction of a value, and a pattern which matches
+against it.
 
 ?---?
+
+# Select the code that is equivalent to the pattern, `case In(Of(8, April), year) =>`:
+
+- [ ] `case 8 In April Of year =>`
+- [ ] `case 8 In (April Of year) =>`
+- [ ] `case In(Of(8, April, year)) =>`
+- [X] `case Of(8, April) In year =>`
+- [ ] `case In(8, Of(April, year)) =>`
+
+# The following code is equivalent to one case clause which matches against a scrutinee, `s`. Which case clause?
+
+```scala
+if ~.unapply(s) == Some(("abc", "xyz")) then f
+else ... // handle other cases
+```
+
+- [ ] `case ~.unapply("abc", "xyz") => f`
+- [X] `case "abc" ~ "xyz" => f`
+- [ ] `case Some("abc" ~ "xyz") => f`
+- [ ] `case s => if s == ("abc", "xyz") then f`
+- [ ] `case "abc" Some "xyz" => f`
