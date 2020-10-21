@@ -43,6 +43,11 @@
       "lessonEnd": "threads"
     },
     {
+      "topicId": "fors",
+      "lessonStart": "looping",
+      "lessonEnd": "looping"
+    },
+    {
       "topicId": "syntax",
       "lessonStart": "underscore",
       "lessonEnd": "underscore"
