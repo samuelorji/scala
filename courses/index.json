@@ -1,5 +1,6 @@
 {
   "courses": [
-      "scala"
+      "scala",
+      "test"
       ]
 }

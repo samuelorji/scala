@@ -1,0 +1,14 @@
+{
+  "name": "Test Topic",
+  "desc": "Testing",
+  "lessons": [
+    {
+      "id": "testA",
+      "title": "Test A"
+    },
+    {
+      "id": "testB",
+      "title": "Test B"
+    }
+  ]
+}
