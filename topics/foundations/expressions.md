@@ -121,7 +121,7 @@ When two statements appear after each other on separate lines, or separated by a
 evaluated one after the other. For example,
 ```scala
 println("Waiting...")
-Thread.sleep(1000L)
+Thread.sleep(1000)
 println("Done.")
 ```
 will print `"Waiting..."` on the console, will then wait for 1000 milliseconds, before finally printing
@@ -137,3 +137,41 @@ Expressions are the most fundamental building-blocks of Scala code. Understandin
 composable means of specifying computations or sequences of operations is key to writing even basic Scala code.
 
 ?---?
+
+# In the following short code sample, identify all the expressions:
+
+```scala
+val y = (3 + x)*2
+println(y*5)
+```
+
+* [ ] `val`
+* [X] `3 + x`
+* [X] `x`
+* [ ] `val y`
+* [X] `println(y*5)`
+* [X] `y*5`
+* [X] `2`
+* [ ] `=`
+
+# Select all of the claims that are true about the following line of code:
+
+```scala
+println("Hello, World!")
+```
+
+* [X] it is a statement
+* [X] it is an expression
+* [ ] it is pure
+* [X] it has side-effects
+* [ ] the parameter to `println` is a statement
+* [X] the parameter to `println` is an expression
+
+# True or false? The following code returns a value.
+
+```scala
+Thread.sleep(1000)
+```
+
+- [X] True
+- [ ] False
