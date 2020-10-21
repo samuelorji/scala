@@ -4,7 +4,7 @@
   "ranges": [
     {
       "topicId": "foundations",
-      "lessonStart": "environment",
+      "lessonStart": "expressions",
       "lessonEnd": "scopes"
     },
     {

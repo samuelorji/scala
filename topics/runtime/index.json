@@ -8,11 +8,6 @@
       "authorId": "jon-pretty",
       "duration": 12,
       "prerequisites": [
-        {
-          "reason": "before understanding the JVM, we need a working development environment with Java installed",
-          "topicId": "foundations",
-          "lessonId": "environment"
-        }
       ]
     },
     {
