@@ -1,17 +1,18 @@
 {
-  "name": "Scala course",
+  "name": "Scala",
   "levels": [
     "intermediate",
     "beginner"
   ],
   "image": "courseImages/scala.svg",
   "video": "https://www.youtube.com/embed/FvYS8r9Nt18",
-  "desc": "Scala language course",
+  "desc": "The Scala programming language",
   "language": "English",
   "scope": [
-    "Introduction to scala types and collection",
-    "Pattern matching, erasure and exhaustivity",
-    "Extracts and type matching"
+    "Learn Scala 3 syntax",
+    "Explore the Scala type system",
+    "Write functional code",
+    "Understand the JVM runtime"
   ],
   "sponsoredBy": "virtuslab"
 }
