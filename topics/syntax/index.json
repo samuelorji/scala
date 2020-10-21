@@ -1,0 +1,13 @@
+{
+  "name": "Syntax",
+  "desc": "The syntax of Scala code",
+  "lessons": [
+    {
+      "id": "underscore",
+      "title": "The Underscore",
+      "authorId": "jon-pretty",
+      "duration": 17,
+      "comingSoon": true
+    }
+  ]
+}

@@ -5,37 +5,47 @@
     {
       "topicId": "foundations",
       "lessonStart": "environment",
-      "lessonEnd": "defs"
+      "lessonEnd": "scopes"
     },
     {
       "topicId": "concepts",
       "lessonStart": "static",
-      "lessonEnd": "static"
+      "lessonEnd": "hashing"
     },
     {
       "topicId": "templates",
       "lessonStart": "objects",
-      "lessonEnd": "traits"
+      "lessonEnd": "inheritance"
     },
     {
       "topicId": "types",
       "lessonStart": "basics",
-      "lessonEnd": "casting"
+      "lessonEnd": "hierarchy"
     },
     {
       "topicId": "patterns",
       "lessonStart": "simple",
-      "lessonEnd": "collections"
+      "lessonEnd": "exhaustivity"
     },
     {
       "topicId": "collections",
       "lessonStart": "basics",
-      "lessonEnd": "lists"
+      "lessonEnd": "methods"
+    },
+    {
+      "topicId": "data",
+      "lessonStart": "enums",
+      "lessonEnd": "enums"
     },
     {
       "topicId": "runtime",
       "lessonStart": "jvm",
-      "lessonEnd": "stack"
+      "lessonEnd": "threads"
+    },
+    {
+      "topicId": "syntax",
+      "lessonStart": "underscore",
+      "lessonEnd": "underscore"
     }
   ]
 }

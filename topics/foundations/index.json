@@ -1,6 +1,6 @@
 {
   "name": "Foundations",
-  "desc": "Fundamental topics for learning to program in Scala on the JVM",
+  "desc": "Fundamental topics for learning to program in Scala",
   "lessons": [
     {
       "id": "environment",
@@ -32,6 +32,20 @@
           "lessonId": "basics"
         }
       ]
+    },
+    {
+      "id": "scopes",
+      "title": "Scopes and Namespaces",
+      "authorId": "jon-pretty",
+      "duration": 9,
+      "prerequisites": [
+        {
+          "reason": "classes are one of the primary constructs which give rise to scopes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ],
+      "comingSoon": true
     }
   ]
 }

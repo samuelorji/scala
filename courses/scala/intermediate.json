@@ -1,21 +1,41 @@
 {
-  "name": "Scala for beginner",
-  "desc": "Scala for unexperienced developers",
+  "name": "Intermediate Scala",
+  "desc": "Scala from for developers who already have some experience",
   "ranges": [
     {
       "topicId": "types",
       "lessonStart": "casting",
-      "lessonEnd": "casting"
-    },
-    {
-      "topicId": "types",
-      "lessonStart": "hierarchy",
       "lessonEnd": "hierarchy"
     },
     {
       "topicId": "patterns",
-      "lessonStart": "exhaustivity",
+      "lessonStart": "collections",
       "lessonEnd": "exhaustivity"
+    },
+    {
+      "topicId": "foundations",
+      "lessonStart": "scopes",
+      "lessonEnd": "scopes"
+    },
+    {
+      "topicId": "templates",
+      "lessonStart": "traits",
+      "lessonEnd": "inheritance"
+    },
+    {
+      "topicId": "runtime",
+      "lessonStart": "stack",
+      "lessonEnd": "threads"
+    },
+    {
+      "topicId": "collections",
+      "lessonStart": "methods",
+      "lessonEnd": "methods"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "hashing",
+      "lessonEnd": "hashing"
     }
   ]
 }

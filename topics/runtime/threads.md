@@ -118,8 +118,6 @@ that lock is dependent on code which needs to take the lock. The lock cannot be 
 it cannot be released until the code elsewhere has taken it. This risk can be avoided with care, but casual
 overuse of synchronization can make deadlock a little too easy for comfort.
 
-## Summary
-
 Threads give the JVM enormous power to perform many operations concurrently, which is almost essential for
 a modern programming environment. They are, however, a low-level construct which can make our code less safe,
 and they often serve us better as the foundation for higher-level concurrency models. Nevertheless, whatever

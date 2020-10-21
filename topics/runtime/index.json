@@ -40,6 +40,13 @@
           "lessonId": "classes"
         }
       ]
+    },
+    {
+      "id": "threads",
+      "title": "Threads",
+      "authorId": "jon-pretty",
+      "duration": 12,
+      "comingSoon": true
     }
   ]
 }
