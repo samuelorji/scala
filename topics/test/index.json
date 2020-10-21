@@ -5,12 +5,14 @@
     {
       "id": "testA",
       "title": "Test A",
-      "authorId": "szymon-rodziewicz"
+      "authorId": "szymon-rodziewicz",
+      "duration": 5
     },
     {
       "id": "testB",
       "title": "Test B",
-      "authorId": "szymon-rodziewicz"
+      "authorId": "szymon-rodziewicz",
+      "duration": 5
     }
   ]
 }
