@@ -173,7 +173,7 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 
 ?---?
 
-# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1).head`?
+# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1)`?
 
 - [ ] 1
 - [X] 2

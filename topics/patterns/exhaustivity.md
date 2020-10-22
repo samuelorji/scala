@@ -80,7 +80,7 @@ converted to a `String`.
 Remember that the order of the cases is important. If we were to shuffle the order they appear in the list, it
 could change the behavior of the match.
 
-### Ability to check Exhaustivity (beginner)
+## Checking Exhaustivity
 
 For each case in a match, Scala will ask itself a question: do there exist any instances of the scrutinee which
 earlier cases would not match, but which this case would match? And for the entire match, it asks, are there

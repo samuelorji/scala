@@ -22,14 +22,14 @@ This structure is known as _encapsulation_.
 
 For example,
 ```scala
-object Development extends Project:
+object Project extends ProjectDef:
   val tasks: List[Task] = List(Setup, Core, Refinement, Cleanup)
   def todo: Int = tasks.count(!_.done) 
 
 println(s"There are ${Project.todo} tasks to do.")
 ```
 
-Within the object `Development` we can define a method, `todo`, which refers to the value, `tasks`, directly; we
+Within the object `Project` we can define a method, `todo`, which refers to the value, `tasks`, directly; we
 do not need to reference it as `Project.tasks` (although we could). Likewise, the definition of `todo` needs to
 access the `count` method of the list of tasks, but we cannot simply call `count`; we need the `count` method
 which operates on the `Task` elements of the `List` called `tasks`, hence we call `tasks.length`. Outside of the
@@ -42,7 +42,7 @@ object-oriented design: a single, atomic reference can be used as a means to acc
 state together, for example:
 
 ```scala
-def describe(p: Project): Unit =
+def describe(p: ProjectDef): Unit =
   println(s"${p.todo} out of ${p.tasks.length} are incomplete.")
 
 describe(Development)
@@ -51,7 +51,7 @@ describe(Development)
 It is clear from the definition of `describe` that, with only a single reference, `p`, passed as a parameter,
 the expressions `p.todo` and `p.tasks.length` relate (directly or indirectly) to the state from the same object,
 `p`. Accessing a member like `todo` or `tasks` through a reference, as `p.todo` or `p.tasks` is called
-_dereferencing_. We _dereference_ `p` to access its `todo` and `tasks` members.
+_selection_ or _dereferencing_. We _dereference_ `p` and _select_ its `todo` and `tasks` members.
 
 Compare that to a hypothetical alternative implementation which passes the `tasks` and `todo` as separate
 parameters:
@@ -65,8 +65,10 @@ It is entirely possible to call this `describe` method with a `tasks` value from
 from elsewhere, which would make it possible for `describe` to produce inconsistent output, like this:
 
 ```scala
-describe(Development.tasks, 10)
+describe(Project.tasks, 10)
 ```
+
+## Defining objects
 
 In Scala, we can create a new object using the `object` keyword, with a name for the object. While we can create
 a new object almost anywhere, we most commonly want to create an object at the top-level: not nested within
@@ -115,8 +117,7 @@ instantiated, so, like `def`s, the order they appear in is insignificant.
 
 ?---?
 
-
-# Consider the following `object` definition within a hypothetical piece of software called "Onion",
+# Consider the following `object` definition within a hypothetical piece of software called _Onion_,
 
 ```scala
 object Info:
@@ -165,7 +166,7 @@ object Beta:
   def alpha = Alpha
   val delta = 4
 
-object Gamma
+object Gamma:
   val epsilon = 5
 
 @main

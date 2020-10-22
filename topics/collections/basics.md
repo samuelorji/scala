@@ -234,5 +234,5 @@ val d = Vector(1)
 * [ ] `0 +: 1 +: 0 +: 1`
 * [ ] `0 +: d +: c +: Vector(1)`
 * [X] `a ++ c ++ d`
-* [ ] `a ++ Vector() ++ a ++ Vector()`
 * [X] `a ++ a`
+* [ ] `a ++ Vector() ++ a :+ Vector()`
