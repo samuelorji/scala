@@ -1,0 +1,12 @@
+{
+  "name": "Test Topic 2",
+  "desc": "Testingggg ąę <",
+  "lessons": [
+    {
+      "id": "testC",
+      "title": "Test C ąćź>",
+      "authorId": "szymon-rodziewicz",
+      "duration": 5
+    }
+  ]
+}
