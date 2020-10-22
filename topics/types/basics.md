@@ -25,7 +25,7 @@ at its foundation, the DOT calculus. As well as providing us with a basis to tru
 (as long as we do not try to circumvent it!), DOT allows us to combine types algebraicly, almost as easily as we
 would numbers.
 
-## Properties
+# Properties
 
 We can think of a type as shorthand for describing the properties that its instances will have. When we define
 a new class, it introduces a new type (or many types) corresponding to that template. Having defined a new
@@ -49,7 +49,7 @@ example, to specify properties an instance should _not_ have. And details about 
 number and types of their parameters and their return type cannot be encoded in a type. For example, it would
 not be possible to specify that a method is pure or deterministic in its type.
 
-## Member references
+# Member references
 
 Often, when we talk about members (in this course and elsewhere), we want to specify that member by its name and
 the name of the type it is a member of. We can do this using the `#` symbol, for example to specify the
@@ -65,7 +65,7 @@ do instances of the type `List` have members called `empty`.)
 So, in general, `a.b` refers to the member `b` of the instance `a` (of unspecified type), while `A#b` refers to
 the member `b` of _an instance of_ the type `A`.
 
-## Templates and Types
+# Templates and Types
 
 It's important to remember that a value has a type because it was constructed as an instance of a particular
 template, and _not_ because it has the properties needed to conform to that type. In fact, a value may have

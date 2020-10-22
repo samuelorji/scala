@@ -2,7 +2,7 @@ The concept of _hash functions_ is fundamental to a number of different areas of
 performance access of elements in collections, to security, to caching, it has a variety of different
 applications. A good understanding of the basics of _hashing_ is essential.
 
-## What is a Hash Function?
+# What is a Hash Function?
 
 A hash function is a pure, total, deterministic function from a large domain into a smaller range, where a
 different input is _very likely_ to produce a different output.
@@ -54,7 +54,7 @@ Modern computers are able to compare any two 32-bit integers equally fast, so th
 computer in the same way as it helps a human. But hash functions can be defined for any kind of finite input,
 such as strings, or files, or lists of objects.
 
-## Hashing for storing data
+# Hashing for storing data
 
 Hash functions are useful for storing and accessing data fast. Consider another simple hash function on strings,
 or the subset of strings that are people's names: we will hash every string to its first letter, ignoring case.
@@ -75,7 +75,7 @@ single record we store, and instead limited us to a linear search through just a
 
 But there are a few more observations we can make about this.
 
-## Uniformity of Distribution
+# Uniformity of Distribution
 
 Firstly, Names are not evenly distributed through the alphabet, so there are many more people with names
 beginning with "S" than there are people with names beginning with "Q". So the linear search to look up someone
@@ -113,7 +113,7 @@ in our original example), and storing fewer records at each. We could find a new
 value. (Some would be empty, while others would have two or three records.) This would require more storage
 space, but would offer faster retrieval.
 
-## Collisions
+# Collisions
 
 When two values do hash to the same value, this is known as a _hash collision_ or just a _collision_. It's
 generally considered undesirable, because it implies an additional cost _somewhere_ to disambiguate between
@@ -122,7 +122,7 @@ catastrophic. But if they occur too frequently, either by accident, or because a
 seeking to attack a running system, they can reduce the performance of hash lookups from constant time, on
 average, to linear time, which could have serious performance implications.
 
-## Cryptographic Hash Functions
+# Cryptographic Hash Functions
 
 The _MD5_ algorithm is another hash function which takes an arbitrary length input and produces a 128-bit hash,
 often represented as 32 hexadecimal digits, for example, `54fb1a9ecc18bc71d53d6420deabcf69`.
@@ -146,7 +146,7 @@ The MD5 algorithm, like the various SHA algorithms, are _cryptographic_ hash fun
 make it as hard as possible to find two different inputs which produce the same output, or to manipulate an
 input by adding additional data to produce a specific desired hash.
 
-## Hashing in Scala
+# Hashing in Scala
 
 All objects in Scala have a `hashCode` method, defined for each type, and intended to hash the state of that
 object, in some way, to a 32-bit integer. The `hashCode` method is intimately related to the `equals` method:

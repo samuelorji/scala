@@ -11,7 +11,7 @@ Different collection types, such as `Vector`, `Set`, `List` and `Map` store valu
 within memory, which results in these collections having different characteristics for how their values can be
 accessed, and how new collection instances are constructed from old ones, and how fast that can be done.
 
-## Immutability
+# Immutability
 
 The collections we will learn about first are all _immutable_. This means that a collection value, once created,
 can never change. But new collection values can be easily created based on an existing collection, for example,
@@ -45,7 +45,7 @@ Scala also has several _mutable_ collection types too, whose elements can be mod
 same reference may point to a different value at different times. These may have their uses in other
 circumstances too, but immutable collection types provide everything we need to work with collections for now.
 
-### Talking about immutability
+## Talking about immutability
 
 Much of programming in Scala involves constructing new immutable collections based on old immutable collections,
 but it is cumbersome to have to explain the full detail of every change as the construction of a new instance of
@@ -57,7 +57,7 @@ This may appear imprecise, or sound like _sleight of hand_, but in the context o
 pragmatic, and will become very natural with practice. In the event of any ambiguity, we can always be precise
 about the reality that the modification is made through the creation of a new value from the old.
 
-## `Vector`s
+# `Vector`s
 
 A general-purpose collection for storing ordered lists of values (_ordered_, in the sense that their order is
 significant and should always be preserved—not in the sense that "higher" values should come after "lower"
@@ -137,7 +137,7 @@ val transactions = account ++ Vector(200, 400, 100)
 ```
 will construct a new `Vector` with a total of seven elements.
 
-## Accessing `Vector` Elements
+# Accessing `Vector` Elements
 
 Convenient methods exist for accessing the first and last elements of a `Vector`, `Vector#head` and
 `Vector#last`, which must be called on a non-empty `Vector`, or they will throw an exception. They have

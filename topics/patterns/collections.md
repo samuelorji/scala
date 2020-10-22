@@ -81,7 +81,7 @@ and which to include in the remainder, and this is enforced by the order of eval
 the extractor must decompose the scrutinee into parts first, and only then could pattern matching continue to
 check nested extractors.
 
-### Desugaring
+## Desugaring
 
 These infix extractors are actually just ordinary extractors with two parameters, used in an infix position. For
 example, we could define a two-parameter extractor such as,

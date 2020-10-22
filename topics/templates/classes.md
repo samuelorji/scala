@@ -66,7 +66,7 @@ of Scala, but is no longer required. It is, nevertheless, equivalent to write:
 val log = new BasicLog("app")
 ```
 
-## Templates and Types
+# Templates and Types
 
 When a class such as `BasicLog` is defined, it introduces _two_ new entities relevant to us as programmers, and
 although, in practice, they are usually treated as the same thing, it is useful to have a clear understanding of

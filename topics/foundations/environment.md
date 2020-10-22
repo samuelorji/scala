@@ -16,7 +16,7 @@ We are working hard to make the setup process easier for everyone with a one-ste
 meantime, we will look at the steps that need to be done to get a computer ready to perform these everyday
 tasks.
 
-## Editing files
+# Editing files
 
 There are many applications which can be used to edit Scala source files, and while most users will choose an
 integrated development environment (IDE) such as [Visual Studio Code](https://code.visualstudio.com/) or
@@ -43,7 +43,7 @@ We recommend using Visual Studio Code with the
 [Metals](https://marketplace.visualstudio.com/items?itemName=scalameta.metals) and _Ferocity_ extensions for
 developing Scala.
 
-## The Terminal
+# The Terminal
 
 Many operations involved with software development will require interaction with the computer through a
 _terminal emulator_, or simply, a _terminal_. This is a piece of software which allows us to type commands, at a
@@ -80,7 +80,7 @@ distributions may provide different terminals, any it may be necessary to check 
 particular distribution of Linux, though most Linux users will have already encountered a terminal through
 everyday activities.
 
-## Compiling Scala 3
+# Compiling Scala 3
 
 The Scala compiler, `scalac`, is a program which can be run (or _executed_) from the terminal to convert source
 code into _bytecode_, which can be run. This conversion process is called _compilation_, and in addition to
@@ -116,7 +116,7 @@ The `scalac` command has a lot of options that may be specified when we invoke i
 used for small projects, but it quickly becomes impractical for larger projects, and it's typical to use a
 dedicated build tool to compile and run Scala code.
 
-## Build tools
+# Build tools
 
 There are several build tools which work with Scala, and while full details of how each works is beyond the
 scope of this tutorial, it is easy to get started compiling Scala with
@@ -135,17 +135,17 @@ While using the `scalac` program can remove a lot of uncertainty about compilati
 converting source files into bytecode—it is not necessary to have it installed if we use Fury, Mill or sbt:
 these build tools will include everything necessary to compile Scala source code themselves.
 
-## Getting started
+# Getting started
 
-### Start a terminal
+## Start a terminal
 
 First, we will need a terminal.
 
-#### Mac OS X
+### Mac OS X
 
 On Mac OS X, we simply need to find and launch the program called _Terminal_.
 
-#### Windows
+### Windows
 
 On Windows, we will need to install the _Windows Subsystem for Linux 2_ (WSL2). This provides an environment
 that will behave like a Linux computer, despite running under Windows. 
@@ -169,7 +169,7 @@ Linux
 probably means that the terminal that is running is a "PowerShell" or "Command Prompt" terminal, and not a
 _WSL2_ terminal.
 
-#### Linux
+### Linux
 
 Different distributions of Linux, such as _Ubuntu_, _Fedora_, _Arch_ or _NixOS_ can come with completely
 different setups, with different software installed, and different graphical user interfaces. The terminal we
@@ -185,7 +185,7 @@ A few common Linux terminals are:
 and any one of these will be suitable for developing in Scala. However, in case of any doubt, documentation for
 the particular distribution of Linux should provide information on finding the terminal.
 
-### Install Fury
+## Install Fury
 
 Fury offers one of the easiest ways to start programming in Scala. It can be installed from a terminal with the
 command:
@@ -221,7 +221,7 @@ for more information.
 For help on using Fury, run: fury help
 ```
 
-### Install Visual Studio Code and Metals
+## Install Visual Studio Code and Metals
 
 Follow the instructions to download and install [Visual Studio Code](https://code.visualstudio.com/download),
 then install the [Metals](https://marketplace.visualstudio.com/items?itemName=scalameta.metals) plugin from the

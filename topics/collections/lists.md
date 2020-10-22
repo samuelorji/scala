@@ -27,7 +27,7 @@ ourselves with the exact structure of the elements in that data structure. `Seq`
 and `Vector`, but not `Set`, as its elements are unordered, so don't exhibit the "sequential" nature that the
 `Seq` type is intended to indicate.
 
-## `List`s
+# `List`s
 
 `List`s are the most commonly-used Scala collection, particularly (but not only) for working with small
 collections of data. Accessing the first element of a list, the _head_, is very quick, as is accessing the
@@ -108,7 +108,7 @@ Often, the biggest challenge when learning Scala's collections is knowing the pe
 their methods. This requires practice and experience, and even then the analysis can be difficult and
 error-prone. Often the only solution is to use _benchmarking_, which we will learn about later.
 
-## Set
+# Set
 
 `Set` is a collection that keeps neither the order of its elements nor multiple copies of the same element
 within it. This is equivalent to the algebraic concept of a

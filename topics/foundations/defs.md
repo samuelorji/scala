@@ -26,7 +26,7 @@ We often describe the place in the source code where the new identifier is intro
 while every usage is referred to as the _use site_ (where "use" is pronounced like the noun—with a hard `s`—not
 like the verb) or _call site_, particularly in the case of methods.
 
-## Term Identifiers
+# Term Identifiers
 
 Term identifier references usually appear in _expressions_ (even if that expression is nothing more than just
 the term itself!) and in this context they refer to a definition which will produce some value when evaluated at

@@ -5,7 +5,7 @@ is _partial_, not _total_. If we were to pass a scrutinee to the pattern match w
 absence of any possible return expression, the only action that makes sense is for an exception to be thrown.
 So, Scala will throw a `MatchError`.
 
-## Wildcard matches
+# Wildcard matches
 
 To avoid partiality in the pattern match, one solution is to use a _wildcard_ pattern. This is not really a
 "pattern" at all, because it is guaranteed to match the scrutinee every time, but that's exactly what we need to
@@ -42,7 +42,7 @@ parameters of `Color`, but being wildcard patterns, we know they will always mat
 to bind new identifiers to each of the three parameters so we can use them directly on the right-hand side
 of the case clause.
 
-## Enumerations and Sealed types
+# Enumerations and Sealed types
 
 A wildcard match does not always make sense, though. If we were to to match a scrutinee which was an
 `Option[Int]`, we would know that matching `case Some(value)` and `case None` would be guaranteed to match.
@@ -58,7 +58,7 @@ match expression, which is something we want.
 Provided Scala can prove that, collectively, the cases listed inside a `match` will handle any value we pass to
 it, it will consider the match exhaustive.
 
-## Guards
+# Guards
 
 Sometimes an extractor or the scrutinee's type don't give us enough ways to express exactly which cases we would
 like to match, and which we wouldn't. Scala allows additional checks to be performed on the scrutinee, _after_
@@ -80,7 +80,7 @@ converted to a `String`.
 Remember that the order of the cases is important. If we were to shuffle the order they appear in the list, it
 could change the behavior of the match.
 
-### Ability to check Exhaustivity (beginner)
+# Ability to check Exhaustivity (beginner)
 
 For each case in a match, Scala will ask itself a question: do there exist any instances of the scrutinee which
 earlier cases would not match, but which this case would match? And for the entire match, it asks, are there

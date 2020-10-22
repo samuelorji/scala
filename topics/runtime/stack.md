@@ -74,7 +74,7 @@ all the methods that were invoked from the initial entry into our application, t
 living data structure will contain the sequence of method calls that were invoked to get to our current
 position in the code. This turns out to be very useful information when trying to debug our software.
 
-## Exceptions
+# Exceptions
 
 When a method normally runs, it may modify some values in memory, or return a value. Though it is not always
 possible to do that. There is nothing to stop us calling the `factorial` method we used above with a parameter
