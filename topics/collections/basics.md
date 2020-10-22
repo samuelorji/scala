@@ -57,7 +57,7 @@ This may appear imprecise, or sound like _sleight of hand_, but in the context o
 pragmatic, and will become very natural with practice. In the event of any ambiguity, we can always be precise
 about the reality that the modification is made through the creation of a new value from the old.
 
-# `Vector`s
+# Vectors
 
 A general-purpose collection for storing ordered lists of values (_ordered_, in the sense that their order is
 significant and should always be preserved—not in the sense that "higher" values should come after "lower"
@@ -137,7 +137,7 @@ val transactions = account ++ Vector(200, 400, 100)
 ```
 will construct a new `Vector` with a total of seven elements.
 
-# Accessing `Vector` Elements
+# Accessing Vector Elements
 
 Convenient methods exist for accessing the first and last elements of a `Vector`, `Vector#head` and
 `Vector#last`, which must be called on a non-empty `Vector`, or they will throw an exception. They have
