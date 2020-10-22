@@ -2,9 +2,9 @@
 
 set -e -o pipefail -u
 
-sudo apt-get install recode
-find . -type f \( -name "*.md" -o -name "*.json" \) -exec recode ..html {} +
-find ./ -type f -exec sed -i -e 's/&quot;/"/g' {} \;
+# sudo apt-get install recode
+# find . -type f \( -name "*.md" -o -name "*.json" \) -exec recode ..html {} +
+# find ./ -type f -exec sed -i -e 's/&quot;/"/g' {} \;
 
 gcloud info
 DIRS=(pages courses topics contexts icons courseImages contentImages)
