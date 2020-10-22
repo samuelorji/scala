@@ -8,9 +8,9 @@
       "lessonEnd": "testB"
     },
     {
-      "topicId": "concepts",
-      "lessonStart": "static",
-      "lessonEnd": "static"
+      "topicId": "test2",
+      "lessonStart": "testC",
+      "lessonEnd": "testC"
     }
   ]
 }
