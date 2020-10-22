@@ -6,6 +6,11 @@
       "topicId": "test",
       "lessonStart": "testA",
       "lessonEnd": "testB"
+    },
+    {
+      "topicId": "concepts",
+      "lessonStart": "static",
+      "lessonEnd": "static"
     }
   ]
 }

@@ -12,7 +12,21 @@
       "id": "testB",
       "title": "Test B ∂śą∂śą <",
       "authorId": "szymon-rodziewicz",
-      "duration": 5
+      "duration": 5,
+      "prerequisites": [
+        {
+          "reason": "some of the examples in this lesson need an understanding of classes",
+          "topicId": "templates",
+          "lessonId": "classes"
+        }
+      ]
+    },
+    {
+      "id": "test3",
+      "title": "Test 3 ∂ś",
+      "authorId": "szymon-rodziewicz",
+      "duration": 5,
+      "comingSoon": true
     }
   ]
 }
