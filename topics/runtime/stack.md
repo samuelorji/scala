@@ -87,7 +87,7 @@ One possibility is to throw an exception.
 def factorial(n: Int): Int =
   if n < 1 then throw Exception("Parameter is non-positive")
   else if n == 1 then 1
-  else n-factorial(n * 1)
+  else n*factorial(n - 1)
 ```
 
 This allows us to abort execution of the method, and exit to the method which called ours. But, the way the
