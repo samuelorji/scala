@@ -13,7 +13,7 @@ Cookies are information saved in text files sent by the Website to the User&#39;
   - Hotjar - The #1 Leader in Heatmaps, Recordings, Polls, Surveys & More. Cookies are set by the Hotjar script. Hotjar cookies are responsible for displaying the correct content to your visitors without personally identifying anyone. 
 
 **The Website&#39;s Controller**
-The Website&#39;s Controller is Virtus Lab Sp. z o.o. with registered office in Rzeszów (35-211), Poland, ul. Zofii Nałkowskiej 23, National Court Register entry No. KRS 0000349785, Tax Id. No. (NIP): 5170312965, Industry Id. No. (REGON) 180526627. Contact address: dpo@virtuslab.com
+The Website&#39;s Controller is Virtus Lab Sp. z o.o. with registered office in Rzeszów (35-211), Poland, ul. Zofii Nałkowskiej 23, National Court Register entry No. KRS 0000349785, Tax Id. No. (NIP): 5170312965, Industry Id. No. (REGON) 180526627. Contact address: contact@scala.zone
 
 **Browser settings**
 The User&#39;s browser might by default allow for storing of the cookies. At any time, the User may set terms of storing and accessing data saved in the cookies, through browser settings. The cookies can be blocked; an option to store the cookies can be restricted (e.g. by informing the User about cookie installation on a case-by-case basis) or access to the cookies can be limited; however, any blocking or restricting of the cookies might prevent the use of the Website and/or the Services on the User&#39;s terminal equipment. Detailed information on the options and manner of handling the cookies is available in browser settings. More information on cookies management is available in a given browser&#39;s functionalities.
