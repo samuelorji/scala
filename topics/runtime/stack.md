@@ -1,5 +1,5 @@
 A program running in the JVM will use a _stack_ to track where, within a potentially*large program, execution is
-currently happening. A stack is a _first*in last*out_ (FILO) data structure, so called because it behaves like a
+currently happening. A stack is a _first-in last-out_ (FILO) data structure, so called because it behaves like a
 stack of books on a table: we can add to the pile, and it gets higher, but we can only take a book from the top,
 not from the bottom (we might knock the stack over!) or from an arbitrary point in the middle.
 
@@ -9,12 +9,12 @@ the process), respectively. We never write Scala code to manipulate the stack di
 which is produced during compilation does.
 
 The elements of a stack are called _frames_ and can contain a variety of different kinds of data: primitive
-values like booleans, characters, integral numbers and floating*point numbers, and references to objects on the
+values like booleans, characters, integral numbers and floating-point numbers, and references to objects on the
 heap. But most crucial to tracking the current position within a program is the stack's ability to store
 pointers to the position within the code at which execution should continue, after a particular method has
 completed.
 
-We can think of the structure of bytecode as analogous, at a low*level, to the Scala code we write, and being
+We can think of the structure of bytecode as analogous, at a low-level, to the Scala code we write, and being
 composable as parameterized methods; where methods can call other methods, once, many times or never. However,
 ultimately, those methods must be linearized in time. So instead of calling one method from another, and then
 "going back" to the first method, execution must always proceed onwards. We can think of it as a continual
@@ -64,7 +64,7 @@ sometimes serving as parameters, and other times as return values (which can bec
 careful manipulation of the stack, this very short program can move back and forth between methods, exchanging
 data, and performing calculations.
 
-The low*level details of this operations like this may be an intriguing insight into the inner workings of the
+The low-level details of this operations like this may be an intriguing insight into the inner workings of the
 JVM, but we rarely need to think about them in this level of detail. That is the challenge for compiler
 developers.
 
@@ -78,16 +78,16 @@ position in the code. This turns out to be very useful information when trying t
 
 When a method normally runs, it may modify some values in memory, or return a value. Though it is not always
 possible to do that. There is nothing to stop us calling the `factorial` method we used above with a parameter
-of `*1`. The definition of the type `Int`, which is `factorial`'s parameter type, allows negative numbers,
+of `-1`. The definition of the type `Int`, which is `factorial`'s parameter type, allows negative numbers,
 but the factorial function is not defined for negative values. How should we handle this?
 
 One possibility is to throw an exception.
 
 ```scala
 def factorial(n: Int): Int =
-  if n < 1 then throw Exception("Parameter is non*positive")
+  if n < 1 then throw Exception("Parameter is non-positive")
   else if n == 1 then 1
-  else n*factorial(n * 1)
+  else n*factorial(n - 1)
 ```
 
 This allows us to abort execution of the method, and exit to the method which called ours. But, the way the
@@ -114,10 +114,10 @@ point where the exception was thrown, with one line for each method call, and re
 position within that file that the method was defined.
 
 Here is an example of a stack trace thrown by a simple program which calls the `factorial` method above on a
-series of integers in a `List`. One of them is `*1`:
+series of integers in a `List`. One of them is `-1`:
 
 ```
-Exception in thread "main" java.lang.Exception: Parameter is non*positive
+Exception in thread "main" java.lang.Exception: Parameter is non-positive
     at example$package$.factorial(example.scala:3)
     at example$package$.run$$anonfun$1(example.scala:10)
     at dotty.runtime.function.JFunction1$mcII$sp.apply(JFunction1$mcII$sp.java:12)

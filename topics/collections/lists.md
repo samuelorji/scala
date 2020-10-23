@@ -83,11 +83,12 @@ But adding an element to the end of the list is less trivial.
 Imagine we wanted to add `4` to our list of natural numbers, above. That is, we want to construct,
 `1 :: 2 :: 3 :: 4 :: Nil` from `1 :: 2 :: 3 :: Nil`. Unlike prepending, we cannot "reuse" the existing list,
 because `1` is attached to `2 :: 3 :: Nil`, and `2` is attached to `3 :: Nil`, and `3` is attached to `Nil`,
-each one being an independent `List` instance in memory. We can construct the new `List`, `4 :: Nil`, and
-then use that as the tail to the new instance, `3 :: 4 :: Nil`. We can continue to produce, `2 :: 3 :: 4 :: Nil`
-and finally, `1 :: 2 :: 3 :: 4 :: Nil`. But in comparison to prepending an element to an existing list, which
-took a single operation, _appending_ requires a number of operations proportional to the length of the list,
-making it very inefficient for large lists.
+each one being an independent `List` instance in memory.
+
+We can construct the new `List`, `4 :: Nil`, and then use that as the tail to the new instance, `3 :: 4 :: Nil`.
+We can continue to produce, `2 :: 3 :: 4 :: Nil` and finally, `1 :: 2 :: 3 :: 4 :: Nil`. But in comparison to
+prepending an element to an existing list, which took a single operation, _appending_ requires a number of
+operations proportional to the length of the list, making it very inefficient for large lists.
 
 Despite this difference, the methods available on `List`s and `Vector`s are mostly the same. Both have `head`
 and `last` methods and both have the `+:` (prepend) and `:+` (append) methods, even though some of these methods
@@ -173,7 +174,7 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 
 ?---?
 
-# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1).head`?
+# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1)`?
 
 - [ ] 1
 - [X] 2
