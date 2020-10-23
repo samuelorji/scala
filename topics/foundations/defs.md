@@ -78,8 +78,8 @@ Identifiers are always case sensitive. For example, values called `head` and `He
 and considered as different from each other as two identifiers called `alpha` and `omega`.
 
 New term identifiers can be introduced into a scope via several different routes, but the most direct way is
-through a new definition, using the keywords `val`, `def`, or occasionally, `var`. The usage of each of these
-keywords looks very similar. For example,
+through a new definition, using the keywords `val`, `def`, or occasionally, `var` (which we will not explore
+until a later lesson). The usage of each of these keywords looks very similar. For example,
 ```scala
 val first: String = "one"
 def second: String = "two"
