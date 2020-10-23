@@ -32,7 +32,7 @@ was designed to naturally accommodate many of the features of Java, but nothing 
 precludes other languages from running on it, and even interacting with code written in other JVM languages,
 such as Java, [Kotlin](https://kotlinlang.org/) and [Groovy](https://groovy-lang.org/).
 
-## Java Bytecode
+# Java Bytecode
 
 It is possible for the JVM to host code written in different languages only because they all use the same
 low-level intermediate language to represent code: _Java Bytecode_. Every JVM language uses a compiler, like

@@ -19,7 +19,7 @@ def to_level_ordinal(level: str):
 
 
 def test_prerequisites():
-  lesson_and_topic_to_lowest_level_ordinal = {}
+  lesson_and_topic_to_level_ordinals = {}
   course_to_lesson_and_topic_id = {}
   lesson_and_topic_to_course = {}
   for course in STRUCTURE.courses:
@@ -39,9 +39,11 @@ def test_prerequisites():
         course_lesson_ids.extend(range_lessons_with_topic)
 
         for lesson_id in range_lessons:
-          current_lesson_level = lesson_and_topic_to_lowest_level_ordinal.get((lesson_id, topic.id))
-          if current_lesson_level == None or current_lesson_level > level_ordinal:
-            lesson_and_topic_to_lowest_level_ordinal[(lesson_id, topic.id)] = level_ordinal
+          current_lesson_levels = lesson_and_topic_to_level_ordinals.get((lesson_id, topic.id))
+          if current_lesson_levels == None:
+            lesson_and_topic_to_level_ordinals[(lesson_id, topic.id)] = [level_ordinal]
+          else:
+            lesson_and_topic_to_level_ordinals[(lesson_id, topic.id)].append(level_ordinal)
           lesson_and_topic_to_course[(lesson_id, topic.id)] = course.id
 
     if course_to_lesson_and_topic_id.get(course.id) == None:
@@ -57,7 +59,7 @@ def test_prerequisites():
           assert (prereq.lesson_id, prereq.topic_id) in lesson_and_topic_to_course.keys(), prereq_doesnt_exists_msg
           same_course_failed_msg = f"Lesson's {topic.id}/{lesson.id} preqrequiste {prereq.topic_id}/{prereq.lesson_id} doesn't exist at the lesson's course"
           assert lesson_and_topic_to_course[(lesson.id, topic.id)] == lesson_and_topic_to_course[(prereq.lesson_id, prereq.topic_id)], same_course_failed_msg
-          lower_ordinal_failed_msg = f"Lesson's {topic.id}/{lesson.id} preqrequiste {prereq.topic_id}/{prereq.lesson_id} is on higher level that the {topic.id}/{lesson.id}"
-          assert lesson_and_topic_to_lowest_level_ordinal[(lesson.id, topic.id)] >= lesson_and_topic_to_lowest_level_ordinal[(prereq.lesson_id, prereq.topic_id)], lower_ordinal_failed_msg
+          lower_ordinal_failed_msg = f"Lesson's {topic.id}/{lesson.id} preqrequiste {prereq.topic_id}/{prereq.lesson_id} doesn't overlap with the lesson's levels"
+          assert set(lesson_and_topic_to_level_ordinals[(lesson.id, topic.id)]).intersection(set(lesson_and_topic_to_level_ordinals[(prereq.lesson_id, prereq.topic_id)])) != {}, lower_ordinal_failed_msg
             
       

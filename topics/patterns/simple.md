@@ -40,7 +40,7 @@ The behavior of both versions of this code is identical, but the first should lo
 key advantage Scala's pattern matching syntax provides. That should be clear just from this simple example, but
 this advantage becomes even more significant with more complex examples.
 
-## Match expressions
+# Match expressions
 
 The entire `match`/`case` construction is an _expression_, so it returns a value for the body of the `move`
 method. And we can use a match expression in the same places any other expression can be used. But when we write
@@ -72,7 +72,7 @@ Finally, after each pattern, to the right of the arrow (`=>`, which is often rea
 expression that gets evaluated if that pattern matches the runtime value of the scrutinee, and, of course, only
 one of the expressions to the right of the arrows will be evaluated each time the expression is evaluated.
 
-### Caution!
+## Caution!
 
 Note that in some languages, once a case matches, the runtime will evaluate the right-hand side of the case
 clause, and carry on evaluating the right-hand side of _every_ case clause after it, unless we explicitly
@@ -81,7 +81,7 @@ work this way, and only one single case clause will ever be evaluated. For a fun
 expression evaluates to a single value, it would not make sense, anyway: how could an expression return a value
 and then return another value? Where would the first value go?
 
-## Summary
+# Summary
 
 Pattern matching in Scala provides very convenient syntax for branching to different actions, by checking a
 value, the scrutinee, against a series of patterns to try to find one which matches, then taking that branch.

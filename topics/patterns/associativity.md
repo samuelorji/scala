@@ -36,7 +36,7 @@ between `b` and `c`. So the _evaluation order_ will be left-to-right for right-a
 right-to-left for left-associative extractors, but only because we are working with a _pattern_ and not an
 _expression_.
 
-## Precedence (intermediate/advanced)
+# Precedence (intermediate/advanced)
 
 Combinations of infix extractors are possible in patterns, to provide expression-like syntax. Consider the
 following definitions for a simple expression language:
@@ -91,7 +91,7 @@ character of the operator. Here is a reminder of that order, from highest to low
 - `|`
 - alphabetic characters
 
-## Ambiguous cases
+# Ambiguous cases
 
 Scala can parse patterns of infix-operators unambiguously, except in cases where left- and right-associative
 operators of the same precedence are mixed. That is not a common occurrence, but it's useful to remember that

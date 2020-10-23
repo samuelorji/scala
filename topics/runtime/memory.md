@@ -45,7 +45,7 @@ of those JVMs will be the same. These implementations can also evolve (for examp
 improvements) over time, without affecting the _correctness_ of the programs which run within them, even if
 their performance characteristics change.
 
-## Garbage Collection
+# Garbage Collection
 
 We have looked at how memory from the heap is assigned to objects in the JVM, but heap memory is a finite and
 sometimes scarce resource. Once all the memory available to the operating system has been allocated to objects

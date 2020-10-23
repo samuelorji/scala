@@ -44,7 +44,7 @@ If we were to subsequently iterate over both elements in this `Set[Exception]`, 
 `IOException` and the other would be an `ArithmeticException`, but sets are unordered, so we would have no idea
 which would come first, and all we would know about both elements is that they are `Exception`s.
 
-## Downcasting
+# Downcasting
 
 Given the possibility that values may be upcast to more general types, and the immutability of a value's runtime
 type, we may have values with types that are known more precisely at runtime than at compile-time. But if we

@@ -55,7 +55,7 @@ It's common to name traits after their capabilities (though some people discoura
 a proliferation of entities all with names ending in `-able`), and we might expect `Closable` to define a method
 `close()`, and `Pausable` a method `pause()`. But traits' names are entirely our choice.
 
-## Abstract methods
+# Abstract methods
 
 Looking back at our example using `Timer`, written here in equivalent, but slightly shorter form,
 ```scala
@@ -187,7 +187,7 @@ we could choose to implement `writer` later (in a subclass), and define `BasicLo
 abstract class BasicLog(id: String) extends Timer, FileRecorder
 ```
 
-## A word of caution...
+# A word of caution...
 
 Traits provide a very powerful system for defining and satisfying constraints, in the form of methods, and the
 Scala compiler can very capably provide guarantees that those constraints are satisfied, with helpful guidance

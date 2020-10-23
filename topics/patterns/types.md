@@ -24,7 +24,7 @@ Be careful not to write `case Node =>` instead of `case _: Node`. The former wou
 with a _value_ called `Node` (if it exists, the `Node` type's companion object), not a value which is an
 instance of `Node`. As usual, an identifier we see after a `:` will be a type.
 
-## Union types
+# Union types
 
 A value with a union type, such as `Int | Double | BigDecimal`, will be an instance of one of the types in the
 union—`Int`, `Double` or `BigDecimal`—and we would normally use pattern matching to process the value
@@ -48,7 +48,7 @@ companion object, `scala.Long`. It's unlikely we would ever mean that!
 
 To match on a union type, we should write `case _: (Int | Long)`.
 
-## Generic types
+# Generic types
 
 It would seem very natural to extend this functionality to matching on generic types, like `List[Int]` or
 `Option[String]`, but this is not quite so easy.
