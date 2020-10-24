@@ -140,7 +140,8 @@ This simple machinery gives us some useful tools for writing more expressive pat
 
 ?---?
 
-# Choose which pattern will match the expression
+# In the following code,
+
 ```scala
 val red = Color(1.0, 0.0, 0.0)
 val green = Color(0.0, 1.0, 0.0)
@@ -154,23 +155,30 @@ green match
   case red =>
     println("Third")
 ```
+
+Choose which pattern will match the expression
+
 - [ ] First
 - [ ] Second
 - [X] Third
 
-# Choose pattern that *does not* contain syntax errors, given color definitions from previous question
- - [ ] 
- ```scala
-  red match 
-    case Color(r, g, b) | Blue => println("Match!")
- ```
- - [X] 
- ```scala
- green match 
-   case red => println("Match!")
- ```
-  - [ ] 
-  ```scala
-  Blue match 
-    case `blue` => println("Match!")
-  ```
+# In the following code, three of the four case clauses contain compile errors:
+
+```scala
+val red = Color(1.0, 0.0, 0.0)
+val green = Color(0.0, 1.0, 0.0)
+val Blue = Color(0.0, 0.0, 1.0)
+
+color match
+  case Color(r, g, b) | Blue => "First"
+  case `blue`                => "Second"
+  case red                   => "Third"
+  case Color(x, x, x)        => "Fourth"
+```
+
+What value would be produced by the only error-free case clause?
+
+- [ ] `"First"`
+- [ ] `"Second"`
+- [X] `"Third"`
+- [ ] `"Fourth"`
