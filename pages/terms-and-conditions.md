@@ -1,4 +1,4 @@
-# SCALA ZONE TERMS OF SERVICE
+# ScalaZONE Terms of Service
 
 **§ 1. General Provisions**
 
@@ -23,7 +23,7 @@ The Terms of Service set forth rules governing the provision of ScalaZONE Servic
         - a calendar of Scala related conferences and meetings,
         - the Newsletter.
         
-    9. Website – this shall mean the ScalaZONE website, available through a telecommunications network, available at an address: [scalazone.com](http://www.scalazone.com/), representing an organised online platform via which the Services are rendered, encompassing the &quot;scalazone.com&quot; domain and its sub-domains held and managed by the Service Provider;
+    9. Website – this shall mean the ScalaZONE website, available through a telecommunications network, available at an address: [scala.zone](https://scala.zone/), representing an organised online platform via which the Services are rendered, encompassing the &quot;scala.zone&quot; domain and its sub-domains held and managed by the Service Provider;
     10. GitHub – this shall mean a third-party website, GitHub, Inc. (88 Colin P Kelly Jr St, San Francisco, CA 94107, United States), through which the User can register and log onto the Website;
     11. Account – this shall mean the set of resources and rights assigned to the User on the Website or GitHub, respectively (depending on the context of use in the Terms of Service);
     12. Newsletter – this shall mean news sent by the Service Provider to an e-mail address specified by the User. The Newsletter contains the Information about Scala or the Services as well as events related to Scala or the Website&#39;s operation and projects in progress;
