@@ -198,3 +198,52 @@ A common trap when using traits in this way is commonly known as the _cake patte
 body of a large class or object may be "sliced" up into many traits, each with its own abstract and concrete
 methods. Unfortunately this style makes it too easy to create subtle dependencies, or strong couplings, between
 traits, and this somewhat defeats their purpose.
+
+?---?
+
+# Given the following trait definitions,
+
+```scala
+trait Publication(title: String)
+trait Novel(title: String) extends Publication
+trait Inventory(copies: Int) extends Publication
+
+select every object definition which will compile without error.
+
+* [X] `object JaneEyre extends Novel("Jane Eyre"), Publication("Jane Eyre"), Inventory(1)`
+* [ ] `object WarAndPeace extends Novel("War and Peace")`
+* [ ] `object MobyDick extends Novel("Moby Dick"), Inventory(10)`
+* [ ] `object Ulysses extends Publication, Novel("Ulysses")`
+* [X] `object Middlemarch extends Novel("Middlemarch"), Publication("Middlemarch")`
+* [ ] `object Catch22 extends Novel("Catch-22"), Publication, Inventory(0)`
+```
+
+# The following code will not compile:
+
+```scala
+
+val Origin = Point(0, 0)
+
+trait Position(point: Point):
+  def center: Point = point
+
+trait Shape extends Position:
+  def inside(point: Point): Boolean
+  def area: Double
+
+trait Circle(radius: Double) extends Shape:
+  def area: Double = math.Pi*radius*radius
+  def inside(point: Point): Boolean = point.distanceTo(center) < radius
+
+object Dot extends Circle(1.0)
+```
+
+Which of the following solutions would fix the compile error?
+
+* [ ] add a method, `def center: Point = Origin`, to the body of `object Dot`
+* [ ] change the definition of `def center` in `trait Position` to `def center: Point = Origin`
+* [X] change the definition of `trait Shape` to `trait Shape extends Position(Origin)`
+* [ ] remove the method `def center` and the parameter block, `(point: Point)` from `trait Position`
+* [ ] remove `extends Position` from the definition of `trait Shape`
+* [X] change the definition of `object Dot` to `object Dot extends Circle(1.0), Position(Origin)`
+
