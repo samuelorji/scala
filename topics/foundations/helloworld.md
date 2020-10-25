@@ -137,5 +137,3 @@ What happens?
  - [ ] The code compiles, but fails with a runtime error
  - [X] The code compiles and runs, but prints no output
  - [ ] The code compiles, runs and prints `5184` in the console
-
-# 
