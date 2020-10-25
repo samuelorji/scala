@@ -207,7 +207,7 @@ traits, and this somewhat defeats their purpose.
 trait Publication(title: String)
 trait Novel(title: String) extends Publication
 trait Inventory(copies: Int) extends Publication
-
+```
 select every object definition which will compile without error.
 
 * [X] `object JaneEyre extends Novel("Jane Eyre"), Publication("Jane Eyre"), Inventory(1)`
@@ -216,12 +216,10 @@ select every object definition which will compile without error.
 * [ ] `object Ulysses extends Publication, Novel("Ulysses")`
 * [X] `object Middlemarch extends Novel("Middlemarch"), Publication("Middlemarch")`
 * [ ] `object Catch22 extends Novel("Catch-22"), Publication, Inventory(0)`
-```
 
 # The following code will not compile:
 
 ```scala
-
 val Origin = Point(0, 0)
 
 trait Position(point: Point):
