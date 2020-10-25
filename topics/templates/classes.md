@@ -116,7 +116,7 @@ users of the object.
 
 ?---?
 
-# Consider the following definitions
+# Consider the following definitions:
 
 ```scala
 class JobRole(title: String, company: String):
@@ -157,16 +157,17 @@ class Info(msg: String):
 
 def go() = Info("Hello, World!")
 ```
-and imagine evaluating the following main method:
-```scala
 
+and imagine evaluating the following main method:
+
+```scala
 @main def run(): Unit =
   val info = go()
   println(info.message)
   println(go().message)
 ```
 
-# The `run()` method will cause `[INFO] Hello, World!` to be printed a number of times. How many?
+The `run()` method will cause `[INFO] Hello, World!` to be printed a number of times. How many?
 
 - [ ] one
 - [ ] two
