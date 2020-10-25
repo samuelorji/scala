@@ -152,13 +152,13 @@ println(s"The result of ${first} plus ${first} is two.")
 
 The output on the console would be,
 ```
-Accessed the first method.
+Accessed the first value.
 The result of one plus one is two.
 ```
 even though there are two references to the identifier `first`.
 
 The runtime will execute the implementation of the value, `first`, as soon as it encounters it, in the process
-printing the line, `Accessed the first method.`, once, and storing the result, `"one"` in memory, so that
+printing the line, `Accessed the first value.`, once, and storing the result, `"one"` in memory, so that
 subsequent references to `first` can use the value directly. And thus, in the `println` statement, both
 references to the identifier `first` behave as if the value, `"first"`, had been substituted directly into the
 string.
@@ -168,3 +168,62 @@ opaque at the use site.
 
 ?---?
 
+# In the following code, `Counter(0)` constructs a new a `Counter` instance, an object with an internal integer counter starting at `0`. Every time the `inc()` method is invoked on a `Counter` instance, it increments its inner counter by `1`. The `Counter`'s `value` method will return the counter value.
+
+```scala
+val counter = Counter(0)
+
+val rnd =
+  counter.inc()
+  math.random
+
+def message =
+  counter.inc()
+  s"Three numbers: $rnd, $rnd and $rnd"
+
+@main
+def run(): Unit =
+  println(message)
+  println(message)
+  println(counter.value)
+```
+
+What is the counter value printed at the end of the `run()` method?
+
+- [ ] 0
+- [ ] 1
+- [ ] 2
+- [X] 3
+- [ ] 4
+- [ ] 6
+- [ ] 7
+
+# The same code has been modified to swap some `def` and `val` declarations:
+
+```scala
+def counter = Counter(0)
+
+def rnd =
+  counter.inc()
+  math.random
+
+val message =
+  counter.inc()
+  s"Three numbers: $rnd, $rnd and $rnd"
+
+@main
+def run(): Unit =
+  println(message)
+  println(message)
+  println(counter.value)
+```
+
+What counter value is printed now?
+
+- [X] 0
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [ ] 4
+- [ ] 6
+- [ ] 7
