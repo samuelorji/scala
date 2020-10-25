@@ -6,6 +6,14 @@
       "twitter": "https://twitter.com/virtuslab",
       "github": "https://github.com/VirtusLab",
       "facebook": "https://www.facebook.com/virtuslab",
-      "desc": "TODO desc of VirtusLab"
+      "desc": "VirtusLab, in collaboration with the Scala Center and EPFL, support and maintain the Scala 3 compiler and related tooling to enhance the development experience for all Scala users."
+  },
+  {
+      "id": "propensive",
+      "name": "Propensive",
+      "order": 1,
+      "twitter": "https://twitter.com/propensive",
+      "github": "https://github.com/propensive",
+      "desc": "Propensive specialize in delivering advanced Scala training to businesses worldwide, and are actively developing Fury to revolutionize the Scala software ecosystem."
   }
 ]
