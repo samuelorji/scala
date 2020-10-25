@@ -155,3 +155,32 @@ process of a program can remain superficial, so long as we understand how to rea
   * [x] The name of each source file from which those methods were compiled 
   * [ ] The parameters to those methods
   * [x] The line numbers in the source files from which those methods were compiled
+
+# Have a look at the following stack trace:
+
+```
+Exception in thread "main" java.lang.Exception: there was an unfortunate failure
+        at example$package$.beta(defs.scala:11)
+        at example$package$.alpha(defs.scala:8)
+        at example$package$.beta(defs.scala:12)
+        at example$package$.alpha(defs.scala:8)
+        at example$package$.beta(defs.scala:12)
+        at example$package$.alpha(defs.scala:8)
+        at example$package$.run(example.scala:3)
+        at run.main(example.scala:2)
+```
+
+On which line of which file, and in which method was the exception thrown? You will need to select a line,
+method and file.
+
+* [ ] line 2
+* [ ] line 3
+* [ ] line 8
+* [X] line 11
+* [ ] line 12
+* [X] method `beta`
+* [ ] method `alpha`
+* [ ] method `example`
+* [ ] method `run`
+* [X] file `defs.scala`
+* [ ] file `example.scala`

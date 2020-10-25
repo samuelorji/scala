@@ -116,7 +116,8 @@ users of the object.
 
 ?---?
 
-Consider the following definitions
+# Consider the following definitions
+
 ```scala
 class JobRole(title: String, company: String):
   val entity = "job-role"
@@ -125,26 +126,30 @@ class JobRole(title: String, company: String):
 val pearCeo = JobRole("CEO", "Pear Inc")
 ```
 
-# What does the experession `pearCeo.description` evaluate to?
-* [ ] `"CEO"`
-* [X] `"CEO at Pear Inc"`
-* [ ] the expression does not compile
-* [ ] the expression throws an exception at runtime
+What does the experession `pearCeo.description` evaluate to?
 
-# What does the experession `pearCeo.title` evaluate to?
-* [ ] `"CEO"`
-* [ ] `"CEO at Pear Inc"`
-* [X] the expression does not compile
-* [ ] the expression throws an exception at runtime
+- [ ] `"CEO"`
+- [X] `"CEO at Pear Inc"`
+- [ ] the expression does not compile
+- [ ] the expression throws an exception at runtime
 
-# What does the experession `JobRole("Analyst", "Quince Inc").title` evaluate to?
-* [ ] `"Analyst"`
-* [ ] `"Analyst at Quince Inc"`
-* [ ] `"job-role"`
-* [X] the expression does not compile
-* [ ] the expression throws an exception at runtime
+# In the same code, what does the experession `pearCeo.title` evaluate to?
 
-Now consider a class whose body contains a `println` statement,
+- [ ] `"CEO"`
+- [ ] `"CEO at Pear Inc"`
+- [X] the expression does not compile
+- [ ] the expression throws an exception at runtime
+
+# And what does the experession `JobRole("Analyst", "Quince Inc").title` evaluate to?
+
+- [ ] `"Analyst"`
+- [ ] `"Analyst at Quince Inc"`
+- [ ] `"job-role"`
+- [X] the expression does not compile
+- [ ] the expression throws an exception at runtime
+
+# Now consider a class whose body contains a `println` statement,
+
 ```scala
 class Info(msg: String):
   val message = s"[INFO] $msg"
@@ -155,23 +160,24 @@ def go() = Info("Hello, World!")
 and imagine evaluating the following main method:
 ```scala
 
-@main
-def run(): Unit =
+@main def run(): Unit =
   val info = go()
   println(info.message)
   println(go().message)
 ```
 
 # The `run()` method will cause `[INFO] Hello, World!` to be printed a number of times. How many?
-* [ ] one
-* [ ] two
-* [ ] three
-* [X] four
-* [ ] five
+
+- [ ] one
+- [ ] two
+- [ ] three
+- [X] four
+- [ ] five
 
 # How many different instances of the `Info` class are constructed when executing the `run()` method?
-* [ ] one
-* [X] two
-* [ ] three
-* [ ] four
-* [ ] five
+
+- [ ] one
+- [X] two
+- [ ] three
+- [ ] four
+- [ ] five

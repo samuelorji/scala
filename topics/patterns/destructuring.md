@@ -148,3 +148,28 @@ parts we care about and ignoring those we don't. And it employs a readable synta
 construction of the values we want to match against.
 
 ?---?
+
+# Consider this `area` method for calculating the area of certain geometric shapes:
+
+```scala
+geo match
+  case Square(edge) =>
+    edge*edge
+  case Rectangle(width, 1.0) =>
+    width*height
+  case Circle(_, radius) =>
+    math.Pi*radius*radius
+  case Line(a@Point(ax, 0.0), b) =>
+    0.0
+```
+
+Select all the expressions which the pattern match would match. You can ignore the calculated value.
+
+* [X] `Circle(0.5, 0.5)`
+* [ ] `Rectangle(1.0, 2.0)`
+* [X] `Line(Point(0.0, 0.0), Point(0.2, 0.8))`
+* [ ] `Point(-1.0, 1.0)`
+* [X] `Square(12.2)`
+* [X] `Line(Point(-0.1, 0.0), Point(0.0, 0.1))`
+* [X] `Rectangle(-2.0, 1.0)`
+* [ ] `Line(Point(-0.4, 0.3), Point(0.0, 5.3))`

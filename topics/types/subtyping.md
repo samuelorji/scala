@@ -19,11 +19,12 @@ more). But this does not imply any particular subtyping relationship between `Li
 has methods which `List[String]` does not have. They are unrelated types, though later we will see that it is
 still significant that `List[String]` and `Vector[String]` have a common supertype of `Seq[String]`.
 
-The usefulness of subtyping arises from the Liskov Substitution Principle, which asserts that anywhere in our
-code that a particular type, `T`, is expected, a value of a different type, `S` may be provided as long as `S`
-is a subtype of `T`. This applies when specifying the parameters of a method when it is called, where the method
-definition specifies the expected types for each parameter, and to the body of a method, variable or value,
-where the implementation must result in a value of a type which is a subtype of the declared return type.
+The usefulness of subtyping arises from the _Liskov Substitution Principle_, which asserts that anywhere in our
+code that a value of a specified type, `T`, is expected, a value of a different type, `S` may be provided as
+long as `S` is a subtype of `T`. This applies when specifying the parameters of a method when it is called,
+where the method definition specifies the expected types for each parameter, and to the body of a method,
+variable or value, where the implementation must result in a value of a type which is a subtype of the declared
+return type.
 
 Here's an example of how that can work. We can define a simple method, `product` which will multiply a
 sequence of integers together.
@@ -66,12 +67,12 @@ subtype of `Seq[Int]`, then it follows naturally that `List[Int]` is a subtype o
 
 But we might ask _why_ these subtype relationships exist at all. The answer comes from the definitions of the
 generic template types `List[T]`, `Seq[T]` and `Iterable[T]`: these template definitions specify inheritance
-relationships between them. While the full story is more complex, the definitions for these templates look
-similar to this:
+relationships between them. While the full story is more complex, the relevant parts of the definitions for
+these templates (simplified for clarity) look similar to this:
 ```scala
-abstract class List[+A] extends Seq[A]
-trait Seq[+A] extends Iterable[A]
-trait Iterable[+A]
+class List[A] extends Seq[A]
+trait Seq[A] extends Iterable[A]
+trait Iterable[A]
 ```
 
 The fact that the class `List[A]` extends `Seq[A]` means that the properties implied by every member defined in
@@ -86,13 +87,15 @@ new types and other types, without any explicit inheritance being defined. We wi
 
 # Types as Sets
 
-Although they are foundationally different, types can be viewed as sets of properties or sets of instances, and
-a _subtyping_ relationship between types translates in an interesting way into _subset_ relationships when
-viewed this way.
+Although they are foundationally different, types can be viewed as sets of instances or sets of properties that
+are true about those instances, and a _subtyping_ relationship between types translates in an interesting way
+into _subset_ relationships when viewed this way.
 
 If `A` is a subtype of `B`, the set of instances of implied by the type `A` is a _subset_ of the set of
 instances implied by `B`, or conversely, if `a` is an element of the set `A`, that implies that `a` is also an
-element of the set `B`. Clearly, we can make a similar claim about _supertype_ and _superset_ relationships.
+element of the set `B`.
+
+Clearly, we can make a similar claim about _supertype_ and _superset_ relationships.
 
 But if we view the type `A` as a set of properties, and `B` as a set of properties, then the subset relationship
 is reversed: if `A` is a subtype of `B`, then the set of properties of `A` is a superset of the set of
@@ -105,8 +108,49 @@ Category Theory is a profound and interesting topic, but is beyond the scope of 
 provides good context for understanding these relationships, and the duality between properties and instances in
 the context of types.
 
-For an experienced Scala developer, thinking about types should become second nature, but it remains a complex
-topic, and sometimes we need to reason about types more carefully. This is where thinking about types as sets of
-instances or sets of properties can be useful. Understanding subtyping is crucial to understanding how Scala
-works. With pracitice, experience and familiarity, it can become very easy to reason about types and their
-relationships, and to harness the power it provides us to express specificity and generality in our code.
+For an experienced Scala developer, thinking of types as first-class entities should be second nature, but it
+is nevertheless a complex topic, and sometimes we need to reason about types, and their relationships, more
+carefully. This is where thinking about types as sets of instances or sets of properties can be useful.
+
+Understanding subtyping is crucial to understanding how Scala works. With pracitice, experience and familiarity,
+it can become very easy to reason about types and their relationships, and to harness the power it provides us
+to express specificity and generality in our code.
+
+?---?
+
+# Imagine the type `Device` is a _subtype_ of the type `Apparatus`.
+
+Then compared to `Device`, the type `Apparatus`:
+
+* [X] has fewer properties
+* [ ] has fewer instances
+* [ ] has more properties
+* [X] has more instances
+* [X] is more general
+* [ ] is more specific
+* [X] is a supertype of `Device`
+* [ ] is a subtype of `Device`
+* [ ] may have a method which does not exist on the type `Device`
+
+# Imagine seeing this code as part of a working program.
+
+```scala
+class Layer() extends Group
+
+def showStatus(ctx: Context): Unit =
+  println(ctx.status)
+
+def showGroup(group: Group): Unit =
+  println(group.describe)
+
+val group: Group = Group.get()
+showStatus(group)
+
+// println(Layer().status)
+```
+
+Knowing that this code compiles without error, would the commented-out statement `println(Layer().status)` also compile?
+
+- [X] Yes, it would compile
+- [ ] No, it would not compile
+- [ ] We cannot know if it would compile or not without seeing more code

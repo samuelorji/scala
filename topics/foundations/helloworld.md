@@ -17,8 +17,8 @@ scalac hello.scala
 ```
 
 If everything worked correctly, this will create some new files in the same directory, with names ending in
-`.class`, and containing _compiled bytecode_. The `scalac` command will not print any output if the compilation
-was successful, but error messages will be displayed if compilation fails.
+`.class`, and containing _compiled Java bytecode_. The `scalac` command will not print any output if the
+compilation was successful, but error messages will be displayed if compilation fails.
 
 If we try to compile a slightly different program,
 ```scala
@@ -95,9 +95,47 @@ is nothing more than a method definition, indicated by the `def` keyword. The na
 the empty parentheses after its name are where we could define its parameters, if it had any. The implementation
 of the `hello` method is on the right-hand side of the `=` sign, and is a simple statement which invokes the
 method `println`, pronounced "print line", passing it the string `Hello, World!`, enclosed in quotes as its only
-parameter. And finally, as previously mentioned, `@main` is an _annotation_ which adds some "metadata" to the
-definition; specifically, that it is a main method. Annotations are a versatile feature of Scala, but their use
-is relatively uncommon.
+parameter. The `println` method call is what produces output on the consolu.
+
+And finally, as previously mentioned, `@main` is an _annotation_ which adds some "metadata" to the definition;
+specifically, that it is a main method. Annotations are a versatile feature of Scala, but their use is
+relatively uncommon.
 
 So, we have created our first program. It's not particularly interesting, but now we can start building upon it
 incrementally!
+
+?---?
+
+# The following program contains at least one mistake.
+
+```scala
+def factorial(x: Int) =
+  if x == 0 then 1 else x * factorial(x)
+```
+
+Try to compile the program and read the error message to understand the problem that is preventing successful
+compilation.
+
+- [ ] compilation fails because the `@main` annotation is missing
+- [ ] compilation fails because the method is not called `main`
+- [X] compilation fails because the method needs a return type
+- [ ] compilation fails because the program never terminates
+
+# Try to compile and run the following program
+
+```scala
+def go(x: Int): Int =
+  if x == 0 then 1 else x * go(x/2)
+
+@main def calculate() = go(24)
+```
+
+What happens?
+
+ - [ ] An error is produced during compilation
+ - [ ] The code compiles, but no runnable main method is produced
+ - [ ] The code compiles, but fails with a runtime error
+ - [X] The code compiles and runs, but prints no output
+ - [ ] The code compiles, runs and prints `5184` in the console
+
+# 

@@ -132,8 +132,8 @@ and a `main` method which references it, twice:
 ```scala
 @main
 def exec(): Unit =
-  Info // First reference
-  Info // Second reference
+  println(Info.name) // First reference
+  println(Info.name) // Second reference
 ```
 
 When the runtime encounters the first reference to the `Info` object, it will,
@@ -143,18 +143,20 @@ When the runtime encounters the first reference to the `Info` object, it will,
 * [X] print the string `"Initializing Onion, version 7"`
 * [ ] print something else
 
-# TODO FIX The second time the runtime encounters a reference to the `Info` object, it will,
-* [X] instantiate the object
+# When the runtime encounters the second reference to the `Info` object, it will,
+
+* [ ] instantiate the object
 * [ ] evaluate the value `version`
 * [ ] evaluate the value `name`
 * [ ] print the string `"Initializing Onion, version 7"`
 * [ ] print something else
+* [X] look up the `Info` object instantiated earlier
 
-# TODO FIX Moving the definition of `description` before the definition of `name` would,
-* [X] cause compilation to fail, due to a forward-reference
-* [ ] result in an error at runtime, due to a forward-reference
-* [ ] cause an incorrect message to be printed
-* [ ] not change the behavior at all
+# Moving the definition of `description` _before_ the definition of `name` would,
+- [ ] cause compilation to fail, due to a forward-reference
+- [ ] result in an error at runtime, due to a forward-reference
+- [ ] cause an incorrect message to be printed
+- [X] not change the behavior at all
 
 # Now, consider the following definitions,
 ```scala
@@ -178,6 +180,7 @@ Invoking the method `exec()` will cause several objects to be instantiated to ev
 is printed on the console.
 
 Tick all the objects which are initialized when the `exec()` method is run:
+
 * [X] `Alpha`
 * [X] `Beta`
 * [X] `Alpha.beta`

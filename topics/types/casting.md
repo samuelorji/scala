@@ -134,3 +134,43 @@ unfortunately, that is not something that the compiler can check.
 Casting should therefore be used as a last resort, and while every effort should be taken to avoid writing
 casts, refactoring as necessary, we may still see them in Scala code, and we need to understand what they are
 doing.
+
+?---?
+
+# Consider the following code:
+
+```scala
+val berlin: List[Any] = List("Berlin", 1237, 13.405, 52.52)
+
+val city = berlin(0).asInstanceOf[String]
+val foundation = berlin(1).asInstanceOf[String]
+val east: Int = berlin(2)
+val north = berlin(3): Double
+val city2 = city.asInstanceOf[Any]
+```
+
+Select every value definition which would compile successfully:
+
+* [X] `val city`
+* [X] `val foundation`
+* [ ] `val east`
+* [ ] `val north`
+* [X] `val city2`
+
+# Here is a similar example, which does compile successfully.
+
+```scala
+val chicago = List("Chicago", 1833, 41.8781, 87.6298)
+
+val city = chicago(0).asInstanceOf[String]
+val foundation = chicago(1).asInstanceOf[String]
+val west = chicago(2).asInstanceOf[Double]
+val north = chicago(3).asInstanceOf[Any]
+```
+
+Select every value definition which will run without exception:
+
+* [X] `val city`
+* [ ] `val foundation`
+* [X] `val west`
+* [X] `val north`
