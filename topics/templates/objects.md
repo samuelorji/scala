@@ -176,10 +176,10 @@ def exec(): Unit =
   println(Alpha.beta.alpha.gamma)
 ```
 
-Invoking the method `exec()` will cause several objects to be instantiated to evaluate it, before the number `3`
+Invoking the method `exec()` will cause several values to be instantiated to evaluate it, before the number `3`
 is printed on the console.
 
-Tick all the objects which are initialized when the `exec()` method is run:
+Tick all the values which are initialized when the `exec()` method is run:
 
 * [X] `Alpha`
 * [X] `Beta`

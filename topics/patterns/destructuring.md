@@ -110,15 +110,16 @@ scrutinee is not equal to `0`, then the entire case will fail to match, and eval
 against the next case.
 
 We match on circles whose centres have either their *x*- or *y*-coordinates equal to `0` and construct new
-circles with the same color, but a new radius of `1`. But this code also constructs new instances of `Point`s
-even though the `Point` instances we matched upon do not change, even though the `Color` instances (`c`) are
-reused: the `c` value we extract from the `Circle` is exactly the same object we use in the construction of the
-new `Circle` on the right-hand side of the case matches.
+circles with the same color, but with the radius changed to `1`. But this code also constructs new instances of
+`Point`s even though the `Point` instances we matched upon do not change at all.
+
+The original `Color` instances (`c`) get reused, because the `c` value we extract from the `Circle` is _exactly_
+the same object we then use in the construction of the new `Circle` on the right-hand side of the case clause.
 
 As the `center` value for each new circle is left unchanged, we would prefer to reuse the same value, without
-constructing a new `Point` instance, and thankfully, we can pattern match on a scrutinee's structure at the
-same time as binding it to an identifier, using the `@` operator to attach the identifier to the pattern. Here
-is the example above rewritten more concisely:
+unnecessarily constructing a new `Point` instance, and thankfully, we can pattern match on a scrutinee's
+structure at the same time as binding it to an identifier, using the `@` operator to attach the identifier to
+the pattern. Here is the example above rewritten more concisely:
 ```scala
 def axisCircle(circle: Circle): Circle =
   circle match
