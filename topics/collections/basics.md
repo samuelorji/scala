@@ -1,6 +1,6 @@
 As programmers we often need to store and operate on multiple similar values, where it's necessary to refer to
 the values _collectively_ rather than individually, and where our code must work whether there is one value, a
-million values, or zero. Scala provides a variety of _collection types_ with for this purpose.
+million values, or zero. Scala provides a variety of _collection types_ for this purpose.
 
 An instance of a collection type is a value which provides us with the means to access the other values stored
 within it. We can construct an instance of a collection from some initial values, and we get a new value
@@ -142,7 +142,7 @@ will construct a new `Vector` with a total of seven elements.
 Convenient methods exist for accessing the first and last elements of a `Vector`, `Vector#head` and
 `Vector#last`, which must be called on a non-empty `Vector`, or they will throw an exception. They have
 complementary methods called `Vector#tail` and `Vector#init` (in the sense of _initial_ values) which will
-construct new `Vector`s from the elements remaining after the `head` and the `last` values are removed,
+construct new `Vector`s from the elements remaining after the `head` and `last` values are removed,
 respectively. Again, these methods will throw exceptions if they are called on an empty `Vector`.
 
 We can test if a `Vector` is empty using the `Vector#isEmpty` method or its complementary `Vector#nonEmpty`
@@ -211,7 +211,7 @@ with them very safe and easy. Later lessons will explore these in more detail, b
 
 ```scala
 val xs = Vector(2, 4) ++ Vector(5, 7)
-val ys = Vector(1, 6, 9) :+ 3 +: xs
+val ys = Vector(1, 6, 9) ++ (3 +: xs)
 val zs = Vector(ys(2), ys(4), ys(7))
 ```
 

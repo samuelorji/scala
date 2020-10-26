@@ -36,9 +36,10 @@ There are other occasions when upcasting may happen. The types `IOException` and
 subtypes of the `Exception` type. If we had an instance of `IOException` and an instance of
 `ArithmeticException` and we put them both into a `Set`, the compiler would have a quandry to decide what type
 of `Set` it would be. It could not be a `Set[IOException]` if it contained an `ArithmeticException` because
-`ArithmeticException` does not conform to `IOException`. By exactly the same reasoning, it could not be a
-`Set[IOException]`. But it _could_ be a `Set[Exception]` because both `IOException` and `ArithmeticException`
-conform to `Exception`.
+`ArithmeticException` does not conform to `IOException`.
+
+By exactly the same reasoning, it could not be a `Set[ArithmeticException]`. But it _could_ be a `Set[Exception]`
+because both `IOException` and `ArithmeticException` conform to `Exception`.
 
 If we were to subsequently iterate over both elements in this `Set[Exception]`, one element would be an
 `IOException` and the other would be an `ArithmeticException`, but sets are unordered, so we would have no idea
