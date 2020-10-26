@@ -42,7 +42,7 @@ was found in the source code, in an unexpected position. This might not be the c
 problem, but it should help: we need to put paretheses around the string literal in order for it to be _applied_
 to the method `println`. Simply juxtaposing the string next to the method name is not valid syntax!
 
-# Programs
+## Programs
 
 This is an example of a complete _program_. Although a program can mean different things in different contexts,
 when we refer to a "program" we usually mean a standalone application that is launched by the operating system,
@@ -85,7 +85,7 @@ In reality, very few programs are so simple, and usually different _source_ and 
 used, along with a set of dependencies, defined using a _classpath_. The `scalac` and `scala` commands support
 a variety of parameters for specifying these details, but it is more usual to give this task to a _build tool_.
 
-# Anatomy of Hello World
+## Anatomy of Hello World
 
 Our simple program,
 ```scala
@@ -106,7 +106,7 @@ incrementally!
 
 ?---?
 
-# The following program contains at least one mistake.
+## The following program contains at least one mistake.
 
 ```scala
 def factorial(x: Int) =
@@ -121,7 +121,7 @@ compilation.
 - [X] compilation fails because the method needs a return type
 - [ ] compilation fails because the program never terminates
 
-# Try to compile and run the following program
+## Try to compile and run the following program
 
 ```scala
 def go(x: Int): Int =

@@ -45,7 +45,7 @@ If we were to subsequently iterate over both elements in this `Set[Exception]`, 
 `IOException` and the other would be an `ArithmeticException`, but sets are unordered, so we would have no idea
 which would come first, and all we would know about both elements is that they are `Exception`s.
 
-# Downcasting
+## Downcasting
 
 Given the possibility that values may be upcast to more general types, and the immutability of a value's runtime
 type, we may have values with types that are known more precisely at runtime than at compile-time. But if we
@@ -138,7 +138,7 @@ doing.
 
 ?---?
 
-# Consider the following code:
+## Consider the following code:
 
 ```scala
 val berlin: List[Any] = List("Berlin", 1237, 13.405, 52.52)
@@ -158,7 +158,7 @@ Select every value definition which would compile successfully:
 * [ ] `val north`
 * [X] `val city2`
 
-# Here is a similar example, which does compile successfully.
+## Here is a similar example, which does compile successfully.
 
 ```scala
 val chicago = List("Chicago", 1833, 41.8781, 87.6298)

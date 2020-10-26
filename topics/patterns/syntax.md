@@ -2,7 +2,7 @@ Reading and writing match expressions requires us to understand a couple of fund
 syntax. In this lesson, we will examine a couple more of these details: the significance of identifier names in
 a pattern, and alternation.
 
-# Naming and Patterns
+## Naming and Patterns
 
 In a match such as,
 ```scala
@@ -82,7 +82,7 @@ are treated as literals.
 Likewise, numbers such as `5` and `3.14159` are treated as literals, and so are `String`s, like `"this"`. They
 are therefore compared to the scrutinee with an equality check.
 
-# Alternation
+## Alternation
 
 Sometimes we have two cases in a match expression which should invoke exactly the same behavior. For example:
 ```scala
@@ -140,7 +140,7 @@ This simple machinery gives us some useful tools for writing more expressive pat
 
 ?---?
 
-# In the following code,
+## In the following code,
 
 ```scala
 val red = Color(1.0, 0.0, 0.0)
@@ -162,7 +162,7 @@ Choose which pattern will match the expression
 - [ ] Second
 - [X] Third
 
-# In the following code, three of the four case clauses contain compile errors:
+## In the following code, three of the four case clauses contain compile errors:
 
 ```scala
 val red = Color(1.0, 0.0, 0.0)

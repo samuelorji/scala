@@ -32,7 +32,7 @@ was designed to naturally accommodate many of the features of Java, but nothing 
 precludes other languages from running on it, and even interacting with code written in other JVM languages,
 such as Java, [Kotlin](https://kotlinlang.org/) and [Groovy](https://groovy-lang.org/).
 
-# Java Bytecode
+## Java Bytecode
 
 It is possible for the JVM to host code written in different languages only because they all use the same
 low-level intermediate language to represent code: _Java Bytecode_. Every JVM language uses a compiler, like
@@ -68,9 +68,9 @@ class, in a format which is low-level, but still readable. Here is an example of
 "Hello, World!" application written in Java:
 
 ```jvm
-0: getstatic      #2  // Field java/lang/System.out:Ljava/io/PrintStream;
-3: ldc            #3  // String Hello, World!
-5: invokevirtual  #4  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+0: getstatic      ##2  // Field java/lang/System.out:Ljava/io/PrintStream;
+3: ldc            ##3  // String Hello, World!
+5: invokevirtual  ##4  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
 8: return
 ```
 
@@ -82,10 +82,10 @@ elements in the _constant pool_, a part of a classfile containing fixed values l
 references. At the end of each line, `javap` will lookup these references and show them to us.
 
 This particular bytecode can be interpreted as follows:
- - `getstatic #2` puts a reference to the value specified at constant pool index 2, `java.lang.System.out` which
+ - `getstatic ##2` puts a reference to the value specified at constant pool index 2, `java.lang.System.out` which
    is a `java.io.PrintStream` onto the stack
- - `ldc #3` loads the constant at index 3, `"Hello, World!"`, onto the stack
- - `invokevirtual #4` calls the method `java.io.PrintStream#println(_: java.lang.String): Unit` (whose
+ - `ldc ##3` loads the constant at index 3, `"Hello, World!"`, onto the stack
+ - `invokevirtual ##4` calls the method `java.io.PrintStream##println(_: java.lang.String): Unit` (whose
    parameters are already on the stack)
  - `return` terminates the method
 
@@ -122,22 +122,22 @@ performance.
 
 ?---?
 
-# True or false? The Java Virtual Machine is an ordinary program the runs on a computer system.
+## True or false? The Java Virtual Machine is an ordinary program the runs on a computer system.
 - [X] True
 - [ ] False
 
-# True or false? All JVM instructions are one byte long (excluding parameters).
+## True or false? All JVM instructions are one byte long (excluding parameters).
 - [X] True
 - [ ] False
 
-# True or false? Java bytecode instructions map directly to Scala keywords.
+## True or false? Java bytecode instructions map directly to Scala keywords.
 - [ ] True
 - [X] False
 
-# True or false? A Java classfile contains only Java bytecode.
+## True or false? A Java classfile contains only Java bytecode.
 - [ ] True
 - [X] False
 
-# True or false? Compilation is the process by which Scala source code is converted into bytecode.
+## True or false? Compilation is the process by which Scala source code is converted into bytecode.
 - [X] True
 - [ ] False

@@ -11,7 +11,7 @@ Different collection types, such as `Vector`, `Set`, `List` and `Map` store valu
 within memory, which results in these collections having different characteristics for how their values can be
 accessed, and how new collection instances are constructed from old ones, and how fast that can be done.
 
-# Immutability
+## Immutability
 
 The collections we will learn about first are all _immutable_. This means that a collection value, once created,
 can never change. But new collection values can be easily created based on an existing collection, for example,
@@ -45,7 +45,7 @@ Scala also has several _mutable_ collection types too, whose elements can be mod
 same reference may point to a different value at different times. These may have their uses in other
 circumstances too, but immutable collection types provide everything we need to work with collections for now.
 
-## Talking about immutability
+### Talking about immutability
 
 Much of programming in Scala involves constructing new immutable collections based on old immutable collections,
 but it is cumbersome to have to explain the full detail of every change as the construction of a new instance of
@@ -57,7 +57,7 @@ This may appear imprecise, or sound like _sleight of hand_, but in the context o
 pragmatic, and will become very natural with practice. In the event of any ambiguity, we can always be precise
 about the reality that the modification is made through the creation of a new value from the old.
 
-# Vectors
+## Vectors
 
 A general-purpose collection for storing ordered lists of values (_ordered_, in the sense that their order is
 significant and should always be preserved—not in the sense that "higher" values should come after "lower"
@@ -137,15 +137,15 @@ val transactions = account ++ Vector(200, 400, 100)
 ```
 will construct a new `Vector` with a total of seven elements.
 
-# Accessing Vector Elements
+## Accessing Vector Elements
 
-Convenient methods exist for accessing the first and last elements of a `Vector`, `Vector#head` and
-`Vector#last`, which must be called on a non-empty `Vector`, or they will throw an exception. They have
-complementary methods called `Vector#tail` and `Vector#init` (in the sense of _initial_ values) which will
+Convenient methods exist for accessing the first and last elements of a `Vector`, `Vector##head` and
+`Vector##last`, which must be called on a non-empty `Vector`, or they will throw an exception. They have
+complementary methods called `Vector##tail` and `Vector##init` (in the sense of _initial_ values) which will
 construct new `Vector`s from the elements remaining after the `head` and `last` values are removed,
 respectively. Again, these methods will throw exceptions if they are called on an empty `Vector`.
 
-We can test if a `Vector` is empty using the `Vector#isEmpty` method or its complementary `Vector#nonEmpty`
+We can test if a `Vector` is empty using the `Vector##isEmpty` method or its complementary `Vector##nonEmpty`
 method. These methods always return the inverse of each other, and while only one is _necessary_, both exist to
 give the programmer an opportunity to subtly signal the positive or primary branch. In all cases,
 - `xs.nonEmpty == !xs.isEmpty`, and therefore,
@@ -184,7 +184,7 @@ Thankfully, accessing element _n_ in a `Vector` is very easy: we apply, in paren
 
 It's not possible to access an element beyond the last element of the `Vector` (or before element `0`!), so
 indices lower than `0`, or equal to the length of the `Vector` or higher will throw an exception. We could
-safely check this using the `Vector#length` method of any `Vector`, like so:
+safely check this using the `Vector##length` method of any `Vector`, like so:
 ```scala
 def safeGet(idx: Index, xs: Vector[Int]): Int =
   if idx >= 0 && idx < xs.length then xs(idx) else 0
@@ -201,13 +201,13 @@ with them very safe and easy. Later lessons will explore these in more detail, b
 
 ?---?
 
-# In the expression `x +: y :+ z`, all the values are either `Int`s or `Vector[Int]`s. What type does the value `y` have?
+## In the expression `x +: y :+ z`, all the values are either `Int`s or `Vector[Int]`s. What type does the value `y` have?
 
 - [X] `Vector[Int]`
 - [ ] `Int`
 - [ ] It is not possible to work out without knowing more
 
-# The following code, constructs a new `Vector`, `zs`, from three elements of `ys`. What is its value?
+## The following code, constructs a new `Vector`, `zs`, from three elements of `ys`. What is its value?
 
 ```scala
 val xs = Vector(2, 4) ++ Vector(5, 7)
@@ -221,7 +221,7 @@ val zs = Vector(ys(2), ys(4), ys(7))
 - [ ] `Vector(5, 3, 1)`
 - [ ] `Vector(9, 3, 5)`
 
-# In the definitons below, `a`, `b`, `c` and `d` are all `Vector[Int]`s. Select all of the expressions which compile and evaluate to a value equal to `Vector(0, 1, 0, 1)`.
+## In the definitons below, `a`, `b`, `c` and `d` are all `Vector[Int]`s. Select all of the expressions which compile and evaluate to a value equal to `Vector(0, 1, 0, 1)`.
 
 ```scala
 val a = Vector(0, 1)

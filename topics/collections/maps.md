@@ -27,9 +27,9 @@ val none = phoneNumbers.get("Pablo") // equals to None
 
 Another way of accessing Map's element is by calling the `Map` as you would call a function - and indirectly calling the `apply` method on it. The significant difference between this method and calling `get` method is that this method throws a `NoSuchElementException` when element can not be found. It is considered a bad pratice to call a method that throws an exception when there is an alternative that handles the problem in more convenient and meaningful way - in this case it is calling the `get` method and dealing with possilbility of receiving a `None` from it.
 
-# Modyfing the Map
+## Modyfing the Map
 
-## Adding the elements
+### Adding the elements
 
 To add a new key-value element to a Map you can use a `+` operator. As a side note - remember that immutability is the default behaviour of Scala collections and modyfing is in fact creating a new, modified `Map` and returning it. Syntax for adding a new elements to Map is straightforward as you can see in example below.
 
@@ -37,7 +37,7 @@ To add a new key-value element to a Map you can use a `+` operator. As a side no
 val updatedNumbers = phoneNumbers + ("John" -> "755 224 143)
 ```
 
-## Removing an element
+### Removing an element
 
 `-` operator allows the removal of elements from the `Map`. Elements are removed by key, so removing phone number to `Harry` could be written in the Scala code as follows:
 
@@ -45,7 +45,7 @@ val updatedNumbers = phoneNumbers + ("John" -> "755 224 143)
 val withoutHarry = phoneNumbers - "Harry"
 ```
 
-## Joining Maps
+### Joining Maps
 
 If you have two Maps and you want to join them together you can use `++` operator. Remember that they are required to have conforming types of keys and values. 
 

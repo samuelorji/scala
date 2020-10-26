@@ -48,7 +48,7 @@ be an alternative way of writing the same pattern, but it would extract the colo
 `r`, `g` and `b` instead. There is no need for the extracted components' names to match the names in the
 definition of `Rgb`.
 
-# Nested Structures
+## Nested Structures
 
 Imagine if we wanted to represent a circle, with a center, a radius and a color. In addition to our definition
 of `Color`, we could define these case classes to model the data.
@@ -150,7 +150,7 @@ construction of the values we want to match against.
 
 ?---?
 
-# Consider this `area` method for calculating the area of certain geometric shapes:
+## Consider this `area` method for calculating the area of certain geometric shapes:
 
 ```scala
 geo match
