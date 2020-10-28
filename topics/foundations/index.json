@@ -38,7 +38,6 @@
       "title": "Scopes and Namespaces",
       "authorId": "jon-pretty",
       "duration": 9,
-      "video": "https://www.youtube.com/embed/IOnttJYoj_4",
       "prerequisites": [
         {
           "reason": "classes are one of the primary constructs which give rise to scopes",

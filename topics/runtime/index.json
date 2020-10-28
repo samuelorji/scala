@@ -30,6 +30,7 @@
       "title": "The Execution Stack",
       "authorId": "jon-pretty",
       "duration": 15,
+      "video": "https://www.youtube.com/embed/es68rZbORoc",
       "prerequisites": [
         {
           "reason": "the stack contains references to methods in classes, so we should understand classes first",

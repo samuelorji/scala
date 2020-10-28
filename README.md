@@ -28,6 +28,7 @@ Courses are the top-level entity in the ScalaZONE material structure. Their stru
 | `video`    | String          | Video link that is displayed on the course overview page                               |
 | `desc`     | String          | Description of the course                                                              |
 | `scope`    | List of strings | Scope of the course; these are presented in the bullet list on the course overview page|
+| `sponsoredBy`    | String | Id of company sponsoring the course |
 
 ### Course Levels
 
@@ -72,6 +73,7 @@ The `Lesson` JSON type structure:
 | `authorId`      | String                        | Id of the lesson's author                                    |
 | `duration`      | Int                           | Expected duration of lesson completion in minutes            |
 | `prerequisites` | List of LessonPrerequisites   | Ids of lessons that are prerequisites of this lesson         |
+| `video`         | Lesson video                  | URL to embeddable lesson video                               |
 
 The `LessonPrerequisite` JSON type structure:
 
@@ -79,7 +81,7 @@ The `LessonPrerequisite` JSON type structure:
 |------------|--------|----------------------------------------------|
 | `lessonId` | String | Id of the lesson to depend upon              |
 | `topicId`  | String | Id of the topic of the lesson to depend upon |
-
+| `reason `  | String, Optional | Description of the reason of this dependency |
 
 ### Lessons
 
@@ -178,4 +180,22 @@ Courses' authors are defined in the [authors.json](/authors.json) file. This fil
 | `order`    | Int              | The order of the author in the authors list |
 | `twitter`  | String, Optional | Link to the author's twitter page           |
 | `github`   | String, Optional | Link to the author's github page            |
+| `linkedin`   | String, Optional | Link to the author's linkedin page            |
+| `facebook`   | String, Optional | Link to the author's linkedin page            |
 | `desc`     | String           | Description of the author                   |
+| `company`  ~ String, Optional | Company of the autor                        |
+
+### Companies
+
+Courses' authors are defined in the [companies.json](/companies.json) file. This file contains a list of `Company` objects. The `Company` JSON object has following structure:
+
+| Field name | Type             | Description                                 |
+|------------|------------------|---------------------------------------------|
+| `id`       | String           | Id of the company                           |
+| `name`     | String           | Name that is presented on the website       |
+| `twitter`  | String, Optional | Link to the company's twitter page          |
+| `github`   | String, Optional | Link to the company's github page           |
+| `linkedin`   | String, Optional | Link to the company's linkedin page            |
+| `facebook`   | String, Optional | Link to the company's linkedin page            |
+| `desc`     | String           | Description of the company                   |
+

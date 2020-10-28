@@ -33,6 +33,7 @@
       "title": "Traits",
       "authorId": "jon-pretty",
       "duration": 20,
+      "video": "https://www.youtube.com/embed/hrT33GtAP_A",
       "prerequisites": [
         {
           "reason": "inheritance from traits requires an understanding of subtyping",
