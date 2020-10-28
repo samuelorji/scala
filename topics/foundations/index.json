@@ -3,6 +3,12 @@
   "desc": "Fundamental topics for learning to program in Scala",
   "lessons": [
     {
+      "id": "introduction",
+      "title": "Introduction",
+      "authorId": "jon-pretty",
+      "duration": 9
+    },
+    {
       "id": "expressions",
       "title": "Expressions and Statements",
       "authorId": "jon-pretty",
