@@ -107,9 +107,9 @@ you would like to learn.
 These are usually harder because, in order to get the question right, you must consider each and every possible
 answer. Try this one now: select every programming language containing the letter `a` in its name.
 
-- [ ] F#
-- [X] Haskell
-- [X] Scala
-- [X] Java
-- [ ] Kotlin
-- [ ] C#
+* [ ] F#
+* [X] Haskell
+* [X] Scala
+* [X] Java
+* [ ] Kotlin
+* [ ] C#
