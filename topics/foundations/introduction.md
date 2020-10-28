@@ -1,4 +1,4 @@
-Welcome to _Learning to code in Scala_, an evolving online course which, in over the next months, aims to teach
+Welcome to _Learning to code in Scala_, an evolving online course which, over the next months, aims to teach
 every detail of the Scala language, from the very fundamentals of programming, through the subtle finer details
 of the syntax and runtime, to advanced topics like metaprogramming and type theory.
 
@@ -63,9 +63,9 @@ high-performance distributed scalable systems. Developers who write Scala can be
 in many other languages, and many organizations see Scala development skills not only as valuable asset for any
 developer, but a good indicator of a developer's capability in general.
 
-Scala is a language with a lot of depth, and while a new Scala developer can be productive within days of
-starting to learn the language, Scala has such depth that a developer can have a continual learning experience
-lasting years, all the while gaining proficiency.
+Scala is a language with great depth, and while a new Scala developer can be productive within days of starting
+to learn the language, Scala can offer that same developer a continual learning experience lasting years, all
+the while gaining proficiency.
 
 And that is a _joyful_ experience for any software developer!
 
@@ -82,8 +82,8 @@ language which could confuse beginners or which could frustrate experienced user
 
 Scala 3 also builds upon a more principled set of foundations than its earlier incarnation: a selection of new
 metaprogramming tools replace the powerful but fragile macros, and Scala 3's type system is built upon the
-_DOT Calculus_, proven to be _sound_ as part of the extensive research that went into the development of Scala
-3.
+_DOT Calculus_, proven to be _sound_ as part of the extensive research that went into the development of
+Scala 3.
 
 So let's begin. Good luck, and enjoy the course!
 
