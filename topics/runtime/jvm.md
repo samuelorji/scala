@@ -104,12 +104,7 @@ def run(): Unit = println("Hello, World!")
 and Scala will generate a classfile called `helloworld/run.class`, corresponding to the class, `helloworld.run`,
 which will contain a `main` method which will be invoked when we launch a new JVM.
 
-We can achieve that with Fury by running,
-```sh
-fury module update --type app --main helloworld.run
-fury
-```
-or directly using the `scala` command,
+We can achieve that using the `scala` command,
 ```sh
 scala -classpath <classpath> helloworld.run
 ```
