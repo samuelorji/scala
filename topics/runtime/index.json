@@ -7,6 +7,7 @@
       "title": "The JVM",
       "authorId": "jon-pretty",
       "duration": 12,
+      "video": "https://www.youtube.com/embed/6xe4bmJF-JM",
       "prerequisites": [
       ]
     },
@@ -15,6 +16,7 @@
       "title": "The Memory Model",
       "authorId": "jon-pretty",
       "duration": 14,
+      "video": "https://www.youtube.com/embed/kA4CtzUoCv",
       "prerequisites": [
         {
           "reason": "Java's memory stores objects, so we need to understand them first",

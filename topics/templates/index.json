@@ -25,8 +25,8 @@
       "id": "classes",
       "title": "Classes",
       "authorId": "jon-pretty",
-      "duration": 12
-
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/LQtROAUWfYU"
     },
     {
       "id": "traits",
@@ -46,6 +46,7 @@
       "title": "Inheritance",
       "authorId": "jon-pretty",
       "duration": 11,
+      "video": "https://www.youtube.com/embed/5uAkpxI-GUk",
       "prerequisites": [
         {
           "reason": "we should understand how types are organized hierarchically",
