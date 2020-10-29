@@ -77,7 +77,7 @@ trait Iterable[A]
 
 The fact that the class `List[A]` extends `Seq[A]` means that the properties implied by every member defined in
 `Seq[A]` are also properties of `List[A]` just as those members are inherited. Likewise every property of
-`Iterable[A]` is a property of `Seq[A]` and herce `List[A]`.
+`Iterable[A]` is a property of `Seq[A]` and hence `List[A]`.
 
 Defining a template is not the only way to introduce a new type into Scala, but it is the most familiar for most
 developers, and inheritance between templates is therefore the most familiar way to introduce subtype
