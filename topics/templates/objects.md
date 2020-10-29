@@ -1,4 +1,4 @@
-# Primitives vs Objects
+## Primitives vs Objects
 
 Every value in Scala is an instance of a type. Many values are _primitive values_ or just _primitives_, which
 are representations of data that have special, native support within the JVM, and very closely correspond to
@@ -19,6 +19,8 @@ identifier (such as `filename`), without needing to specify the object containin
 its methods) by specifying the member's identifier, prefixed with the object's identifier (and the `.`
 character).
 
+## Encapsulation
+
 Generally we talk of methods and fields being _inside_ an object, as if the object were a box containing them.
 This structure is known as _encapsulation_.
 
@@ -37,6 +39,8 @@ access the `count` method of the list of tasks, but we cannot simply call `count
 which operates on the `Task` elements of the `List` called `tasks`, hence we call `tasks.length`. Outside of the
 `Project` object, we must refer to `todo` as `Project.todo`, or we could, equally, refer directly to
 `Project.tasks.count` to get the same value.
+
+## Object References
 
 Another important benefit to grouping members together in an object may seem very trivial to anyone already
 familiar with object-oriented programming, but it makes a significant contribution to the ease of
@@ -70,7 +74,7 @@ from elsewhere, which would make it possible for `describe` to produce inconsist
 describe(Project.tasks, 10)
 ```
 
-### Defining objects
+## Defining Objects
 
 In Scala, we can create a new object using the `object` keyword, with a name for the object. While we can create
 a new object almost anywhere, we most commonly want to create an object at the top-level: not nested within
@@ -86,6 +90,8 @@ object BasicLog:
 ```
 the identifier `BasicLog` will always refer to the same instance, and likewise, `BasicLog.writer` will always be
 the same instance of a `FileWriter`.
+
+## Lazy Instantiation
 
 Unlike `val`s, though, objects are instantiated _lazily_. That means that an object may be defined in our
 program, but it will exist as a "living" value on the heap until one of the running threads makes its first
