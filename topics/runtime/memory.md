@@ -1,4 +1,4 @@
-# The Heap and the Stack
+## The Heap and the Stack
 
 All data that is used by a running JVM—values, objects, arrays—will be stored in one of two places: on the
 _heap_, a large block of memory, parts of which may be allocated by the JVM when needed, or in the _stack_,
@@ -13,7 +13,7 @@ Blocks of system memory, which is normally accessed like a big array—indexed b
 be allocated to the JVM by the host operating system when it starts up. But from the perspective of a program
 running inside the JVM, these regions of memory are never presented transparently as _addressable_ memory.
 
-# Allocation
+## Allocation
 
 Instead, memory is automatically _allocated_ on the heap when we create a new array, or instantiate an object,
 and instead of using a numerical index to access values on the heap, Scala provides us with _references_ to them
@@ -28,7 +28,7 @@ a particular type will have a known size), and will modify the bytes in that reg
 This is called the  _instantiation_ of the object; it is creating an _instance_ of the object. Having done so,
 the JVM will return the address of the start of the `Element` instance in memory.
 
-# Opaque Pointers
+## Opaque Pointers
 
 But that _address_, specifically the index of the memory containing the object, is completely opaque from within
 the JVM to the Scala (or Java) code we write. Throughout our code, we refer to that instance by an symbolic

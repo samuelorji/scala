@@ -1,4 +1,4 @@
-# Matching Against Structured Data
+## Matching Against Structured Data
 
 Scala offers a variety of ways to describe patterns, and much of this topic will be spent discovering these.
 In the example above, we have described the simplest of patterns like `Up` and `Down`. They are just references

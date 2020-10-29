@@ -1,4 +1,4 @@
-# Pattern Matching Keywords
+## Pattern Matching Keywords
 
 Scala provides two keywords, `match` and `case` for inspecting a value, and making a choice between several
 possible actions, based on what the value is.

@@ -1,4 +1,4 @@
-# Welcome
+## Welcome
 
 Welcome to _Learning to code in Scala_, an evolving online course which, over the next months, aims to teach
 every detail of the Scala language, from the very fundamentals of programming, through the subtle finer details
@@ -13,7 +13,7 @@ Although ScalaZONE will encourage starting at the beginning of one of the course
 through the topics in a meaningful order, access to all learning material is completely open, and you can always
 navigate or link to any lesson directly.
 
-# Why Scala?
+## Why Scala?
 
 But first, let's look at why we might like to learn Scala at all.
 
@@ -31,7 +31,7 @@ This combination of features makes Scala an extremely interesting hybrid languag
 possibilities for developers working in a wide variety of fields, from large distributed cloud-based
 applications to small command-line tools.
 
-# My experience of Scala
+## My experience of Scala
 
 When I first started programming in an early version of Scala in 2004, I found its new features interesting and
 exciting, and like many users who had worked with Java, it seemed _familiar_, while opening me up a new world of
@@ -58,7 +58,7 @@ self-consistency of my software.
 In an industry where the ability to respond to change _quickly_ is paramount, yet where reliability is far from
 guaranteed, Scala should be enormously welcome.
 
-# Scala Today
+## Scala Today
 
 Today, Scala is one of the most widely used languages for backend development, particularly for
 high-performance distributed scalable systems. Developers who write Scala can be more effective than developers
@@ -71,7 +71,7 @@ the while gaining proficiency.
 
 And that is a _joyful_ experience for any software developer!
 
-# Scala 3
+## Scala 3
 
 This course, while much of it will be relevant to earlier versions of Scala, teaches Scala 3, the latest version
 of Scala. Scala 3 represents the biggest collection of new features, simplifications and bugfixes to the
@@ -91,7 +91,7 @@ So let's begin. Good luck, and enjoy the course!
 
 ?---?
 
-# Throughout the course, questions will appear at the bottom of each lesson, to test whether you have
+## Throughout the course, questions will appear at the bottom of each lesson, to test whether you have
 understood the concepts in the lesson.
 
 Some of these require you to select a single answer. So try this with an easy question now: choose the language
@@ -104,7 +104,7 @@ you would like to learn.
 - [ ] Kotlin
 - [ ] C#
 
-# Other questions allow you to choose multiple answers.
+## Other questions allow you to choose multiple answers.
 
 These are usually harder because, in order to get the question right, you must consider each and every possible
 answer. Try this one now: select every programming language containing the letter `a` in its name.

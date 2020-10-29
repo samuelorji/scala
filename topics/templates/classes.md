@@ -1,4 +1,4 @@
-# Singletons and Classes
+## Singletons and Classes
 
 The `object` keyword allows us to create "one-off", or _singleton_, instances of objects with state and methods
 (collectively, we will call these _members_), but we often need to create multiple instances of similar objects;
@@ -45,7 +45,7 @@ class BasicLog(id: String):
   def record(msg: String): Unit = writer.write(s"$msg\n")
 ```
 
-# Classes as Templates
+## Classes as Templates
 
 And this is a _template_ for creating new objects. It is like a blueprint for the state and methods of an
 object, but is incomplete until the parameter, a `String` called `id`, is supplied. It is therefore impossible
