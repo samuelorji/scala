@@ -127,7 +127,7 @@ to give us a method which returns just the fractional part of a `Double`.
 Note that we have to add a space between the `+`, which is the name of the object, and the syntactic `:`, which
 indicates the start of its definition, so that the two are not interpreted as the same name.
 
-Infix extractors are convenient for _deconstructing_ objects which were _constructed_ using infix operators.
+Infix extractors are convenient for _destructuring_ objects which were _constructed_ using infix operators.
 This maintains the syntactic correspondence between the construction of a value, and a pattern which matches
 against it.
 

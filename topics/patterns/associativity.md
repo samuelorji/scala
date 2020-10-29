@@ -73,7 +73,7 @@ would permit us to match on such an expression, too. For example,
 case a * b + c * d =>
 ```
 
-But both the construction of the expression and the deconstruction rely on the precedence order of the symbolic
+But both the construction of the expression and its destructuring rely on the precedence order of the symbolic
 operators, `*` and `+`. We require that both the expression and the pattern should be interpreted as,
 ```scala
 (a * b) + (c * d)
