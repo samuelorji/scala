@@ -111,7 +111,7 @@ val locations: List[String] =
   details("locations").asInstanceOf[List[String]]
 ```
 
-Here, we are storing a some fields, indexed by `String`s, in a generic `Map`. We can access the age and a list
+Here, we are storing some fields, indexed by `String`s, in a generic `Map`. We can access the age and a list
 of locations by their indices, but the values taken from the map will have the type `Any`, which means that at
 compile-time we know very little about them.
 
