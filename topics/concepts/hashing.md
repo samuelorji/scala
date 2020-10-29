@@ -1,14 +1,15 @@
+# What is a Hash Function?
 The concept of _hash functions_ is fundamental to a number of different areas of software development, from high
 performance access of elements in collections, to security, to caching, it has a variety of different
 applications. A good understanding of the basics of _hashing_ is essential.
-
-# What is a Hash Function?
 
 A hash function is a pure, total, deterministic function from a large domain into a smaller range, where a
 different input is _very likely_ to produce a different output.
 
 The purpose of a hash function is to make it easier to check whether two things are _different_ with
 _certainty_, or the same with some likelihood.
+
+## A Trivial Example
 
 As a trivial example, a function which maps each integer to its remainder after dividing its absolute value by
 `127` is a hash function: our domain is all the integers (infinity, in theory, though there are only 2³²
@@ -26,6 +27,8 @@ because the same input will always generate the same hash.
 But having two inputs which produce the same hash does not confirm that they are the same input, because there
 are many different inputs which could all produce the same hash. Using our hash function, the inputs `50`,
 `177`, `304` and `2147483563` would all hash to the same value, `50`, for example.
+
+## Optimizing Performance
 
 When two inputs produce the same hash value, we still do not know for sure if the inputs are the same or
 different. We only get useful information that the inputs are different when the hash values are different, and
@@ -48,7 +51,7 @@ Most combinations of random numbers would have different hashes using our simpli
 the majority of comparisons could be done very quickly just by comparing the hashes. But a tiny number, about
 0.8% of comparisons would produce the same hash, which would require a full, slow equality check to be carried
 out. So, if 99.2% of comparisons can be made fast, but 0.8% of comparisons are very slow, that represents a
-significant improvement so long as the hash function itself is _fast_.
+significant improvement as long as the hash function itself is _fast_.
 
 Modern computers are able to compare any two 32-bit integers equally fast, so the example above would not help a
 computer in the same way as it helps a human. But hash functions can be defined for any kind of finite input,
@@ -118,9 +121,11 @@ space, but would offer faster retrieval.
 When two values do hash to the same value, this is known as a _hash collision_ or just a _collision_. It's
 generally considered undesirable, because it implies an additional cost _somewhere_ to disambiguate between
 those two inputs. For hash functions with a small range, collisions are inevitable, and should not be considered
-catastrophic. But if they occur too frequently, either by accident, or because a malicious user is deliberately
-seeking to attack a running system, they can reduce the performance of hash lookups from constant time, on
-average, to linear time, which could have serious performance implications.
+catastrophic.
+
+But if they occur too frequently, either by accident, or because a malicious user is deliberately seeking to
+attack a running system, they can reduce the performance of hash lookups from constant time, on average, to
+linear time, which could have serious performance implications.
 
 # Cryptographic Hash Functions
 
@@ -138,11 +143,11 @@ range is so large, and hashes are distributed uniformly and unpredictably across
 infeasible to try to find multiple inputs which produce the same output, and such an event wouldn't happen by
 chance.
 
-This fact may be used to our advantage: it is usually sufficient to make the assertion that if two files had the
-same MD5 hash, their content is identical; we can assume that the vanishingly small possibility that the two
+This fact may be used to our advantage: it is usually sufficient to make the assertion that if two files have
+the same MD5 hash, their content is identical; we can assume that the vanishingly small possibility that the two
 files had different content which generated the same MD5 hash is actually zero.
 
-The MD5 algorithm, like the various SHA algorithms, are _cryptographic_ hash functions. They are designed to
+The MD5 algorithm, and the various SHA algorithms, are _cryptographic_ hash functions. They are designed to
 make it as hard as possible to find two different inputs which produce the same output, or to manipulate an
 input by adding additional data to produce a specific desired hash.
 

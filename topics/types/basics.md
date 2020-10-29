@@ -1,3 +1,5 @@
+# The Type System
+
 Scala uses _types_ during compilation to check that the code we write is self-consistent. Scala's type system
 offers us the single greatest protection from coding mistakes; it makes it impossible for us to even attempt to
 run code which the compiler can prove is inconsistent.
@@ -49,7 +51,7 @@ example, to specify properties an instance should _not_ have. And details about 
 number and types of their parameters and their return type cannot be encoded in a type. For example, it would
 not be possible to specify that a method is pure or deterministic in its type.
 
-# Member references
+# Member References
 
 Often, when we talk about members (in this course and elsewhere), we want to specify that member by its name and
 the name of the type it is a member of. We can do this using the `#` symbol, for example to specify the
@@ -90,6 +92,8 @@ class has a method to close the door, returning `true` if the door was successfu
 the same name, but completely different purposes, and the classes have identical structures. But an instance
 of a `Door` is never an instance of a `Relation`, nor is a `Relation` an instance of a `Door`.
 
+# Namespaces
+
 The names of types share a namespace, the _type namespace_, and while Scala has a set of rules which dictate
 exactly when and where a particular type name can be used (and resolve unambiguously to a definition the
 compiler can use), if two different types with the same name are accessible in the same place, it will only be
@@ -107,6 +111,8 @@ name of a term.
 By convention, types always begin with capital letters, except in some very unusual circumstances. Terms
 _usually_ start with a lower-case letter, but not always: terms starting with capital letters are very common
 too. We will learn about these later.
+
+# Identifying Types and Terms
 
 It is useful, when reading Scala code, to get a feel for which identifiers represent types. The case of the
 first letter of the name is a strong indicator, but additionally, whenever we see a colon with a name after it,

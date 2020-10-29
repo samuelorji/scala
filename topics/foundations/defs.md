@@ -1,3 +1,5 @@
+# Term and Type Identifiers
+
 From a syntactic perspective, the code we write in Scala will be a composition of:
 - literal values, such as `"orange"`, `1`, `82.7` and `'z'`
 - Scala keywords, such as `trait`, `def`, `for` and `lazy`
@@ -26,7 +28,7 @@ We often describe the place in the source code where the new identifier is intro
 while every usage is referred to as the _use site_ (where "use" is pronounced like the noun—with a hard `s`—not
 like the verb) or _call site_, particularly in the case of methods.
 
-# Term Identifiers
+# Terms
 
 Term identifier references usually appear in _expressions_ (even if that expression is nothing more than just
 the term itself!) and in this context they refer to a definition which will produce some value when evaluated at
@@ -54,6 +56,8 @@ if fileVersion < 7
 then println(s"The file version is lower than the current version (7)")
 ```
 
+## Changing Meanings
+
 If, as we maintain our code, the version number needs to change, for example, from `7` to `8`, then we can
 change this just once in the definition,
 ```scala
@@ -68,6 +72,8 @@ different.
 Identifiers are typically concise words or a couple of words joined together without spaces. Their purpose is to
 _identify_ what they refer to, so they should do that unambiguously and with enough precision, but should not be
 overly long if a shorter term suffices.
+
+# Identifier Names
 
 The rules for what constitutes a valid identifier are more complex than might seem necessary, but to begin with,
 we can choose identifier names that are alphanumeric, do not begin with a number, and are not the same as any
@@ -96,6 +102,8 @@ same way, despite all being introduced with different keywords.
 
 But there are subtle differences.
 
+## Val vs Def
+
 The keyword `val` defines a new _value_: a field in a class, trait or object, or a local value within a method.
 This can be thought of as an allocation of some memory to store a value (either a primitive value, or a
 reference to an object) for as long as necessary. In the case of an object (or an object created from a class),
@@ -111,6 +119,8 @@ expression, as in our earlier example,
 ```scala
 def second: String = "two"
 ```
+
+## Repeated Evaluation
 
 But the keyword `def` actually defines a new _method_; a reusable piece of code which is executed every single
 time it is evaluated; that is, every single time it is referenced. The "code" in `second`'s definition is so

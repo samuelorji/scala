@@ -1,3 +1,5 @@
+# The Heap and the Stack
+
 All data that is used by a running JVM—values, objects, arrays—will be stored in one of two places: on the
 _heap_, a large block of memory, parts of which may be allocated by the JVM when needed, or in the _stack_,
 a special data structure which stores the current position in a running program, and the history of how it got
@@ -11,6 +13,8 @@ Blocks of system memory, which is normally accessed like a big array—indexed b
 be allocated to the JVM by the host operating system when it starts up. But from the perspective of a program
 running inside the JVM, these regions of memory are never presented transparently as _addressable_ memory.
 
+# Allocation
+
 Instead, memory is automatically _allocated_ on the heap when we create a new array, or instantiate an object,
 and instead of using a numerical index to access values on the heap, Scala provides us with _references_ to them
 in the form of named identifiers.
@@ -23,6 +27,8 @@ the JVM will find an empty region of its heap memory large enough to store an `E
 a particular type will have a known size), and will modify the bytes in that region to store the new `Element`.
 This is called the  _instantiation_ of the object; it is creating an _instance_ of the object. Having done so,
 the JVM will return the address of the start of the `Element` instance in memory.
+
+# Opaque Pointers
 
 But that _address_, specifically the index of the memory containing the object, is completely opaque from within
 the JVM to the Scala (or Java) code we write. Throughout our code, we refer to that instance by an symbolic
@@ -71,6 +77,8 @@ way of accessing an object "directly" by its memory address, there is simply no 
 object in any future computation. And therefore it is safe to delete it, and mark the memory it previously used
 as free to use again.
 
+## A Worked Example
+
 So, we cannot explicitly destroy objects on the JVM; we can only remove all references to them. That can happen
 when a mutable field containing a reference to an object is changed to a different reference, or when a local
 variable in the stack is discarded.
@@ -112,6 +120,8 @@ refer to in data structures such as sets and maps. Merely having these reference
 enough to prevent them from ever being garbage collected. If this is unintended, it is usually called a
 _memory leak_ because the effect is a gradual, continuous, undesirable loss of heap memory, as garbage
 collection fails to delete objects we would otherwise expect it to.
+
+## GC Pauses
 
 Garbage collection occurs every so often, whenever the JVM decides it is necessary or beneficial. That's not
 something that can be controlled by a program running in the JVM. Sometimes we would like to have more control

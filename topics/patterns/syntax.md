@@ -1,8 +1,8 @@
+# Naming and Patterns
+
 Reading and writing match expressions requires us to understand a couple of fundamental details of Scala's
 syntax. In this lesson, we will examine a couple more of these details: the significance of identifier names in
 a pattern, and alternation.
-
-# Naming and Patterns
 
 In a match such as,
 ```scala
@@ -20,6 +20,8 @@ def valid(input: Option[String]): Validation =
 there is a subtle difference between the first two patterns and the final one. `None` and `Blank` are values
 which are already defined outside of the scope of the match, and the `input` value is compared to each of them,
 in turn. But `other` is not defined anywhere else: it's a new identifier which is _introduced_ by the pattern.
+
+## Matching and Binding
 
 The choice between these two behaviors depends on a detail that might not be obvious at first: both `None` and
 `Blank` start with a capital letter, whereas `other` does not. The compiler will look at the name given to the
@@ -52,6 +54,8 @@ If we follow the code, we might assume that the call to `describe(cyan)` would r
 But calling `describe(cyan)` will return `"red"`. That's because `case red` will match on _any_ scrutinee, and
 bind it to the identifier `red`. The second `case` will never match, and, in fact, the compiler will warn us
 about this, but we can't always rely on the second case being present to force the warning.
+
+## Backtick Syntax
 
 One solution would be to create new `val`s starting with capital letters, which reference `red` and `cyan`,
 ```scala
@@ -126,6 +130,8 @@ def readBoolean(input: Option[String]): Option[Boolean] =
 ```
 
 Imagine having to list every one of those cases on a separate line!
+
+## Binding Constraints
 
 Alternation does not permit us, however, to bind identifiers to patterns in an alternation. It would not, for
 example, make sense to match on `case Some(a) | None` and expect to use `a` on the right-hand side of the case

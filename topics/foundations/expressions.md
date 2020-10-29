@@ -1,3 +1,5 @@
+# Evaluation
+
 The most fundamental components of Scala source code are _expressions_: code which _evaluates_ when a program is
 run to produce a single _value_. Most of the code we write, excluding the signatures which define the structure
 of classes, objects, traits and methods, will be expressions; they most closely represent the code that is doing

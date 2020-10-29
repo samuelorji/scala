@@ -1,3 +1,5 @@
+# Different Collection Types
+
 Scala's standard library provides many different collection types, which differ primarily in the structure they
 use to store the values contained within them. The way a collection's internal data is structured has
 implications for how that data is stored and accessed, and certain operations will be performed much more
@@ -72,6 +74,8 @@ val xs = 1 :: 2 :: 3 :: Nil
 Scala permits the use of a symbolic name for a type, `::`, which is generally referred to as "cons", short for
 "construct", and equivalent to the arrows on the diagram, above.
 
+## Constructing Lists
+
 Constructing new `List`s presents a similar compromise in performance: prepending an element to the start is
 fast, regardless of the length of the original list, because it requires only the creation of a single new `::`
 object which links the new element to the pre-existing tail. It's especially convenient that the original `List`
@@ -93,6 +97,8 @@ operations proportional to the length of the list, making it very inefficient fo
 Despite this difference, the methods available on `List`s and `Vector`s are mostly the same. Both have `head`
 and `last` methods and both have the `+:` (prepend) and `:+` (append) methods, even though some of these methods
 may have quite different performance characteristics for long sequences.
+
+## Performance Comparison with Vectors
 
 In comparison, none of `Vector`s operations are proportional to the size of the collection, all being
 guaranteed to complete in fewer than a small, fixed number of operations. But accessing the first element of a
