@@ -85,7 +85,7 @@ relationships between types. But new types can also be created by composing exis
 nature of the composition, subtyping relationships may automatically be conferred by the compiler between these
 new types and other types, without any explicit inheritance being defined. We will look at these rules later.
 
-# Types as Sets
+## Types as Sets
 
 Although they are foundationally different, types can be viewed as sets of instances or sets of properties that
 are true about those instances, and a _subtyping_ relationship between types translates in an interesting way
@@ -118,7 +118,7 @@ to express specificity and generality in our code.
 
 ?---?
 
-# Imagine the type `Device` is a _subtype_ of the type `Apparatus`.
+## Imagine the type `Device` is a _subtype_ of the type `Apparatus`.
 
 Then compared to `Device`, the type `Apparatus`:
 
@@ -132,7 +132,7 @@ Then compared to `Device`, the type `Apparatus`:
 * [ ] is a subtype of `Device`
 * [ ] may have a method which does not exist on the type `Device`
 
-# Imagine seeing this code as part of a working program.
+## Imagine seeing this code as part of a working program.
 
 ```scala
 class Layer() extends Group

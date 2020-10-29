@@ -14,7 +14,7 @@ case class, the object is the case class's companion object, and the component p
 parameters, but there is no strict requirement this be the case: any object may be an extractor, and it can
 deconstruct into any components.
 
-# The `unapply` method
+## The `unapply` method
 
 What makes an object an extractor is the presence of a member method called `unapply` with an appropriate
 signature. We will look later at the variety of different signatures that are suitable for the `unapply` method,

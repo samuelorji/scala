@@ -6,6 +6,7 @@
       "id": "objects",
       "title": "Objects",
       "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/72l8Kmwhlk4",
       "duration": 11,
       "prerequisites": [
         {
@@ -24,14 +25,15 @@
       "id": "classes",
       "title": "Classes",
       "authorId": "jon-pretty",
-      "duration": 12
-
+      "duration": 12,
+      "video": "https://www.youtube.com/embed/LQtROAUWfYU"
     },
     {
       "id": "traits",
       "title": "Traits",
       "authorId": "jon-pretty",
       "duration": 20,
+      "video": "https://www.youtube.com/embed/hrT33GtAP_A",
       "prerequisites": [
         {
           "reason": "inheritance from traits requires an understanding of subtyping",
@@ -45,6 +47,7 @@
       "title": "Inheritance",
       "authorId": "jon-pretty",
       "duration": 11,
+      "video": "https://www.youtube.com/embed/5uAkpxI-GUk",
       "prerequisites": [
         {
           "reason": "we should understand how types are organized hierarchically",

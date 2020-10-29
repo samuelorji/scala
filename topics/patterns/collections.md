@@ -85,7 +85,7 @@ and which to include in the remainder, and this is enforced by the order of eval
 the extractor must decompose the scrutinee into parts first, and only then could pattern matching continue to
 check nested extractors.
 
-## Desugaring
+### Desugaring
 
 These infix extractors are actually just ordinary extractors with two parameters, used in an infix position. For
 example, we could define a two-parameter extractor such as,
@@ -133,7 +133,7 @@ against it.
 
 ?---?
 
-# Select the code that is equivalent to the pattern, `case In(Of(8, April), year) =>`:
+## Select the code that is equivalent to the pattern, `case In(Of(8, April), year) =>`:
 
 - [ ] `case 8 In April Of year =>`
 - [ ] `case 8 In (April Of year) =>`
@@ -141,7 +141,7 @@ against it.
 - [X] `case Of(8, April) In year =>`
 - [ ] `case In(8, Of(April, year)) =>`
 
-# The following code is equivalent to one case clause which matches against a scrutinee, `s`. Which case clause?
+## The following code is equivalent to one case clause which matches against a scrutinee, `s`. Which case clause?
 
 ```scala
 if ~.unapply(s) == Some(("abc", "xyz")) then f

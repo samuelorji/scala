@@ -122,21 +122,21 @@ class Sheep(name: String) extends Animal("Sheep"):
 
 val sheep = Sheep("Aries")
 ```
-# What is the result of `println(sheep.name)`?
+## What is the result of `println(sheep.name)`?
  * [ ] prints `"Sheep"`
  * [ ] prints `"Aries"`
  * [ ] prints `"SHEEP-001"`
  * [ ] prints `"ARIES-001"`
  * [X] does not compile
 
- # What is the result of `println(sheep.description)`?
+ ## What is the result of `println(sheep.description)`?
  * [ ] prints `"Sheep"`
  * [ ] prints `"Aries"`
  * [X] prints `"SHEEP-001"`
  * [ ] prints `"ARIES-001"`
  * [ ] does not compile
  
- # What is the result of `println(sheep.id)`?
+ ## What is the result of `println(sheep.id)`?
  * [ ] prints `"Sheep"`
  * [ ] prints `"Aries"`
  * [X] prints `"SHEEP-001"`
@@ -155,7 +155,7 @@ class Child(n) extends Parent(n + 1):
 
 Child(2)
 ```
-# What is the value of `counter` after running this code?
+## What is the value of `counter` after running this code?
  * [ ] 1
  * [ ] 3
  * [ ] 4

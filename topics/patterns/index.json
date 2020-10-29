@@ -7,6 +7,7 @@
       "title": "Simple matching",
       "authorId": "jon-pretty",
       "duration": 8,
+      "video": "https://www.youtube.com/embed/rhhkLMfyysA",
       "prerequisites": [
         {
           "reason": "pattern matches are composed of (and are themselves) expressions, so we should understand these first",
@@ -32,6 +33,7 @@
       "title": "Matching on Collections",
       "authorId": "jon-pretty",
       "duration": 12,
+      "video": "https://www.youtube.com/embed/Mobst4aunLk",
       "prerequisites": [
         {
           "reason": "it would be useful to know a few collections before we try to pattern match on them",

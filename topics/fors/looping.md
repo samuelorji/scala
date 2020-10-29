@@ -1,6 +1,6 @@
 In the previous lessons we talked about methods that are called `foreach`, `map` and `filter`. In this lesson you will learn about a more convenient way to work with these functions. At first it may seem that the construct you are going to learn about only makes your code look cleaner. However, it is one of the most important and commonly used features in the functional programming.
 
-# The for comprehension
+## The for comprehension
 
 If you learned any high level programming languages in the past you probably have seen the `for` loop in some form. It is used to `iterate` in its most general meaning. You can use it to go over the elements of a collection, just like we did with the `foreach` statement, or you can just repeat some operation a couple of times. In Scala, the `for` expression is inherently connected to `foreach`, `map`, and `filter` methods. Given any composition of these methods, you are able to rewrite it in terms of a `for comprehension`. So let's try to make a `for` that prints all the elements in a List.
 
@@ -21,7 +21,7 @@ During the execution of the two code samples above, they both boil down to the s
 
 Let's focus on the keywords that we used in this `for comprehension`. The first one that we haven't seen before is the `for` itself. It marks the beginng of the `for` expression and can be read as `For each`. Then, in the next line, there is a tabulated `i <- list` statement. It can be understood as `value "i" in the list`. Adding these two pieces together we end up with `For each value "i" in the list` - you must admit that at this point the meaning of this sentence is pretty clear. The last line says `do println(i)`. Now we can rewrite this whole expressing using the english language: `For each value "i" in the list do println "i"`. And it is exactly what it does on execution.
 
-# Filtering
+## Filtering
 
 But what if we wanted to print only the even numbers in the `List`? Doing so with the collection methods would require calling the `filter` first, and then doing `foreach` on the resulting `List`. Just like in the example below:
 
@@ -45,7 +45,7 @@ do println(i)
 
 As you can see, we added the `if` expression next to the `i <- list`. It makes sure that only the elements that pass the condition given with `isEven` get assigned to `i`. We can still easily translate it directly to the english language: `For each value "i" in the list that isEven do println "i"`. 
 
-# Multiple levels of iteration
+## Multiple levels of iteration
 
 Consider following problem: `Given two lists, print all the possible pairs of values from these Lists`. We can just dive in this problem using the knowledge from previous lessons and use the `foreach` expression two times:
 
@@ -97,7 +97,7 @@ for
 do println(twoLetters)
 ```
 
-# Yielding
+## Yielding
 
 All the code we wrote so far was only supposed to print out values. These `for comprehensions` were performing specified operation with values, and then totally forgetting about them. There is another approach that allows to execute the `for comprehension` and extract the specified values out of it. It is done using the `yield` keyword. All we have to do to use it is just replace the `do` with `yield` and not print the value, but just reference it instead:
 

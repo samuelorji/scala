@@ -1,4 +1,4 @@
-# Evaluation
+## Evaluation
 
 The most fundamental components of Scala source code are _expressions_: code which _evaluates_ when a program is
 run to produce a single _value_. Most of the code we write, excluding the signatures which define the structure
@@ -15,7 +15,7 @@ Here are some example expressions:
 - `list`, a reference to some value called `list`
 - `name.substring(2, 4)`, which evaluates to the segment of the string `name` between characters `2` and `4`
 
-# Composition
+## Composition
 
 Expressions may be simple references to existing named values, selections using the `.` operator to access
 members of an object (sometimes called _dereferencing_), or invocations of methods. Where a method takes
@@ -47,7 +47,7 @@ value. This value may exist only for the briefest moment, as an intermediate val
 as a parameter to another method (and never used thereafter), or may be a result which is kept for a long time,
 and referred to multiple times during the program's life.
 
-# Purity and Side-Effects
+## Purity and Side-Effects
 
 Some expressions can, during their evaluation, make changes which could be detected by an external observer.
 The sorts of changes we consider "detectable" would include all of the following:
@@ -87,7 +87,7 @@ low-level system tools could be used to inspect the state of the computer's CPU.
 intrusive, impractical and potentially unreliable, so we only consider those changes which are detectable from
 within the JVM by means of "standard" unintrusive, reliable operations to be "side-effects".
 
-# Exceptions
+## Exceptions
 
 Expressions should return a single value, but sometimes problems occur during their evaluation which make it
 impossible to return a value. For example when the expression,
@@ -104,7 +104,7 @@ _handled_ and the programmer can provide some mechanism for recovering from the 
 
 We will look at exceptions in more detail later in the course.
 
-# Statements
+## Statements
 
 Sometimes an expression will perform a useful action through a side-effect, but will not return any useful
 value, for example, the expression,
@@ -143,7 +143,7 @@ composable means of specifying computations or sequences of operations is key to
 
 ?---?
 
-# In the following short code sample, identify all the expressions:
+## In the following short code sample, identify all the expressions:
 
 ```scala
 val y = (3 + x)*2
@@ -159,7 +159,7 @@ println(y*5)
 * [X] `2`
 * [ ] `=`
 
-# Select all of the claims that are true about the following line of code:
+## Select all of the claims that are true about the following line of code:
 
 ```scala
 println("Hello, World!")

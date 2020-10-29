@@ -1,4 +1,4 @@
-# Generalizing Inheritance
+## Generalizing Inheritance
 
 Scala provides another kind of template, similar to a class, but trading some constraints for some additional
 capabilities. Like a class, a _trait_ defines a body with methods, state and other members. A trait may also
@@ -57,7 +57,7 @@ It's common to name traits after their capabilities (though some people discoura
 a proliferation of entities all with names ending in `-able`), and we might expect `Closable` to define a method
 `close()`, and `Pausable` a method `pause()`. But traits' names are entirely our choice.
 
-# Abstract methods
+## Abstract methods
 
 Looking back at our example using `Timer`, written here in equivalent, but slightly shorter form,
 ```scala
@@ -191,7 +191,7 @@ we could choose to implement `writer` later (in a subclass), and define `BasicLo
 abstract class BasicLog(id: String) extends Timer, FileRecorder
 ```
 
-# A Warning
+## A Warning
 
 Traits provide a very powerful system for defining and satisfying constraints, in the form of methods, and the
 Scala compiler can very capably provide guarantees that those constraints are satisfied, with helpful guidance
@@ -205,7 +205,7 @@ traits, and this somewhat defeats their purpose.
 
 ?---?
 
-# Given the following trait definitions,
+## Given the following trait definitions,
 
 ```scala
 trait Publication(title: String)
@@ -221,7 +221,7 @@ select every object definition which will compile without error.
 * [X] `object Middlemarch extends Novel("Middlemarch"), Publication("Middlemarch")`
 * [ ] `object Catch22 extends Novel("Catch-22"), Publication, Inventory(0)`
 
-# The following code will not compile:
+## The following code will not compile:
 
 ```scala
 val Origin = Point(0, 0)

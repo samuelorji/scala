@@ -1,4 +1,4 @@
-# Term and Type Identifiers
+## Term and Type Identifiers
 
 From a syntactic perspective, the code we write in Scala will be a composition of:
 - literal values, such as `"orange"`, `1`, `82.7` and `'z'`
@@ -28,7 +28,7 @@ We often describe the place in the source code where the new identifier is intro
 while every usage is referred to as the _use site_ (where "use" is pronounced like the noun—with a hard `s`—not
 like the verb) or _call site_, particularly in the case of methods.
 
-# Terms
+## Term Identifiers
 
 Term identifier references usually appear in _expressions_ (even if that expression is nothing more than just
 the term itself!) and in this context they refer to a definition which will produce some value when evaluated at
@@ -73,7 +73,7 @@ Identifiers are typically concise words or a couple of words joined together wit
 _identify_ what they refer to, so they should do that unambiguously and with enough precision, but should not be
 overly long if a shorter term suffices.
 
-# Identifier Names
+## Identifier Names
 
 The rules for what constitutes a valid identifier are more complex than might seem necessary, but to begin with,
 we can choose identifier names that are alphanumeric, do not begin with a number, and are not the same as any
@@ -178,7 +178,7 @@ opaque at the use site.
 
 ?---?
 
-# In the following code, `Counter(0)` constructs a new a `Counter` instance, an object with an internal integer counter starting at `0`. Every time the `inc()` method is invoked on a `Counter` instance, it increments its inner counter by `1`. The `Counter`'s `value` method will return the counter value.
+## In the following code, `Counter(0)` constructs a new a `Counter` instance, an object with an internal integer counter starting at `0`. Every time the `inc()` method is invoked on a `Counter` instance, it increments its inner counter by `1`. The `Counter`'s `value` method will return the counter value.
 
 ```scala
 val counter = Counter(0)
@@ -208,7 +208,7 @@ What is the counter value printed at the end of the `run()` method?
 - [ ] 6
 - [ ] 7
 
-# The same code has been modified to swap some `def` and `val` declarations:
+## The same code has been modified to swap some `def` and `val` declarations:
 
 ```scala
 def counter = Counter(0)

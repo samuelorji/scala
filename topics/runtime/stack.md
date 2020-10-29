@@ -80,7 +80,7 @@ all the methods that were invoked from the initial entry into our application, t
 living data structure will contain the sequence of method calls that were invoked to get to our current
 position in the code. This turns out to be very useful information when trying to debug our software.
 
-# Exceptions
+## Exceptions
 
 When a method normally runs, it may modify some values in memory, or return a value. Though it is not always
 possible to do that. There is nothing to stop us calling the `factorial` method we used above with a parameter
@@ -157,7 +157,7 @@ process of a program can remain superficial, so long as we understand how to rea
 
 ?---?
 
-# Stack traces can reveal:
+## Stack traces can reveal:
   * [x] The type of exception that was thrown
   * [ ] The exact time that the exception was thrown
   * [ ] All values stored on the stack
@@ -166,7 +166,7 @@ process of a program can remain superficial, so long as we understand how to rea
   * [ ] The parameters to those methods
   * [x] The line numbers in the source files from which those methods were compiled
 
-# Have a look at the following stack trace:
+## Have a look at the following stack trace:
 
 ```
 Exception in thread "main" java.lang.Exception: there was an unfortunate failure

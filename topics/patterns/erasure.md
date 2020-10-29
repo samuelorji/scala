@@ -37,7 +37,7 @@ def asType[S: ClassTag](value: Any): Option[S] =
     case _    => None
 ```
 
-# Inlining
+## Inlining
 
 For a method like `asType`, there is an alternative solution which may work in many cases. Without the
 `ClassTag` context, we can make `asType` an _inline_ method, like so,
@@ -80,7 +80,7 @@ important, but inlining large bodies may not scale well. With both solutions, ho
 type match on the abstract type, back through every call site, to an invocation when the type was known
 statically and concretely.
 
-## Pattern matching on arrays
+### Pattern matching on arrays
 
 While `Array` instances may appear to behave like other collection types, such as `List` and `Vector`, they are
 special in that they have a native representation on the JVM. An `Array[String]` is represented as

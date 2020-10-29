@@ -1,4 +1,4 @@
-# The Type System
+## The Type System
 
 Scala uses _types_ during compilation to check that the code we write is self-consistent. Scala's type system
 offers us the single greatest protection from coding mistakes; it makes it impossible for us to even attempt to
@@ -27,7 +27,7 @@ at its foundation, the DOT calculus. As well as providing us with a basis to tru
 (as long as we do not try to circumvent it!), DOT allows us to combine types algebraicly, almost as easily as we
 would numbers.
 
-# Properties
+## Properties
 
 We can think of a type as shorthand for describing the properties that its instances will have. When we define
 a new class, it introduces a new type (or many types) corresponding to that template. Having defined a new
@@ -51,23 +51,23 @@ example, to specify properties an instance should _not_ have. And details about 
 number and types of their parameters and their return type cannot be encoded in a type. For example, it would
 not be possible to specify that a method is pure or deterministic in its type.
 
-# Member References
+## Member References
 
 Often, when we talk about members (in this course and elsewhere), we want to specify that member by its name and
-the name of the type it is a member of. We can do this using the `#` symbol, for example to specify the
-`substring` method of the `String` type, we would write `String#substring`. The type name always goes on the
-left of the `#` and the member name (which may be a term name or a type name) goes on the right.
+the name of the type it is a member of. We can do this using the `##` symbol, for example to specify the
+`substring` method of the `String` type, we would write `String##substring`. The type name always goes on the
+left of the `##` and the member name (which may be a term name or a type name) goes on the right.
 
 This is similar to, but should not be confused with, references written with _dot-notation_. These may look
-similar, using a `.` instead of a `#`, but the name to the left of the `.` will always be a _value_ and not a
+similar, using a `.` instead of a `##`, but the name to the left of the `.` will always be a _value_ and not a
 _type_. For example, in `List.empty`, `List` is the _object_ called `List` with the member `empty`, while in
-`List#head`, `List` refers to the type `List`. (Neither does the object `List` have a member called `head`, nor
+`List##head`, `List` refers to the type `List`. (Neither does the object `List` have a member called `head`, nor
 do instances of the type `List` have members called `empty`.)
 
-So, in general, `a.b` refers to the member `b` of the instance `a` (of unspecified type), while `A#b` refers to
+So, in general, `a.b` refers to the member `b` of the instance `a` (of unspecified type), while `A##b` refers to
 the member `b` of _an instance of_ the type `A`.
 
-# Templates and Types
+## Templates and Types
 
 It's important to remember that a value has a type because it was constructed as an instance of a particular
 template, and _not_ because it has the properties needed to conform to that type. In fact, a value may have
@@ -92,7 +92,7 @@ class has a method to close the door, returning `true` if the door was successfu
 the same name, but completely different purposes, and the classes have identical structures. But an instance
 of a `Door` is never an instance of a `Relation`, nor is a `Relation` an instance of a `Door`.
 
-# Namespaces
+## Namespaces
 
 The names of types share a namespace, the _type namespace_, and while Scala has a set of rules which dictate
 exactly when and where a particular type name can be used (and resolve unambiguously to a definition the
@@ -112,7 +112,7 @@ By convention, types always begin with capital letters, except in some very unus
 _usually_ start with a lower-case letter, but not always: terms starting with capital letters are very common
 too. We will learn about these later.
 
-# Identifying Types and Terms
+## Identifying Types and Terms
 
 It is useful, when reading Scala code, to get a feel for which identifiers represent types. The case of the
 first letter of the name is a strong indicator, but additionally, whenever we see a colon with a name after it,
@@ -145,7 +145,7 @@ putting many limitations on the code we can write straight away.
 
 ?---?
 
-# Below are several short fragments of code which include a single reference to either `alpha` or `Alpha`. In some fragments, it is a term, while in others it represents a type. Even if you don't fully understand the code, try to understand whether each is a term or a type. Select all the fragments of Scala code where `alpha` or `Alpha` looks like a type (and not a term). There are no trick questions!
+## Below are several short fragments of code which include a single reference to either `alpha` or `Alpha`. In some fragments, it is a term, while in others it represents a type. Even if you don't fully understand the code, try to understand whether each is a term or a type. Select all the fragments of Scala code where `alpha` or `Alpha` looks like a type (and not a term). There are no trick questions!
 * [X] `val x: Alpha = get()`
 * [ ] `val alpha = "a"`
 * [ ] `val Alpha = "A"`
@@ -156,7 +156,7 @@ putting many limitations on the code we can write straight away.
 * [ ] `2 + Alpha()`
 * [X] `private[Alpha] def apply(): Unit`
 
-# Consider the following class and object definitions:
+## Consider the following class and object definitions:
 ```scala
 class Rectangle(width: Double, height: Double):
   def size: Double = width*height
@@ -170,7 +170,7 @@ Is the object `Square` an instance of the type `Rectangle`?
 - [ ] Yes
 - [X] No
 
-# Which of the following properties of a value could be represented by its type?
+## Which of the following properties of a value could be represented by its type?
 * [X] "it has a member called `apply()` which will always return the value `2`"
 * [X] "it has a member called `count` which takes any number of parameters of the same type"
 * [ ] "it does not have a member called `run()`"

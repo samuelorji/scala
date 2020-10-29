@@ -15,7 +15,7 @@ The rest of this lesson cover the variety of contexts in which underscores may a
 These might not make sense yet, but should provide hints about where to look to try to understand these concepts
 better.
 
-# Imports and Exports
+## Imports and Exports
 
 Import and export statements in Scala may use the `_` to help define what should and should not be imported (or
 exported).
@@ -44,7 +44,7 @@ The way to read this should be, "from within the `java.io` package, discard `Fil
 The `_` character appears twice, firstly to indicate that `File` is discarded, and secondly as a wildcard import
 of everything else.
 
-# Lambdas
+## Lambdas
 
 Underscores are very common shorthand for writing simple lambdas in Scala, using what is usually called
 _placeholder syntax_, for example in, `xs.exists(_ < 10)`, which is short for, `xs.exists { x => x < 10 }`. This
@@ -58,7 +58,7 @@ provided the order of the parameters matches the order of their placement in the
 List(3, 5, 7, 11).reduce(_ * _)
 ```
 
-# Wildcard types
+## Wildcard types
 
 We may sometimes encounter _wildcard types_ in Scala, which are a way of generalizing generic types with one or
 more type parameters that is _indeterminate_. In Scala versions before 3, these were a subset of the
@@ -91,7 +91,7 @@ We could choose to represent our list as a `List[_]`, but this would discard typ
 `Set[_]`s that may have been useful: we can call `.size` on every element of a `List[Set[_]]` but we cannot do
 that on the elements of a `List[_]`.
 
-# Uninitialized values
+## Uninitialized values
 
 Sometimes we want to create a field in a class or object, but do not yet want to assign it a value. We can use
 an underscore to indicate that its value should not (yet) be initialized.
@@ -109,7 +109,7 @@ being initialized.
 
 Note that this only makes sense for fields in classes and objects. Local variables cannot be left uninitialized.
 
-# Numeric spacing
+## Numeric spacing
 
 Sometimes, when we work with vary large literal numbers, like `100000000000L` (that's one triillion) it is
 useful to group the digits to make them easier to read. So we can write,
@@ -121,7 +121,7 @@ The `_` characters within the number behave as if they were not present, except 
 of digits. The positions of the `_` characters in the number do not need to be in any particular pattern.
 `1_00__000_0` is also a valid number, for example.
 
-# Pattern matching
+## Pattern matching
 
 The `_` character also behaves as a wildcard in pattern matching. It will always match _any_ scrutinee, which
 makes it useful for disregarding a value because we don't care about it.
@@ -141,7 +141,7 @@ def isAdmin(email: String) = email match
   case _               => false
 ```
 
-# Higher-kinded type parameters
+## Higher-kinded type parameters
 
 When defining a method or class that takes a type parameter, and that type parameter itself should be a type
 that normally takes one or more type parameters (like `List` or `Either`), the `_` can be used to indicate that

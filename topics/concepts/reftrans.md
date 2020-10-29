@@ -50,8 +50,8 @@ Here are some examples:
 Identifiers may also be _symbolic_, meaning that they consist entirely of symbolic characters, such as `+`, `~`,
 `^` or `*`. Certain symbolic characters which have a special meaning in Scala are forbidden in identifier names.
 These include various brackets (`(`, `)`, `{`, `}`, `[` and `]`), quotes (`'`, `` ` `` and `"`) and other
-characters which would significantly complicate parsing source code if they were to be permitted (`,`, `.`, `#`,
-`@` and `=`), though `#`, `@` and `=` may still be used as long as they are not the first character of an
+characters which would significantly complicate parsing source code if they were to be permitted (`,`, `.`, `##`,
+`@` and `=`), though `##`, `@` and `=` may still be used as long as they are not the first character of an
 identifier.
 
 Underscores (`_`) may also be used in identifier names, though their use is uncommon. Nevertheless, they do
@@ -71,7 +71,7 @@ invalid.
 
 Very occasionally, we may want to define or use an identifier name which would be forbidden by one of these
 rules. This is permitted, with one compromise: it must be enclosed within backticks (`` ` ``). For example,
-- `` `#` ``
+- `` `##` ``
 - `` `object` ``
 - `` `Hello, World!` ``
 - `` `()` ``

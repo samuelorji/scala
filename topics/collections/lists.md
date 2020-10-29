@@ -29,7 +29,7 @@ ourselves with the exact structure of the elements in that data structure. `Seq`
 and `Vector`, but not `Set`, as its elements are unordered, so don't exhibit the "sequential" nature that the
 `Seq` type is intended to indicate.
 
-# Lists
+## Lists
 
 `List`s are the most commonly-used Scala collection, particularly (but not only) for working with small
 collections of data. Accessing the first element of a list, the _head_, is very quick, as is accessing the
@@ -39,7 +39,7 @@ To access element 1 of the list (remembering that this is the _second_ element) 
 the list's tail, which is _two_ operations. Element 2 requires accessing the head of the tail of the list's
 tail, which is _three_ operations. While each operation is very fast, in general it takes _n_ operations to
 access the _nth_ element, which makes `List` unsuitable for operations which require _random access_ of elements
-within the sequence. The method `List#last` exists, but the cost of executing it will be proportional to the
+within the sequence. The method `List##last` exists, but the cost of executing it will be proportional to the
 length of the sequence.
 
 The structure of Scala's `List` is usually called a _linked list_, or more precisely, a _singly-linked list_.
@@ -115,7 +115,7 @@ Often, the biggest challenge when learning Scala's collections is knowing the pe
 their methods. This requires practice and experience, and even then the analysis can be difficult and
 error-prone. Often the only solution is to use _benchmarking_, which we will learn about later.
 
-# Set
+## Set
 
 `Set` is a collection that keeps neither the order of its elements nor multiple copies of the same element
 within it. This is equivalent to the algebraic concept of a
@@ -180,7 +180,7 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 
 ?---?
 
-# What is the value of `List(5, 4, 3, 2, 1).tail.tail(1)`?
+## What is the value of `List(5, 4, 3, 2, 1).tail.tail(1)`?
 
 - [ ] 1
 - [X] 2
@@ -188,7 +188,7 @@ Sets offer a rich assortment of other operations. The most useful of these are,
 - [ ] 4
 - [ ] 5
 
-# The `List`, `xs`, contains the integers `0` to `4`. If we print every element, accessed by its index, how many times must the `tail` field of a `List` be accessed?
+## The `List`, `xs`, contains the integers `0` to `4`. If we print every element, accessed by its index, how many times must the `tail` field of a `List` be accessed?
 
 ```scala
 val xs = List(0, 1, 2, 3, 4, 5, 6)
@@ -208,7 +208,7 @@ println(xs(6))
 - [X] 21
 - [ ] 36
 
-# How many elements does the set `zs` contain?
+## How many elements does the set `zs` contain?
 
 ```scala
 val ws = Set(1, 2, 3)

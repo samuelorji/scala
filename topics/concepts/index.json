@@ -13,6 +13,7 @@
       "title": "Hashing",
       "authorId": "jon-pretty",
       "duration": 16,
+      "video": "https://www.youtube.com/embed/p1qh7HoXxOA",
       "prerequisites": [
         {
           "reason": "some of the examples in this lesson need an understanding of classes",

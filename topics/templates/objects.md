@@ -70,7 +70,7 @@ from elsewhere, which would make it possible for `describe` to produce inconsist
 describe(Project.tasks, 10)
 ```
 
-## Defining objects
+### Defining objects
 
 In Scala, we can create a new object using the `object` keyword, with a name for the object. While we can create
 a new object almost anywhere, we most commonly want to create an object at the top-level: not nested within
@@ -119,7 +119,7 @@ instantiated, so, like `def`s, the order they appear in is insignificant.
 
 ?---?
 
-# Consider the following `object` definition within a hypothetical piece of software called _Onion_,
+## Consider the following `object` definition within a hypothetical piece of software called _Onion_,
 
 ```scala
 object Info:
@@ -145,7 +145,7 @@ When the runtime encounters the first reference to the `Info` object, it will,
 * [X] print the string `"Initializing Onion, version 7"`
 * [ ] print something else
 
-# When the runtime encounters the second reference to the `Info` object, it will,
+## When the runtime encounters the second reference to the `Info` object, it will,
 
 * [ ] instantiate the object
 * [ ] evaluate the value `version`
@@ -154,13 +154,13 @@ When the runtime encounters the first reference to the `Info` object, it will,
 * [ ] print something else
 * [X] look up the `Info` object instantiated earlier
 
-# Moving the definition of `description` _before_ the definition of `name` would,
+## Moving the definition of `description` _before_ the definition of `name` would,
 - [ ] cause compilation to fail, due to a forward-reference
 - [ ] result in an error at runtime, due to a forward-reference
 - [ ] cause an incorrect message to be printed
 - [X] not change the behavior at all
 
-# Now, consider the following definitions,
+## Now, consider the following definitions,
 ```scala
 object Alpha:
   val beta = Beta
