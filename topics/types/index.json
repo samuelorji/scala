@@ -6,6 +6,7 @@
       "id": "basics",
       "title": "Basics",
       "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/G2oyqW8VyqM",
       "duration": 12,
       "prerequisites": [
         {
@@ -25,6 +26,7 @@
       "title": "Subtyping",
       "authorId": "jon-pretty",
       "duration": 12,
+      "video": "https://www.youtube.com/embed/wfTM_0sxqsA",
       "prerequisites": [
         {
           "reason": "subtyping requires a basic understanding of classes to provide context",
@@ -37,6 +39,7 @@
       "id": "casting",
       "title": "Casting",
       "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/Z_RUJ9ApUzI",
       "duration": 14
     },
     {

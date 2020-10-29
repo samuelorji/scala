@@ -1,4 +1,4 @@
-# Infix Extractors
+## Infix Extractors
 
 We commonly want to match on collection types like `List[Int]` or `Vector[String]`, and Scala offers special
 support for matching against collections using _infix extractors_.
@@ -52,7 +52,7 @@ long, much as it is a fast, constant-time operation to construct a new list by p
 Conversely, splitting a list into its initial and last elements is not a constant-time operation: it will be
 slower and slower the longer the list is, so it's desirable to use the `::` extractor for working with `List`s.
 
-# Matching Vectors
+## Matching Vectors
 
 For other sequence-like collections, such as `Vector`, we have two additional extractors available to us:
 `+:` and `:+`. The first, `+:` is equivalent to `::`, but works on any collection that is a `Seq`, not just
@@ -85,7 +85,7 @@ and which to include in the remainder, and this is enforced by the order of eval
 the extractor must decompose the scrutinee into parts first, and only then could pattern matching continue to
 check nested extractors.
 
-### Desugaring
+## Desugaring
 
 These infix extractors are actually just ordinary extractors with two parameters, used in an infix position. For
 example, we could define a two-parameter extractor such as,
@@ -110,7 +110,7 @@ Scala interprets these in exactly the same way. While in the first version, `Poi
 after the extractor (inside parentheses), the second "infix" version moves the first parameter before the
 extractor name, `Point`, leaves the second parameter after, and removes the parentheses and comma.
 
-# Generalizing Extractors
+## Generalizing Extractors
 
 This works for any extractor, though it's less common to use it for extractors with alphanumeric names. We
 could, however, rename `Point` to a symbolic name, like `+`, and then write,

@@ -1,4 +1,4 @@
-# A Machine Abstraction
+## A Machine Abstraction
 
 Scala code runs inside the _Java Virtual Machine_, or _JVM_. The JVM is designed to look like a "machine" while
 we are writing code to run on it, but it is not actually a machine in the traditional sense, as the different
@@ -67,7 +67,7 @@ Java bytecode is organized into many _classfiles_, each of serves as a blueprint
 object. All executable bytecode must belong to a class or object, so all the code we compile from Scala source
 code will go into one classfile or another.
 
-# Javap
+## Javap
 
 The `javap` tool, which is bundled with the Java Development Kit (JDK) allows us to inspect the bytecode for any
 class, in a format which is low-level, but still readable. Here is an example of the bytecode for a simple

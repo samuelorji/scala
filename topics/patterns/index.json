@@ -20,12 +20,14 @@
       "id": "destructuring",
       "title": "Structural Matching",
       "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/C-PI5HXlPTE",
       "duration": 14
     },
     {
       "id": "syntax",
       "title": "Pattern Syntax",
       "authorId": "jon-pretty",
+      "video": "https://www.youtube.com/embed/dnSr2Ky3JxY",
       "duration": 15
     },
     {

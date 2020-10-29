@@ -1,4 +1,4 @@
-# Different Collection Types
+## Different Collection Types
 
 Scala's standard library provides many different collection types, which differ primarily in the structure they
 use to store the values contained within them. The way a collection's internal data is structured has

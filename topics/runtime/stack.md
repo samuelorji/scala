@@ -1,4 +1,4 @@
-# Tracking Execution
+## Tracking Execution
 
 A program running in the JVM will use a _stack_ to track where, within a potentially-large program, execution is
 currently happening. A stack is a _first-in last-out_ (FILO) data structure, so called because it behaves like a
@@ -23,7 +23,7 @@ ultimately, those methods must be linearized in time. So instead of calling one 
 stream of bytes, each one instructing the JVM what to do next, with pointers on the stack used to direct
 execution to the next instruction.
 
-# Operating with the Stack
+## Operating with the Stack
 
 When execution reaches the end of a method, it expects to find, at the top of the stack, a pointer to the next
 bytecode instruction to execute. And crucially, that pointer is there simply because the JVM placed it there
@@ -113,7 +113,7 @@ redirected to that handler, and normal operations will continue. If it is not, t
 from the stack, and this sequence repeats, until either a matching handler is found, or it reaches the bottom
 entry on the stack, and the application fails irrecoverably.
 
-# Stack Traces
+## Stack Traces
 
 In this case, the JVM will print a _stack trace_ using the information encapsulated in the `Exception` object.
 This can provide many useful clues about the state of the application at the point it failed, but importantly,
