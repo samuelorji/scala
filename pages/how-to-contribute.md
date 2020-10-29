@@ -17,7 +17,7 @@ on request.
 
 ### Courses
 
-Courses are the top-level entity in the ScalaZONE material structure. Their structure is stored in the [courses](/courses) directory. The [courses/index.json](/courses/index.json) file stores a list with all available courses. For each course there is a directory named after the course id that contains the course structure. Basic course data is stored in the `index.json` file in this directory. Here is the `Course` JSON type structure:
+Courses are the top-level entity in the ScalaZONE material structure. Their structure is stored in the [courses](https://github.com/scalazone/scala/tree/main/courses) directory. The [courses/index.json](https://github.com/scalazone/scala/tree/main/courses/index.json) file stores a list with all available courses. For each course there is a directory named after the course id that contains the course structure. Basic course data is stored in the `index.json` file in this directory. Here is the `Course` JSON type structure:
 
 | Field name | Type            | Description                                                                            |
 |------------|-----------------|----------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Topic ranges define what topics and lessons are present in a course level. By sp
 
 ### Topics
 
-Topics are ordered collections of lessons. Their index is stored in the [topics/index.json] file. The structure of a single topic is defined in the `index.json` file inside the specific directory named after the topic in the `topics` directory. This `index.json` file has following JSON structure:
+Topics are ordered collections of lessons. Their index is stored in the [topics/index.json](https://github.com/scalazone/scala/tree/main/topics/index.json) file. The structure of a single topic is defined in the `index.json` file inside the specific directory named after the topic in the `topics` directory. This `index.json` file has following JSON structure:
 
 | Field name | Type           | Description                                      |
 |------------|----------------|--------------------------------------------------|
@@ -170,7 +170,7 @@ To add two numbers ...
 
 ### Authors
 
-Courses' authors are defined in the [authors.json](/authors.json) file. This file contains a list of `Author` objects. The `Author` JSON object has following structure:
+Courses' authors are defined in the [authors.json](https://github.com/scalazone/scala/tree/main/authors.json) file. This file contains a list of `Author` objects. The `Author` JSON object has following structure:
 
 | Field name | Type             | Description                                 |
 |------------|------------------|---------------------------------------------|
@@ -186,7 +186,7 @@ Courses' authors are defined in the [authors.json](/authors.json) file. This fil
 
 ### Companies
 
-Courses' authors are defined in the [companies.json](/companies.json) file. This file contains a list of `Company` objects. The `Company` JSON object has following structure:
+Courses' authors are defined in the [companies.json](https://github.com/scalazone/scala/tree/main/companies.json) file. This file contains a list of `Company` objects. The `Company` JSON object has following structure:
 
 | Field name | Type             | Description                                 |
 |------------|------------------|---------------------------------------------|
