@@ -1,3 +1,5 @@
+# Values Containing Values
+
 As programmers we often need to store and operate on multiple similar values, where it's necessary to refer to
 the values _collectively_ rather than individually, and where our code must work whether there is one value, a
 million values, or zero. Scala provides a variety of _collection types_ for this purpose.
@@ -66,6 +68,8 @@ values) is `Vector`.
 We can think about `Vector`s as sequences of values, where each element can be accessed by its numbered
 position, or _index_, in the sequence. When a new element is appended to the end of a `Vector`, that new element
 will be assigned an index one higher than the previous highest index.
+
+## Vector Operations
 
 Imagine we are storing a series of financial transactions using a `Vector`, where each transaction is
 represented by an `Int`, being the difference to the amount in the account. (We will not store any other details

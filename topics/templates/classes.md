@@ -1,3 +1,5 @@
+# Singletons and Classes
+
 The `object` keyword allows us to create "one-off", or _singleton_, instances of objects with state and methods
 (collectively, we will call these _members_), but we often need to create multiple instances of similar objects;
 a _class_ of objects.
@@ -43,6 +45,8 @@ class BasicLog(id: String):
   def record(msg: String): Unit = writer.write(s"$msg\n")
 ```
 
+# Classes as Templates
+
 And this is a _template_ for creating new objects. It is like a blueprint for the state and methods of an
 object, but is incomplete until the parameter, a `String` called `id`, is supplied. It is therefore impossible
 to instantiate an object from a template without every parameter being specified.
@@ -83,7 +87,9 @@ into both the _term_ and the _type_ namespaces.
 
 It is also important not to confuse a class definition and an object definition: Although their bodies look
 the same, only the object definition defines a new object; a class definition only defines a template or
-blueprint for creating new objects. The term _template_ is not so widely used in the Scala ecosystem, perhaps
+blueprint for creating new objects.
+
+The term _template_ is not so widely used in the Scala ecosystem, perhaps
 because it evokes some developers' bad memories from templates in C++, but it's nevertheless appropriate: the
 definition is a partial specification for an object, but potentially with "gaps". In the `BasicLog` example, the
 `id` parameter is just such a gap, and to construct a new instance, that gap must be "filled in", that is, the

@@ -1,3 +1,5 @@
+## Generalizing Inheritance
+
 Scala provides another kind of template, similar to a class, but trading some constraints for some additional
 capabilities. Like a class, a _trait_ defines a body with methods, state and other members. A trait may also
 define a constructor, but unlike a class, cannot be instantiated; not _directly_, at least. This compromise has
@@ -157,6 +159,8 @@ and redefine our `SimpleTimer` object in terms of `StdoutRecorder` and `Timer`:
 object SimpleTimer extends Timer, StdoutRecorder
 ```
 
+## Linearization Order
+
 The order of the traits does not matter. Each trait that is mixed in to a template may _provide_ any number of
 method implementations, and may _declare_ any number of abstract methods, so a trait may both satisfy a
 requirement by providing a method definition, whilst introducing a new requirement which must subsequently be
@@ -187,7 +191,7 @@ we could choose to implement `writer` later (in a subclass), and define `BasicLo
 abstract class BasicLog(id: String) extends Timer, FileRecorder
 ```
 
-## A word of caution...
+## A Warning
 
 Traits provide a very powerful system for defining and satisfying constraints, in the form of methods, and the
 Scala compiler can very capably provide guarantees that those constraints are satisfied, with helpful guidance

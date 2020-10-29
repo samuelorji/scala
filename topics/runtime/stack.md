@@ -1,4 +1,6 @@
-A program running in the JVM will use a _stack_ to track where, within a potentially*large program, execution is
+# Tracking Execution
+
+A program running in the JVM will use a _stack_ to track where, within a potentially-large program, execution is
 currently happening. A stack is a _first-in last-out_ (FILO) data structure, so called because it behaves like a
 stack of books on a table: we can add to the pile, and it gets higher, but we can only take a book from the top,
 not from the bottom (we might knock the stack over!) or from an arbitrary point in the middle.
@@ -21,6 +23,8 @@ ultimately, those methods must be linearized in time. So instead of calling one 
 stream of bytes, each one instructing the JVM what to do next, with pointers on the stack used to direct
 execution to the next instruction.
 
+# Operating with the Stack
+
 When execution reaches the end of a method, it expects to find, at the top of the stack, a pointer to the next
 bytecode instruction to execute. And crucially, that pointer is there simply because the JVM placed it there
 when as method was invoked. And while, over the course of executing any method, the stack may grow and shrink
@@ -36,6 +40,8 @@ An method, when invoked, may also expect to find certain values at the top of th
 execution. These are analogous to the _parameters_ to the method, and the method's bytecode will expect them to
 be present on the stack whenever it is called. Hence, any bytecode which calls a method must first ensure that
 the values representing the method's parameters are at the top of the stack.
+
+## A Worked Example
 
 Here is an example of a simple method which calls a `factorial` method (whose implementation is irrelevant to
 us).
@@ -107,6 +113,8 @@ redirected to that handler, and normal operations will continue. If it is not, t
 from the stack, and this sequence repeats, until either a matching handler is found, or it reaches the bottom
 entry on the stack, and the application fails irrecoverably.
 
+# Stack Traces
+
 In this case, the JVM will print a _stack trace_ using the information encapsulated in the `Exception` object.
 This can provide many useful clues about the state of the application at the point it failed, but importantly,
 it shows us every method that was called from the entry point (the `main` method) of the program, up to the
@@ -125,6 +133,8 @@ Exception in thread "main" java.lang.Exception: Parameter is non-positive
     at example$package$.run(example.scala:10)
     at run.main(example.scala:8)
 ```
+
+## Interpretation of Stack Traces
 
 The first line shows that there was an exception thrown, with the type `java.lang.Exception` (the "standard"
 exception type), with a custom message. The next line indicates that this exception happened in a method called

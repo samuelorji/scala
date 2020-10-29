@@ -1,3 +1,5 @@
+## Evaluation
+
 The most fundamental components of Scala source code are _expressions_: code which _evaluates_ when a program is
 run to produce a single _value_. Most of the code we write, excluding the signatures which define the structure
 of classes, objects, traits and methods, will be expressions; they most closely represent the code that is doing
@@ -117,6 +119,9 @@ with the value `()`, but it exists in order to maintain the invariant that every
 Nevertheless, expressions which return `()` are called _statements_, and the invariant on returning a value
 means that we can treat them like any other expression.
 
+There is only one unit value, which means that every statement returns the _same_ value, regardless of what it
+does.
+
 When two statements appear after each other on separate lines, or separated by a semicolon (`;`), they will be
 evaluated one after the other. For example,
 ```scala
@@ -166,12 +171,5 @@ println("Hello, World!")
 * [X] it has side-effects
 * [ ] the parameter to `println` is a statement
 * [X] the parameter to `println` is an expression
-
-## True or false? The following code returns a value.
-
-```scala
-Thread.sleep(1000)
-```
-
-- [X] True
-- [ ] False
+* [X] it returns the unit value
+* [ ] it returns a string

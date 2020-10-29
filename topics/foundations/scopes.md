@@ -1,3 +1,5 @@
+# Resolving Names
+
 At any point within a Scala source file where we may refer to values, methods, objects, types, traits, enums and
 classes by an identifier, Scala must resolve the name we use to the unique definition, somewhere else in our
 code, or within libraries that we depend upon.
@@ -22,6 +24,8 @@ creates a new instance of `com.example.File`. Both are referred to as `File` but
 While every position that an identifier may appear has its own context, these may be conveniently structured
 into _lexical scopes_. Within one lexical scope (or just a _scope_) the same identifier will always resolve to
 the same symbol.
+
+## Nesting
 
 The most important feature of scopes is that structurally, they _nest_, so apart from the _top-level scope_,
 every scope is entirely nested _within_ another scope, potentially many layers deep. The significance of this
@@ -51,6 +55,8 @@ and tranisitively, `Server`. And also `Form` itself, from the top-level scope. F
 is definied in this scope. The body of `send()` introduces another new scope, but it introduces no new symbols,
 and it may refer to symbols defined in any of the prior scopes we mentioned.
 
+## Shadowing
+
 A new scope may introduce new identifiers, but it is also permitted for these to have identical names to
 identifiers defined in outer scopes. This does not produce any error or warning, and the identifier in an inner
 scope will always take precedence over an identically-named identifier in an outer scope. This is called
@@ -66,6 +72,8 @@ we found.
 While we can refer to an identifier within an outer scope directly, without any prefix (such as `list.name` for
 a member called `name` in an object called `list`), the reverse is not true. A scope may contain any number of
 nested scopes, and elements within those scopes may only be accessed via a prefix—if at all.
+
+## Context and Paths
 
 This makes sense from a semantic perspective: a new scope, whether it is a lambda or a class or a case
 expression, generally introduces some new context—for example, the lambda's parameter, a class's `this` value,

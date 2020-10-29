@@ -1,3 +1,5 @@
+# Hello, World!
+
 It is a tradition to start programming by writing a program called "Hello, World!" which does nothing more than
 print the words,
 ```
@@ -10,6 +12,8 @@ In Scala, we can create just such a program with the following code:
 @main def hello() = println("Hello, World!")
 ```
 
+## Compiling
+
 We can put this into a plain text file called `hello.scala`, and compile it by running the Scala compiler, like
 so:
 ```sh
@@ -19,6 +23,8 @@ scalac hello.scala
 If everything worked correctly, this will create some new files in the same directory, with names ending in
 `.class`, and containing _compiled Java bytecode_. The `scalac` command will not print any output if the
 compilation was successful, but error messages will be displayed if compilation fails.
+
+## Compilation Errors
 
 If we try to compile a slightly different program,
 ```scala

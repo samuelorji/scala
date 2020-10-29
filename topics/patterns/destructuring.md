@@ -1,3 +1,5 @@
+# Matching Against Structured Data
+
 Scala offers a variety of ways to describe patterns, and much of this topic will be spent discovering these.
 In the example above, we have described the simplest of patterns like `Up` and `Down`. They are just references
 to values, and the `dir` value will be compared to see if it is _equal_ to each of them: first `Up`, and if
@@ -38,6 +40,8 @@ side of the case clause, set to whichever values the `Rgb` instance was initiali
 As the name has always suggested, it's like checking whether the scrutinee matches a pattern which looks like
 `Rgb(red, green, blue)`.
 
+## Checking Equality
+
 So while pattern matching against a single value would perform an _equality check_ between that value and the
 scrutinee, a structural match will check that the scrutinee has the right structure—in this example, checking
 that it is an `Rgb` instance of the `Color` type. If it is, then it will always have the desired structure.
@@ -66,6 +70,8 @@ def leftEdge(circle: Circle): Double =
   circle match
     case Circle(center, radius, color) => center.x - radius
 ```
+
+## Binding Identifiers
 
 This introduces, on the right-hand side of the case clause, three new identifiers called `center` (an instance
 of `Point`), `radius` and `color`, an `Rgb` instance. But these can additionally be treated as nested scrutinees
@@ -127,6 +133,8 @@ def axisCircle(circle: Circle): Circle =
     case Circle(pt@Point(x, 0), _, c) => Circle(pt, 1, c)
     case other                        => other
 ```
+
+## Deconstruction Mirrors Construction
 
 Patterns may be nested within other patterns any number of times, as deeply as we like. It is no coincidence
 that destructuring a value looks very similar to constructing a new value. Compare the construction and

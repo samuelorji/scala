@@ -1,3 +1,5 @@
+# Introducing Extractors
+
 Every case class or enum we define may be used in a pattern. But the same is not true by default for all types.
 It is possible for case classes and enums because, by design, their signatures should be what defines them: the
 notion of equality on a case class is defined in terms of equality on its parameters, as is its `hashCode`
@@ -45,6 +47,8 @@ object Integral:
     if input == input.floor then Some(input.toInt) else None
 ```
 
+## Return Type
+
 Having this definition in scope is enough to allow us to use it in a pattern. The return value of `unapply` will
 be either `Some` of an integer in the case where we want the extractor to match, or `None` when we do not wish
 it to match.
@@ -74,6 +78,8 @@ def local(ip: String): Boolean = ip match
 Note that bytes on the JVM are signed, whereas IP addresses use unsigned bytes, so we will simply use `Int`s
 instead of `Byte`s for convenience. A better implementation could use an opaque type based on `Byte`.
 
+## Defining An Extractor
+
 Our extractor would look like this:
 ```scala
 object Ip:
@@ -84,6 +90,8 @@ object Ip:
 ```
 
 In order to extract into a four-parameter `Ip` pattern, we must return an `Option` of a four-tuple.
+
+## Binary Extractors
 
 Scala also supports extractors which take an empty parameter list, and dont extract any new values. For example,
 ```scala

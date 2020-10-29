@@ -1,3 +1,5 @@
+# A Machine Abstraction
+
 Scala code runs inside the _Java Virtual Machine_, or _JVM_. The JVM is designed to look like a "machine" while
 we are writing code to run on it, but it is not actually a machine in the traditional sense, as the different
 parts of the JVM do not necessarily correspond directly to real, physical hardware. It is an abstraction.
@@ -16,6 +18,8 @@ to be different for Windows and Linux or Mac OS, though libraries can help to hi
 But to the extent that the JVM is capable of providing a consistent virtual representation of a machine, it is
 extremely useful to save us having to consider many of the subtle differences that exist between different
 computer systems.
+
+## The JVM Specification vs A JVM Instance
 
 When we talk about "The JVM" we usually mean one of two things. Either we are referring to the design and
 architecture of the virtual machine, or we are talking about a particular _instance_ of a JVM that is running
@@ -63,6 +67,8 @@ Java bytecode is organized into many _classfiles_, each of serves as a blueprint
 object. All executable bytecode must belong to a class or object, so all the code we compile from Scala source
 code will go into one classfile or another.
 
+# Javap
+
 The `javap` tool, which is bundled with the Java Development Kit (JDK) allows us to inspect the bytecode for any
 class, in a format which is low-level, but still readable. Here is an example of the bytecode for a simple
 "Hello, World!" application written in Java:
@@ -73,6 +79,8 @@ class, in a format which is low-level, but still readable. Here is an example of
 5: invokevirtual  ##4  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
 8: return
 ```
+
+## Interpretation of Bytecode
 
 We won't try to understand this fully, but will at least look at how to read this output. The numbers at the
 start of each line indicate the byte offset of each instruction. So they start at zero, and are incremental,
@@ -96,19 +104,16 @@ run. Every time we launch a new JVM, we must specify the name of a class as the 
 The JVM will expect to find a method called `main` in the class, but in Scala, we can just write a top-level
 method (with any name) and annotate it with the `@main` annotation, like this,
 ```scala
-package helloworld
-
 @main
 def run(): Unit = println("Hello, World!")
 ```
-and Scala will generate a classfile called `helloworld/run.class`, corresponding to the class, `helloworld.run`,
-which will contain a `main` method which will be invoked when we launch a new JVM.
+and Scala will generate a classfile called `run.class`, corresponding to the class, `run`, which will contain a
+`main` method which will be invoked when we launch a new JVM.
 
-We can achieve that using the `scala` command,
+We can achieve that using the `scala` command with the compiled class name:
 ```sh
-scala -classpath <classpath> helloworld.run
+scala run
 ```
-where `<classpath>` is the directory containing the compiled application.
 
 Although a full understanding of Java bytecode is not necessary to write good Scala code, at the very least we
 should always remember that it is ultimately what our source code will become, and there will be times when the

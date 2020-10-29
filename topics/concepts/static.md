@@ -1,3 +1,5 @@
+# Compilation vs Interpretation
+
 Many programming languages allow us to write code, and run it directly, converting the source code into machine
 code and running it, as it is being read. This is called _interpretation_, and contrasts with _compilation_,
 which fully converts an entire program from source code to machine code before any of it is executed. Pieces of
@@ -35,6 +37,8 @@ however, ways of compiling series of small fragments of Scala to give the impres
 interpreters in the traditional sense.) Scala is designed to maximise its advantages from being compiled, and
 many of its features would be impossible (or pointless) in an interpreted language.
 
+# Static vs Dynamic
+
 The distinction between interpretation and compilation is often described as _dynamic_ vs _static_. Interpreted
 languages have more flexibility to behave _dynamically_, because their code is interpreted as it is run, and
 the state of the running program can therefore affect the nature of the interpretation. Whereas, during a
@@ -65,6 +69,8 @@ in asserting them. But the vast majority of static assertions the Scala compiler
 _types_. Types can be thought of as a shorthand for describing (and hence having the compiler assert) all the
 properties of a value that are known statically.
 
+# Types (and Tests)
+
 Scala is able to assert whether certain operations on a value are safe based on its _type_. For example, the
 expression, `5 - StdIn.readLine`, which tries to subtract a _string_ from an _integer_ would not compile because
 the type of `StdIn.readLine` is not a valid for subtraction from an integer. It makes no sense, so the Scala
@@ -89,6 +95,8 @@ states, and comparing the results to expected values, but (unlike types) there i
 For dynamic values, even within a statically-typed language, tests can still be very useful. It is not always
 possible or practical to encode enough precision with types to very a program for _all_ possible inputs. And in
 many scenarios, unit tests can offer additional confidince that our code does what we intend it to do.
+
+# Summary
 
 The distinction between the static and the dynamic will be a common theme in this course. It is our goal to
 write _correct_ software, with fewer bugs, and static invariants, often asserted through types, should be

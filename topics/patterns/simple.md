@@ -1,3 +1,5 @@
+# Pattern Matching Keywords
+
 Scala provides two keywords, `match` and `case` for inspecting a value, and making a choice between several
 possible actions, based on what the value is.
 
@@ -19,6 +21,8 @@ In this example, we _match_ on a `dir` value, which is an enumeration, `Directio
 value—`Up`, `Down`, `Left` or `Right`—we return new `x` and `y` coordinates. For each possible value of `dir`,
 the expression that appears to its right will be evaluated and returned. You could imagine this method being
 used, for example, to recalculate the position of a rook on a chessboard.
+
+## Generalized Branching
 
 Pattern matching provides a more general way of performing branching than an `if`/`then`/`else` construct,
 though a pattern match experession could be rewritten as an `if` expression. Here is the same `move` method,
@@ -72,16 +76,15 @@ Finally, after each pattern, to the right of the arrow (`=>`, which is often rea
 expression that gets evaluated if that pattern matches the runtime value of the scrutinee, and, of course, only
 one of the expressions to the right of the arrows will be evaluated each time the expression is evaluated.
 
-### Caution!
+## A Warning
 
 Note that in some languages, once a case matches, the runtime will evaluate the right-hand side of the case
 clause, and carry on evaluating the right-hand side of _every_ case clause after it, unless we explicitly
 _break_ out of the match. This was rarely ever useful behavior for any program, and thankfully Scala does not
-work this way, and only one single case clause will ever be evaluated. For a functional language where every
-expression evaluates to a single value, it would not make sense, anyway: how could an expression return a value
-and then return another value? Where would the first value go?
+work this way, and only one single case clause will ever be evaluated.
 
-## Summary
+For a functional language where every expression evaluates to a single value, it would not make sense, anyway:
+how could an expression return a value and then return another value? Where would the first value go?
 
 Pattern matching in Scala provides very convenient syntax for branching to different actions, by checking a
 value, the scrutinee, against a series of patterns to try to find one which matches, then taking that branch.
